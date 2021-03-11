@@ -15,7 +15,7 @@ const Pricing = () => {
           <HeaderStuff />
         </Head>
         <Navigation />
-        <div class="bg-green-500">
+        <div class="bg-green-600">
           <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl">
             <div class="px-0 sm:px-4 lg:px-0 lg:flex lg:justify-between lg:items-center">
               <div class="max-w-xl">

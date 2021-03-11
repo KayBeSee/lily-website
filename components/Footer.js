@@ -17,7 +17,7 @@ const Footer = () => {
                 <ul className="mt-4 space-y-4">
                   <li>
                     <a
-                      href="#"
+                      href="/"
                       className="text-base text-white hover:text-green-200"
                     >
                       Lily Wallet
@@ -56,6 +56,14 @@ const Footer = () => {
                       Pricing
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="./support"
+                      className="text-base text-white hover:text-green-200"
+                    >
+                      Contact
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -80,15 +88,6 @@ const Footer = () => {
                       className="text-base text-white hover:text-green-200"
                     >
                       Press
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="./support"
-                      className="text-base text-white hover:text-green-200"
-                    >
-                      Contact
                     </a>
                   </li>
                 </ul>
@@ -143,7 +142,7 @@ const Footer = () => {
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  className="w-full bg-yellow-300 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
+                  className="w-full bg-yellow-400 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
                 >
                   Subscribe
                 </button>
@@ -153,7 +152,11 @@ const Footer = () => {
         </div>
         <div className="mt-8 border-t border-green-700 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
-            <a href="#" className="text-white hover:text-green-100">
+            <a
+              target="_blank"
+              href="https://twitter.com/KayBeSee"
+              className="text-white hover:text-green-100"
+            >
               <span className="sr-only">Twitter</span>
               <svg
                 className="h-6 w-6"
@@ -165,7 +168,11 @@ const Footer = () => {
               </svg>
             </a>
 
-            <a href="#" className="text-white hover:text-green-100">
+            <a
+              target="_blank"
+              href="https://github.com/kaybesee/lily-wallet"
+              className="text-white hover:text-green-100"
+            >
               <span className="sr-only">GitHub</span>
               <svg
                 className="h-6 w-6"

@@ -203,7 +203,7 @@ const Navigation = () => {
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
             <span className="inline-flex rounded-md shadow">
               <a
-                href="https://lily.kevinmulcrone.com#download"
+                href="/#download"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-yellow-300 bg-white hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-gray-50 active:text-yellow-700 transition duration-150 ease-in-out"
               >
                 Download
@@ -234,7 +234,7 @@ const Navigation = () => {
               aria-labelledby="main-menu"
             >
               <div className="px-5 pt-4 flex items-center justify-between">
-                <Link href="https://lily.kevinmulcrone.com/">
+                <Link href="/">
                   <a>
                     <div>
                       <img className="h-8 w-auto" src="logo.svg" alt="" />
@@ -276,21 +276,21 @@ const Navigation = () => {
                   </a>
                 </Link>
                 <a
-                  href="https://lily.kevinmulcrone.com#security"
+                  href="/#security"
                   className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                   role="menuitem"
                 >
                   Security
                 </a>
                 <a
-                  href="https://lily.kevinmulcrone.com/pricing.html"
+                  href="/pricing"
                   className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                   role="menuitem"
                 >
                   Pricing
                 </a>
                 <a
-                  href="https://lily.kevinmulcrone.com/support.html"
+                  href="/support"
                   className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                   role="menuitem"
                 >
