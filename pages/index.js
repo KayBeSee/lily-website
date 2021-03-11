@@ -563,13 +563,11 @@ export default function Home() {
       </div>
       <div className="bank-note-background" id="download">
         <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8">
-          <p className="text-center text-3xl leading-6 font-semibold uppercase text-gray-100 tracking-wider">
-            <h1 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
-              Download Lily
-            </h1>
-            <p className="mb-8 text-lg leading-8 font-medium tracking-tight text-gray-100 sm:text-lg sm:leading-10">
-              and start securing your bitcoin today
-            </p>
+          <h1 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
+            Download Lily
+          </h1>
+          <p className="mb-8 text-lg leading-8 font-medium tracking-tight text-gray-100 sm:text-lg sm:leading-10">
+            and start securing your bitcoin today
           </p>
           <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
             <a
@@ -585,7 +583,9 @@ export default function Home() {
               </div>
               <div className="flex flex-col mt-4 items-center justify-center">
                 <span>Windows</span>
-                <span className="file-name">Lily.Wallet.Setup.1.0.2.exe</span>
+                <span className="text-gray-500 text-xs">
+                  Lily.Wallet.Setup.1.0.2.exe
+                </span>
               </div>
             </a>
             <a
@@ -597,7 +597,9 @@ export default function Home() {
               </div>
               <div className="flex flex-col mt-4 items-center justify-center">
                 <span>Linux</span>
-                <span className="file-name">Lily.Wallet-1.0.2.AppImage</span>
+                <span className="text-gray-500 text-xs">
+                  Lily.Wallet-1.0.2.AppImage
+                </span>
               </div>
             </a>
             <a
@@ -609,7 +611,9 @@ export default function Home() {
               </div>
               <div className="flex flex-col mt-4 items-center justify-center">
                 <span>Mac</span>
-                <span className="file-name">Lily.Wallet-1.0.2.dmg</span>
+                <span className="text-gray-500 text-xs">
+                  Lily.Wallet-1.0.2.dmg
+                </span>
               </div>
             </a>
           </div>

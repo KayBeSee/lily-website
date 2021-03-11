@@ -204,7 +204,7 @@ const Navigation = () => {
             <span className="inline-flex rounded-md shadow">
               <a
                 href="/#download"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-yellow-300 bg-white hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-gray-50 active:text-yellow-700 transition duration-150 ease-in-out"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-gray-50 active:text-green-700 transition duration-150 ease-in-out"
               >
                 Download
               </a>

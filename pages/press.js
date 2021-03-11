@@ -27,20 +27,22 @@ const Terms = () => {
           </div>
           <div class="relative z-10 text-base max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
             <p class="text-lg text-gray-500">
-              Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum
-              urna sed consectetur neque tristique pellentesque. Blandit amet,
-              sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi
-              vel porttitor vitae ut. Amet vitae fames senectus vitae.
+              We are at the edge of the next frontier, and like all new
+              frontiers there is <i>a lot</i> to talk about when it comes to
+              bitcoin. Whether it be how to properly self-custody your assets,
+              security trade-offs, or where the industry is headed, we love
+              sharing what we know with others.
             </p>
           </div>
           <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start">
             <div class="relative z-10">
               <div class="prose prose-green text-gray-500 mx-auto lg:max-w-none">
                 <p>
-                  Sollicitudin tristique eros erat odio sed vitae, consequat
-                  turpis elementum. Lorem nibh vel, eget pretium arcu vitae.
-                  Eros eu viverra donec ut volutpat donec laoreet quam urna.
+                  We have participated in a few podcasts and Youtube videos
+                  ourselves and journalists, bloggres, and bitcoin enthusiasts
+                  have shared their thoughts on Lily.
                 </p>
+                <p>We've listed some of our favorites below:</p>
                 <ul>
                   <li>
                     Tales from the Crypt #179 -{" "}
@@ -52,16 +54,29 @@ const Terms = () => {
                     </a>
                   </li>
                   <li>
-                    Cras cras lobortis vitae vivamus ultricies facilisis tempus.
+                    Bitcoin Magazine Walkthrough -{" "}
+                    <a
+                      href="https://www.youtube.com/watch?v=9xUgyTYqvcQ"
+                      target="_blank"
+                    >
+                      Youtube
+                    </a>
                   </li>
-                  <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
+                  <li>
+                    BTC Sessions: How To Use Lily Wallet -{" "}
+                    <a
+                      href="https://www.youtube.com/watch?v=P5UIvCi9FSM"
+                      target="_blank"
+                    >
+                      Youtube
+                    </a>
+                  </li>
                 </ul>
                 <p>
-                  Rhoncus nisl, libero egestas diam fermentum dui. At quis
-                  tincidunt vel ultricies. Vulputate aliquet velit faucibus
-                  semper. Pellentesque in venenatis vestibulum consectetur nibh
-                  id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi
-                  enim fermentum lacus in. Viverra.
+                  The best part about bitcoin is that there are so many
+                  different angles to look at, discuss, and build products for.
+                  We look forward to seeing more and more educational content
+                  being made to guide newcoiners on their journey.
                 </p>
                 <h3>Let's chat</h3>
                 <p>
@@ -140,10 +155,10 @@ const Terms = () => {
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
                     <p class="relative">
-                      Tincidunt integer commodo, cursus etiam aliquam neque, et.
-                      Consectetur pretium in volutpat, diam. Montes, magna
-                      cursus nulla feugiat dignissim id lobortis amet. Laoreet
-                      sem est phasellus eu proin massa, lectus.
+                      Bitcoin combines cryptography, game theory, and free
+                      market economics into one coherent system used to exchange
+                      value across space and time. It's the most exciting thing
+                      to be apart of right now.
                     </p>
                   </div>
                 </div>

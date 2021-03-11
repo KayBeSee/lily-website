@@ -26,10 +26,10 @@ const Footer = () => {
 
                   <li>
                     <a
-                      href="#"
+                      href="/btc-security-guide"
                       className="text-base text-white hover:text-green-200"
                     >
-                      Consulting
+                      BTC Security Guide
                     </a>
                   </li>
                 </ul>
@@ -84,7 +84,7 @@ const Footer = () => {
 
                   <li>
                     <a
-                      href="./press"
+                      href="/press"
                       className="text-base text-white hover:text-green-200"
                     >
                       Press
@@ -123,8 +123,7 @@ const Footer = () => {
               Subscribe to our newsletter
             </h3>
             <p className="mt-4 text-base text-white">
-              The latest news, articles, and resources, sent to your inbox
-              weekly.
+              The latest news, articles, and resources, sent to your inbox.
             </p>
             <form className="mt-4 sm:flex sm:max-w-md">
               <label for="emailAddress" className="sr-only">
@@ -154,7 +153,7 @@ const Footer = () => {
           <div className="flex space-x-6 md:order-2">
             <a
               target="_blank"
-              href="https://twitter.com/KayBeSee"
+              href="https://twitter.com/LilyWallet"
               className="text-white hover:text-green-100"
             >
               <span className="sr-only">Twitter</span>

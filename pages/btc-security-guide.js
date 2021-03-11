@@ -4,11 +4,11 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
 
-const About = () => {
+const BTCSecurityGuide = () => {
   return (
     <div className="relative pt-6 bg-white">
       <Head>
-        <title>Lily Wallet - Multisig Bitcoin Wallet</title>
+        <title>BTC Security Guide - Lily Wallet</title>
         <HeaderStuff />
       </Head>
 
@@ -122,10 +122,10 @@ const About = () => {
             <div class="text-lg max-w-prose mx-auto">
               <h1>
                 <span class="block text-base text-center text-green-600 font-semibold tracking-wide uppercase">
-                  Introducing
+                  Lily Technologies
                 </span>
                 <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  Lily Wallet
+                  BTC Security Guide
                 </span>
               </h1>
               <p class="mt-8 text-xl text-gray-500 leading-8">
@@ -145,8 +145,8 @@ const About = () => {
                 </p>
                 <p>
                   Lily combines bitcoin standard practices with an easy to
-                  understand user interface to keep your bitcoin{" "}
-                  <strong>secure</strong> and <strong>accessible</strong>.
+                  understand user interface to keep your bitcoin
+                  <strong>secure</strong> and <strong>accessable</strong>.
                 </p>
                 <p>At Lily, we focus on:</p>
                 <ul>
@@ -312,4 +312,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default BTCSecurityGuide;
