@@ -303,7 +303,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="mt-10 -mx-4 relative lg:mt-0 sm:rotate-2 transform">
+            <div className="mt-10 -mx-4 relative lg:mt-0 transform">
               <svg
                 className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
                 width="784"
@@ -517,7 +517,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1 transform sm:-rotate-2">
+              <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1 transform">
                 <svg
                   className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
                   width="784"

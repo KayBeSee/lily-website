@@ -1,5 +1,7 @@
 import React from "react";
 
+import EmailSubscribe from "./EmailSubscribe";
+
 const Footer = () => {
   return (
     <footer className="bg-green-600" aria-labelledby="footerHeading">
@@ -118,36 +120,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="mt-8 xl:mt-0">
-            <h3 className="text-sm font-semibold text-yellow-300 tracking-wider uppercase">
-              Subscribe to our newsletter
-            </h3>
-            <p className="mt-4 text-base text-white">
-              The latest news, articles, and resources, sent to your inbox.
-            </p>
-            <form className="mt-4 sm:flex sm:max-w-md">
-              <label for="emailAddress" className="sr-only">
-                Email address
-              </label>
-              <input
-                type="email"
-                name="emailAddress"
-                id="emailAddress"
-                autocomplete="email"
-                required
-                className="appearance-none min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white focus:placeholder-gray-400"
-                placeholder="Enter your email"
-              />
-              <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <button
-                  type="submit"
-                  className="w-full bg-yellow-400 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
-          </div>
+          <EmailSubscribe />
         </div>
         <div className="mt-8 border-t border-green-700 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
