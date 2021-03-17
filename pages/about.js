@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="relative pt-6 bg-white">
       <Head>
-        <title>Lily Wallet - Multisig Bitcoin Wallet</title>
+        <title>About - Lily Wallet</title>
         <HeaderStuff />
       </Head>
 

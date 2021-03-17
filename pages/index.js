@@ -572,7 +572,7 @@ export default function Home() {
           <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
             <a
               href="https://github.com/KayBeSee/lily-wallet/releases/download/v1.1-rc-1/Lily.Wallet.Setup.1.0.2.exe"
-              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center"
+              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md sm:rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
             >
               <div>
                 <img
@@ -590,7 +590,7 @@ export default function Home() {
             </a>
             <a
               href="https://github.com/KayBeSee/lily-wallet/releases/download/v1.1-rc-1/Lily.Wallet-1.0.2.AppImage"
-              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center"
+              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md sm:rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
             >
               <div>
                 <img className="max-h-12" src="./linux-logo.png" alt="Mirage" />
@@ -604,7 +604,7 @@ export default function Home() {
             </a>
             <a
               href="https://github.com/KayBeSee/lily-wallet/releases/download/v1.1-rc-1/Lily.Wallet-1.0.2.dmg"
-              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center"
+              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md sm:rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
             >
               <div>
                 <img className=" max-h-12" src="./apple-logo.png" alt="Tuple" />
@@ -875,7 +875,7 @@ export default function Home() {
 
       <div className="bg-white">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="bg-green-500 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+          <div className="bg-green-600 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
             <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
               <div className="lg:self-center">
                 <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
@@ -886,7 +886,7 @@ export default function Home() {
                   bitcoin in under 10 minutes
                 </p>
                 <a
-                  href="https://docs.lily.kevinmulcrone.com/installation"
+                  href="/download"
                   className="mt-8 bg-white border border-transparent rounded-md shadow px-6 py-3 inline-flex items-center text-base font-medium text-green-600 hover:bg-indigo-50"
                 >
                   Download Lily

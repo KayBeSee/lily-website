@@ -11,7 +11,7 @@ const Pricing = () => {
     <>
       <div class="relative pt-6 pb-12 lg:pb-20">
         <Head>
-          <title>Lily Wallet - Multisig Bitcoin Wallet</title>
+          <title>Pricing - Lily Wallet</title>
           <HeaderStuff />
         </Head>
         <Navigation />
@@ -42,7 +42,7 @@ const Pricing = () => {
                 <span class="text-base font-medium text-gray-500">/year</span>
               </p>
               <a
-                href="#"
+                href="/download"
                 class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Download Lily
@@ -277,7 +277,7 @@ const Pricing = () => {
 
             <div class="border-t border-gray-200 px-4 pt-5">
               <a
-                href="#"
+                href="/download"
                 class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Download Lily
@@ -293,7 +293,7 @@ const Pricing = () => {
                 <span class="text-base font-medium text-gray-500">/year</span>
               </p>
               <a
-                href="#"
+                href="/download"
                 class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Purchase In-App
@@ -528,7 +528,7 @@ const Pricing = () => {
 
             <div class="border-t border-gray-200 px-4 pt-5">
               <a
-                href="#"
+                href="/download"
                 class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Purchase In-App
@@ -546,7 +546,7 @@ const Pricing = () => {
                 <span class="text-base font-medium text-gray-500">/year</span>
               </p>
               <a
-                href="#"
+                href="/download"
                 class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Purchase In-App
@@ -781,7 +781,7 @@ const Pricing = () => {
 
             <div class="border-t border-gray-200 px-4 pt-5">
               <a
-                href="#"
+                href="/download"
                 class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Purchase In-App
@@ -799,7 +799,7 @@ const Pricing = () => {
                 <span class="text-base font-medium text-gray-500">/year</span>
               </p>
               <a
-                href="#"
+                href="/download"
                 class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Purchase In-App
@@ -1034,7 +1034,7 @@ const Pricing = () => {
 
             <div class="border-t border-gray-200 px-4 pt-5">
               <a
-                href="#"
+                href="/download"
                 class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Purchase In-App
@@ -1107,7 +1107,7 @@ const Pricing = () => {
                       </p>
                     </div>
                     <a
-                      href="#"
+                      href="/download"
                       class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
                     >
                       Download Lily
@@ -1128,7 +1128,7 @@ const Pricing = () => {
                       </p>
                     </div>
                     <a
-                      href="#"
+                      href="/download"
                       class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
                     >
                       Purchase In-App
@@ -1149,7 +1149,7 @@ const Pricing = () => {
                       </p>
                     </div>
                     <a
-                      href="#"
+                      href="/download"
                       class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
                     >
                       Purchase In-App
@@ -1170,7 +1170,7 @@ const Pricing = () => {
                       </p>
                     </div>
                     <a
-                      href="#"
+                      href="/download"
                       class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
                     >
                       Purchase In-App
@@ -1726,7 +1726,7 @@ const Pricing = () => {
 
                 <td class="pt-5 px-6">
                   <a
-                    href="#"
+                    href="/download"
                     class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
                   >
                     Download Lily
@@ -1735,7 +1735,7 @@ const Pricing = () => {
 
                 <td class="pt-5 px-6">
                   <a
-                    href="#"
+                    href="/download"
                     class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
                   >
                     Purchase In-App
@@ -1744,7 +1744,7 @@ const Pricing = () => {
 
                 <td class="pt-5 px-6">
                   <a
-                    href="#"
+                    href="/download"
                     class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
                   >
                     Purchase In-App
@@ -1753,7 +1753,7 @@ const Pricing = () => {
 
                 <td class="pt-5 px-6">
                   <a
-                    href="#"
+                    href="/download"
                     class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
                   >
                     Purchase In-App
@@ -1841,7 +1841,7 @@ const Pricing = () => {
 
       <div class="bg-white">
         <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div class="bg-green-500 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+          <div class="bg-green-600 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
             <div class="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
               <div class="lg:self-center">
                 <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
@@ -1852,7 +1852,7 @@ const Pricing = () => {
                   bitcoin in under 10 minutes
                 </p>
                 <a
-                  href="https://docs.lily.kevinmulcrone.com/installation"
+                  href="/download"
                   class="mt-8 bg-white border border-transparent rounded-md shadow px-6 py-3 inline-flex items-center text-base font-medium text-green-600 hover:bg-indigo-50"
                 >
                   Download Lily

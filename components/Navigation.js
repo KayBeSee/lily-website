@@ -167,7 +167,7 @@ const Navigation = () => {
             </div>
           </div>
           <div className="hidden md:flex md:space-x-10">
-            <Link href="/#features">
+            <Link href="/features">
               <a
                 className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                 role="menuitem"
@@ -175,12 +175,13 @@ const Navigation = () => {
                 Features
               </a>
             </Link>
-            <Link href="/#security">
+            <Link href="https://calendly.com/lilywallet/setup-walkthrough">
               <a
+                target="_blank"
                 className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                 role="menuitem"
               >
-                Security
+                Request a Demo
               </a>
             </Link>
             <Link href="/pricing">
@@ -202,12 +203,11 @@ const Navigation = () => {
           </div>
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
             <span className="inline-flex rounded-md shadow">
-              <a
-                href="/#download"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-gray-50 active:text-green-700 transition duration-150 ease-in-out"
-              >
-                Download
-              </a>
+              <Link href="/download">
+                <a className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-gray-50 active:text-green-700 transition duration-150 ease-in-out">
+                  Download
+                </a>
+              </Link>
             </span>
           </div>
         </nav>
@@ -267,7 +267,7 @@ const Navigation = () => {
                 </div>
               </div>
               <div className="px-2 pt-2 pb-3">
-                <Link href="/#features">
+                <Link href="/features">
                   <a
                     className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                     role="menuitem"
@@ -275,27 +275,31 @@ const Navigation = () => {
                     Features
                   </a>
                 </Link>
-                <a
-                  href="/#security"
-                  className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Security
-                </a>
-                <a
-                  href="/pricing"
-                  className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Pricing
-                </a>
-                <a
-                  href="/support"
-                  className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Support
-                </a>
+                <Link href="https://calendly.com/lilywallet/setup-walkthrough">
+                  <a
+                    target="_blank"
+                    className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                    role="menuitem"
+                  >
+                    Request a Demo
+                  </a>
+                </Link>
+                <Link href="/pricing">
+                  <a
+                    className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                    role="menuitem"
+                  >
+                    Pricing
+                  </a>
+                </Link>
+                <Link href="/support">
+                  <a
+                    className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                    role="menuitem"
+                  >
+                    Support
+                  </a>
+                </Link>
               </div>
               <div>
                 <a

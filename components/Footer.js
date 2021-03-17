@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import EmailSubscribe from "./EmailSubscribe";
 
@@ -18,21 +19,19 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <a
-                      href="/"
-                      className="text-base text-white hover:text-green-200"
-                    >
-                      Lily Wallet
-                    </a>
+                    <Link href="/">
+                      <a className="text-base text-white hover:text-green-200">
+                        Lily Wallet
+                      </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href="/btc-security-guide"
-                      className="text-base text-white hover:text-green-200"
-                    >
-                      BTC Security Guide
-                    </a>
+                    <Link href="/btc-security-guide">
+                      <a className="text-base text-white hover:text-green-200">
+                        BTC Security Guide
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -42,29 +41,22 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <a
-                      href="https://docs.lily.kevinmulcrone.com"
-                      className="text-base text-white hover:text-green-200"
-                    >
-                      Documentation
-                    </a>
+                    <Link href="https://docs.lily.kevinmulcrone.com">
+                      <a
+                        target="_blank"
+                        className="text-base text-white hover:text-green-200"
+                      >
+                        Documentation
+                      </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href="./pricing"
-                      className="text-base text-white hover:text-green-200"
-                    >
-                      Pricing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="./support"
-                      className="text-base text-white hover:text-green-200"
-                    >
-                      Contact
-                    </a>
+                    <Link href="./pricing">
+                      <a className="text-base text-white hover:text-green-200">
+                        Pricing
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -76,21 +68,26 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <a
-                      href="./about"
-                      className="text-base text-white hover:text-green-200"
-                    >
-                      About
-                    </a>
+                    <Link href="./about">
+                      <a className="text-base text-white hover:text-green-200">
+                        About
+                      </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href="/press"
-                      className="text-base text-white hover:text-green-200"
-                    >
-                      Press
-                    </a>
+                    <Link href="/press">
+                      <a className="text-base text-white hover:text-green-200">
+                        Press
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="./support">
+                      <a className="text-base text-white hover:text-green-200">
+                        Contact
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -100,21 +97,19 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <a
-                      href="./privacy"
-                      className="text-base text-white hover:text-green-200"
-                    >
-                      Privacy
-                    </a>
+                    <Link href="./privacy">
+                      <a className="text-base text-white hover:text-green-200">
+                        Privacy
+                      </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href="./terms"
-                      className="text-base text-white hover:text-green-200"
-                    >
-                      Terms
-                    </a>
+                    <Link href="./terms">
+                      <a className="text-base text-white hover:text-green-200">
+                        Terms
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

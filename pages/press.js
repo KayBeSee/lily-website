@@ -6,11 +6,11 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
 
-const Terms = () => {
+const Press = () => {
   return (
     <div class="relative pt-6">
       <Head>
-        <title>Terms - Lily Wallet</title>
+        <title>Press - Lily Wallet</title>
         <HeaderStuff />
       </Head>
       <Navigation />
@@ -90,7 +90,7 @@ const Terms = () => {
                 <div class="rounded-md shadow">
                   <a
                     href="/support"
-                    class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-400 hover:bg-yellow-400"
+                    class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-500"
                   >
                     Contact us
                   </a>
@@ -98,7 +98,7 @@ const Terms = () => {
                 <div class="rounded-md shadow ml-4">
                   <a
                     href="/#download"
-                    class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-yellow-400 bg-white hover:bg-gray-50"
+                    class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-gray-50"
                   >
                     Try Lily Wallet
                   </a>
@@ -188,4 +188,4 @@ const Terms = () => {
   );
 };
 
-export default Terms;
+export default Press;
