@@ -128,86 +128,130 @@ const BTCSecurityGuide = () => {
                   BTC Security Guide
                 </span>
               </h1>
-              <p class="mt-8 text-xl text-gray-500 leading-8">
+              {/* <p class="mt-8 text-xl text-gray-500 leading-8">
                 Our mission is to make securing bitcoin safe and easy. We
                 believe that bitcoin is the best monetary network ever created.
                 Because of this belief, we build products and provide support
                 for normal people to make using bitcoin secure and easy.
-              </p>
+              </p> */}
               {/* </div> */}
               <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
                 <p>
-                  Our flagship product is Lily Wallet, an ultra secure bitcoin
-                  wallet that runs on your computer. Lily makes it easy to
-                  create and manage multisignature vaults, a type of bitcoin
-                  account that requires approvals from multiple devices in order
-                  to send coins to other people.
+                  There is a lot of information out there about Bitcoin security
+                  and how to properly secure your digitial wealth.
                 </p>
                 <p>
-                  Lily combines bitcoin standard practices with an easy to
-                  understand user interface to keep your bitcoin
-                  <strong>secure</strong> and <strong>accessable</strong>.
+                  While there is a lot of high quality content out there
+                  already, we felt compelled to put forth our own thinking as a
+                  security company in the space so that our customers and
+                  customers-to-be understand why we built Lily Wallet.
                 </p>
-                <p>At Lily, we focus on:</p>
-                <ul>
-                  <li>Security</li>
-                  <li>Privacy</li>
-                  <li>Usability</li>
-                </ul>
-                {/* <p>
-              Quis semper vulputate aliquam venenatis egestas sagittis quisque
-              orci. Donec commodo sit viverra aliquam porttitor ultrices gravida
-              eu. Tincidunt leo, elementum mattis elementum ut nisl, justo,
-              amet, mattis. Nunc purus, diam commodo tincidunt turpis. Amet,
-              duis sed elit interdum dignissim.
-            </p> */}
-                <h2>Made with our folks in mind</h2>
                 <p>
-                  Lily was designed to make securing bitcoin easy. We build
-                  products easy enough for our parents to use because parents
-                  are the litmus test for usability. If they can use bitcoin,
-                  then you can too.
+                  This guide is mostly inspired by Michael Flaxman's BTC
+                  Security Guide.
                 </p>
-                {/*<blockquote>
-              <p>
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
-              </p>
-            </blockquote>
-            <p>
-              Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
-              enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
-              praesent donec est. Odio penatibus risus viverra tellus varius sit
-              neque erat velit.
-            </p> */}
-                {/*<figure>
-              <img
-                class="w-full rounded-lg"
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3"
-                alt=""
-                width="1310"
-                height="873"
-              />
-              <figcaption>
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-              </figcaption>
-            </figure> */}
-                {/*<h2>Everything you need to get up and running</h2>
-            <p>
-              Purus morbi dignissim senectus mattis <a href="#">adipiscing</a>.
-              Amet, massa quam varius orci dapibus volutpat cras. In amet eu
-              ridiculus leo sodales cursus tristique. Tincidunt sed tempus ut
-              viverra ridiculus non molestie. Gravida quis fringilla amet eget
-              dui tempor dignissim. Facilisis auctor venenatis varius nunc,
-              congue erat ac. Cras fermentum convallis quam.
-            </p>
-            <p>
-              Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
-              enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
-              praesent donec est. Odio penatibus risus viverra tellus varius sit
-              neque erat velit.
-            </p> */}
+                <h2> Introduction: Keys are Key</h2>
+                <p>
+                  Bitcoins are secured by private keys. These keys are random
+                  strings of letters and numbers that, through cryptography,
+                  allow someone who knows them to send your coins to other
+                  people.
+                </p>
+                <p>Therefore it is important that:</p>
+                <ol>
+                  <li>You don't lose your private keys</li>
+                  <li>Others don't find your private keys</li>
+                </ol>
+                <p>
+                  If either of these two things happen, then your digital wealth
+                  can be lost or stolen.
+                </p>
+                <h2>The evolution of private keys</h2>
+                <p>
+                  In the early days of bitcoin, users would keep track of
+                  individual private keys that secured their coins. In 20XX,
+                  proposals to make private key management easier were proposed.
+                  One proposal was to use mnemonic phrases to represent the
+                  random strings of letters and numbers into more human readable
+                  (and correctable) forms. This reduced potential errors when
+                  backing up your keys.
+                </p>
+                <p>
+                  The other proposal introduced what is called heirarchically
+                  deterministic wallets. While it sounds intimidating, HD
+                  wallets are actually very simple. They allow a user to derive
+                  a number of different private keys from one master private
+                  key.
+                </p>
+                <p>
+                  With these two concepts standardized, companies like Trezor
+                  and Ledger started manufacturing devices that could be backed
+                  up using mnemonics and used the HD wallet derivation scheme to
+                  manage multiple addresses with them.
+                </p>
+                <p>
+                  This greatly improved the user experience and security of
+                  bitcoin. Now users could write down one sequence of 24 words
+                  that could be used to access and recover their funds. At the
+                  same time, these new devices known as hardware wallets meant
+                  that users could simple plug in a device to manage and approve
+                  their digital wealth.
+                </p>
+                <p>
+                  This meant that private keys now took on a physical form like
+                  real keys that people use to lock their cars or houses with.
+                </p>
+                <h2>How not to lose your private keys</h2>
+                <p>
+                  With the introduction of hardware wallets, not losing your
+                  private keys seems pretty trivial to solve. Just don't lose
+                  your hardware wallet! Put them in a locked cabinet in your
+                  house, engrave your seed phrase into a plate of steal and bury
+                  it in the back yard, put your hardware wallet in the safety
+                  deposit box at the bank.{" "}
+                </p>
+                <p>
+                  While these are all viable solutions, they are still open to
+                  failure. What if the house burns down? What if your kids get
+                  into the cabinet and spill water on them? What if the
+                  landscapers dig up the steal plate while planting the garden
+                  and haul it off to a landfill? What if you lose access to the
+                  safety deposit box?
+                </p>
+                <p>
+                  We admit, the odds of some of the situations we listed above
+                  are very unlikely. Almost unheard of in fact. But there is a
+                  more than 0% chance that they might happen, and if they do,
+                  your digital wealth is toast.
+                </p>
+                <p>
+                  We can mitigate the risk of losing our private keys by simply
+                  making copies and storing them in different places. If we lose
+                  track of our keys in one location, we can go to another spot
+                  where we stored them and still maintain control of our money.
+                </p>
+                <p>
+                  While this strategy diminishes the risk of losing our private
+                  keys, it increases the likelihood of others finding our
+                  private keys. Because of this, simply making multiple copies
+                  of your private keys is not a suggested strategy for securing
+                  your digital wealth.
+                </p>
+                <p>
+                  So how can we create a private key setup that allows us to
+                  have multiple copies of our keys while preventing someone from
+                  stealing our funds if they happen to stumble upon them?
+                </p>
+                <p>
+                  Over the past few years, the industry has been leaning towards
+                  using multisignature vaults to solve this problem.
+                </p>
+                <h2>What is multisig?</h2>
+                <p>
+                  Multisig combines different private keys together to create
+                  unique addresses that require signatures, or approvals, from
+                  multiple keys in order to send coins.
+                </p>
               </div>
             </div>
 
