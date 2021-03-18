@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import Head from "next/head";
 
@@ -41,12 +42,11 @@ const Pricing = () => {
                 <span class="text-4xl font-extrabold text-gray-900">$0</span>
                 <span class="text-base font-medium text-gray-500">/year</span>
               </p>
-              <a
-                href="/download"
-                class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Download Lily
-              </a>
+              <Link href="/download">
+                <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                  Download Lily
+                </a>
+              </Link>
             </div>
 
             <table class="mt-8 w-full">
@@ -276,12 +276,11 @@ const Pricing = () => {
             </table>
 
             <div class="border-t border-gray-200 px-4 pt-5">
-              <a
-                href="/download"
-                class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Download Lily
-              </a>
+              <Link href="/download">
+                <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                  Download Lily
+                </a>
+              </Link>
             </div>
           </div>
 
@@ -292,12 +291,11 @@ const Pricing = () => {
                 <span class="text-4xl font-extrabold text-gray-900">$100</span>
                 <span class="text-base font-medium text-gray-500">/year</span>
               </p>
-              <a
-                href="/download"
-                class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Purchase In-App
-              </a>
+              <Link href="/download">
+                <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                  Purchase In-App
+                </a>
+              </Link>
             </div>
 
             <table class="mt-8 w-full">
@@ -527,12 +525,11 @@ const Pricing = () => {
             </table>
 
             <div class="border-t border-gray-200 px-4 pt-5">
-              <a
-                href="/download"
-                class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Purchase In-App
-              </a>
+              <Link href="/download">
+                <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                  Purchase In-App
+                </a>
+              </Link>
             </div>
           </div>
 
@@ -545,12 +542,11 @@ const Pricing = () => {
                 <span class="text-4xl font-extrabold text-gray-900">$500</span>
                 <span class="text-base font-medium text-gray-500">/year</span>
               </p>
-              <a
-                href="/download"
-                class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Purchase In-App
-              </a>
+              <Link href="/download">
+                <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                  Purchase In-App
+                </a>
+              </Link>
             </div>
 
             <table class="mt-8 w-full">
@@ -780,12 +776,11 @@ const Pricing = () => {
             </table>
 
             <div class="border-t border-gray-200 px-4 pt-5">
-              <a
-                href="/download"
-                class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Purchase In-App
-              </a>
+              <Link href="/download">
+                <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                  Purchase In-App
+                </a>
+              </Link>
             </div>
           </div>
 
@@ -798,12 +793,11 @@ const Pricing = () => {
                 <span class="text-4xl font-extrabold text-gray-900">$1000</span>
                 <span class="text-base font-medium text-gray-500">/year</span>
               </p>
-              <a
-                href="/download"
-                class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Purchase In-App
-              </a>
+              <Link href="/download">
+                <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                  Purchase In-App
+                </a>
+              </Link>
             </div>
 
             <table class="mt-8 w-full">
@@ -1033,12 +1027,11 @@ const Pricing = () => {
             </table>
 
             <div class="border-t border-gray-200 px-4 pt-5">
-              <a
-                href="/download"
-                class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Purchase In-App
-              </a>
+              <Link href="/download">
+                <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                  Purchase In-App
+                </a>
+              </Link>
             </div>
           </div>
         </div>

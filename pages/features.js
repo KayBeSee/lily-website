@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
@@ -430,12 +431,11 @@ const Features = () => {
           </h2>
           <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div class="inline-flex rounded-md shadow">
-              <a
-                href="/download"
-                class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
-              >
-                Download Lily
-              </a>
+              <Link href="/download">
+                <a class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
+                  Download Lily
+                </a>
+              </Link>
             </div>
             <div class="ml-3 inline-flex rounded-md shadow">
               <a

@@ -5,7 +5,7 @@ import EmailSubscribe from "./EmailSubscribe";
 
 const Footer = () => {
   return (
-    <footer className="bg-green-600" aria-labelledby="footerHeading">
+    <footer className="bg-green-700" aria-labelledby="footerHeading">
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
@@ -117,7 +117,7 @@ const Footer = () => {
           </div>
           <EmailSubscribe />
         </div>
-        <div className="mt-8 border-t border-green-700 pt-8 md:flex md:items-center md:justify-between">
+        <div className="mt-8 border-t border-green-800 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             <a
               target="_blank"

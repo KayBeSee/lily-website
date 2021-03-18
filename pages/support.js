@@ -16,34 +16,48 @@ const Support = () => {
       <Navigation />
 
       <div class="bg-gray-100">
-        <div class="mt-28 max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-          <div class="text-center">
-            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              <span class="block mr-3 xl:inline">We are here</span>
-              <span class="block text-green-600 xl:inline">to help you.</span>
-            </h1>
-            <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              Do you have questions? Drop us a line and we'll get you on the
-              right track.
-            </p>
-            <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-              <div class="rounded-md shadow">
-                <a
-                  href="https://docs.lily.kevinmulcrone.com/"
-                  target="_blank"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
-                >
-                  Read the Docs
-                </a>
+        <div class="relative">
+          <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
+          <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 md:py-8">
+            <div class="relative shadow-xl rounded-2xl sm:overflow-hidden">
+              <div class="absolute inset-0">
+                <img
+                  class="h-full w-full object-cover"
+                  src="https://live.staticflickr.com/65535/50197334191_319fb3751f_h.jpg"
+                  alt="People working on laptops"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-green-800 to-green-700"
+                  style={{ mixBlendMode: "multiply" }}
+                ></div>
               </div>
-              <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a
-                  target="_blank"
-                  href="https://calendly.com/lilywallet/setup-walkthrough"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
-                >
-                  Talk to Us
-                </a>
+              <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+                <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                  <span class="block text-white">We are here</span>
+                  <span class="block text-green-200"> to help you</span>
+                </h1>
+                <p class="mt-6 max-w-lg mx-auto text-center text-xl text-green-200 sm:max-w-3xl">
+                  Don't be scrambling to secure your digital wealth. Get started
+                  with Lily today and secure your bitcoins for generations.
+                </p>
+                <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+                  <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+                    <a
+                      href="https://docs.lily.kevinmulcrone.com/"
+                      target="_blank"
+                      class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-green-700 bg-white hover:bg-green-50 sm:px-8"
+                    >
+                      Read the docs
+                    </a>
+                    <a
+                      href="https://calendly.com/lilywallet/setup-walkthrough"
+                      target="_blank"
+                      class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                    >
+                      Talk to a specialist
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -277,10 +291,10 @@ const Support = () => {
                 >
                   <div>
                     <label
-                      for="first_name"
+                      htmlFor="first_name"
                       class="block text-sm font-medium text-gray-900"
                     >
-                      First name
+                      Name
                     </label>
                     <div class="mt-1">
                       <input
@@ -294,24 +308,7 @@ const Support = () => {
                   </div>
                   <div>
                     <label
-                      for="last_name"
-                      class="block text-sm font-medium text-gray-900"
-                    >
-                      Last name
-                    </label>
-                    <div class="mt-1">
-                      <input
-                        type="text"
-                        name="last_name"
-                        id="last_name"
-                        autocomplete="family-name"
-                        class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      for="email"
+                      htmlFor="email"
                       class="block text-sm font-medium text-gray-900"
                     >
                       Email
@@ -326,49 +323,10 @@ const Support = () => {
                       />
                     </div>
                   </div>
-                  <div>
-                    <div class="flex justify-between">
-                      <label
-                        for="phone"
-                        class="block text-sm font-medium text-gray-900"
-                      >
-                        Phone
-                      </label>
-                      <span id="phone-optional" class="text-sm text-gray-500">
-                        Optional
-                      </span>
-                    </div>
-                    <div class="mt-1">
-                      <input
-                        type="text"
-                        name="phone"
-                        id="phone"
-                        autocomplete="tel"
-                        class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
-                        aria-describedby="phone-optional"
-                      />
-                    </div>
-                  </div>
-                  <div class="sm:col-span-2">
-                    <label
-                      for="subject"
-                      class="block text-sm font-medium text-gray-900"
-                    >
-                      Subject
-                    </label>
-                    <div class="mt-1">
-                      <input
-                        type="text"
-                        name="subject"
-                        id="subject"
-                        class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
-                      />
-                    </div>
-                  </div>
                   <div class="sm:col-span-2">
                     <div class="flex justify-between">
                       <label
-                        for="message"
+                        htmlFor="message"
                         class="block text-sm font-medium text-gray-900"
                       >
                         Message

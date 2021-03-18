@@ -9,7 +9,7 @@ import HeaderStuff from "../components/HeaderStuff";
 const Download = () => {
   return (
     <>
-      <div class="relative pt-6 pb-6 lg:pb-20">
+      <div class="relative pt-6 ">
         <Head>
           <title>Download - Lily Wallet</title>
           <HeaderStuff />
@@ -17,59 +17,19 @@ const Download = () => {
         <Navigation />
       </div>
 
-      <div class="relative">
-        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-          <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
-            <div class="absolute inset-0">
-              <img
-                class="h-full w-full object-cover"
-                src="https://live.staticflickr.com/65535/50197334191_319fb3751f_h.jpg"
-                alt="People working on laptops"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-green-800 to-green-700"
-                style={{ mixBlendMode: "multiply" }}
-              ></div>
-            </div>
-            <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-              <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                <span class="block text-white">Start securing your</span>
-                <span class="block text-green-200"> bitcoin today</span>
-              </h1>
-              <p class="mt-6 max-w-lg mx-auto text-center text-xl text-green-200 sm:max-w-3xl">
-                Don't be scrambling to secure your digital wealth. Get started
-                with Lily today and secure your bitcoins for generations.
-              </p>
-              <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-                <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                  <a
-                    href="https://docs.lily.kevinmulcrone.com/"
-                    target="_blank"
-                    class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-green-700 bg-white hover:bg-green-50 sm:px-8"
-                  >
-                    Read the docs
-                  </a>
-                  <a
-                    href="https://calendly.com/lilywallet/setup-walkthrough"
-                    target="_blank"
-                    class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
-                  >
-                    Talk to a specialist
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-gray-100">
+      <div className="bg-white">
         <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8">
+          <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 mb-8 sm:text-5xl sm:leading-none md:text-6xl">
+            Download Lily
+            <br />
+            <span class="text-green-600">
+              and start securing your bitcoin today
+            </span>
+          </h2>
           <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
             <a
               href="https://github.com/KayBeSee/lily-wallet/releases/download/v1.1-rc-1/Lily.Wallet.Setup.1.0.2.exe"
-              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md sm:rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
+              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
             >
               <div>
                 <img
@@ -87,7 +47,7 @@ const Download = () => {
             </a>
             <a
               href="https://github.com/KayBeSee/lily-wallet/releases/download/v1.1-rc-1/Lily.Wallet-1.0.2.AppImage"
-              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md sm:rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
+              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
             >
               <div>
                 <img className="max-h-12" src="./linux-logo.png" alt="Mirage" />
@@ -101,7 +61,7 @@ const Download = () => {
             </a>
             <a
               href="https://github.com/KayBeSee/lily-wallet/releases/download/v1.1-rc-1/Lily.Wallet-1.0.2.dmg"
-              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md sm:rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
+              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
             >
               <div>
                 <img className=" max-h-12" src="./apple-logo.png" alt="Tuple" />
@@ -117,7 +77,7 @@ const Download = () => {
         </div>
       </div>
 
-      <div className="bg-gray-100">
+      <div className="bg-white">
         <div className="pt-12 sm:pt-16 lg:pt-20">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -131,9 +91,9 @@ const Download = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 bg-white pb-16 sm:mt-12 sm:pb-20 lg:pb-28">
+        <div className="mt-8 bg-gray-50 pb-16 sm:mt-12 sm:pb-20 lg:pb-28">
           <div className="relative">
-            <div className="absolute inset-0 h-1/2 bg-gray-100"></div>
+            <div className="absolute inset-0 h-1/2 bg-white"></div>
             <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
                 <div className="bg-white px-6 py-8 lg:flex-shrink-1 lg:p-12">
@@ -273,7 +233,7 @@ const Download = () => {
         </div>
       </div>
 
-      <div className="bg-white">
+      <div className="bg-gray-50">
         <div className="max-w-screen-xl mx-auto pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:pt-20 lg:pb-28 lg:px-8">
           <h2 className="text-3xl leading-9 font-extrabold text-gray-900">
             Frequently asked questions
