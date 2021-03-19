@@ -162,12 +162,12 @@ const About = () => {
               amet, mattis. Nunc purus, diam commodo tincidunt turpis. Amet,
               duis sed elit interdum dignissim.
             </p> */}
-                <h2>Made with our folks in mind</h2>
+                <h2>Made for normal folks</h2>
                 <p>
                   Lily was designed to make securing bitcoin easy. We build
-                  products easy enough for our parents to use because parents
-                  are the litmus test for usability. If they can use bitcoin,
-                  then you can too.
+                  products for everyday users to use and provide expert support
+                  for when they get stuck. We think this approach will help get
+                  the next million bitcoin users online.
                 </p>
                 {/*<blockquote>
               <p>
@@ -220,10 +220,10 @@ const About = () => {
                       About Us
                     </h2>
                     <p class="text-xl text-gray-500">
-                      Lily was started in March 2020 because its developers were
+                      Lily was started in March 2020 because its founder was
                       frustrated by how complex multisignature wallets for
-                      Bitcoin were. They set out to make a wallet their parents
-                      could use.
+                      Bitcoin were. The company set out to create a secure
+                      multisignature wallet that anyone could use.
                     </p>
                   </div>
                   <div class="lg:col-span-2">

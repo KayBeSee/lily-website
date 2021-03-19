@@ -278,6 +278,7 @@ const BTCSecurityGuide = () => {
                   unique addresses that require multiple signatures, or
                   approvals, in order to send coins.{" "}
                 </p>
+                <p>Work in progress...</p>
               </div>
             </div>
           </div>
