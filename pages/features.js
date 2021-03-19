@@ -124,8 +124,8 @@ const Features = () => {
                         Distribute security
                       </h5>
                       <p className="mt-2 text-base leading-6 text-gray-500">
-                        Keys can be stored in various locations to protect
-                        against theft, loss, or natural disaster.
+                        Store keys in various locations to protect against
+                        theft, loss, or natural disaster.
                       </p>
                     </div>
                   </div>

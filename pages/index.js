@@ -3,6 +3,7 @@ import Head from "next/head";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
+import DownloadButtons from "../components/DownloadButtons";
 
 export default function Home() {
   return (
@@ -264,8 +265,8 @@ export default function Home() {
                         Distribute security
                       </h5>
                       <p className="mt-2 text-base leading-6 text-gray-500">
-                        Keys can be stored in various locations to protect
-                        against theft, loss, or natural disaster.
+                        Store keys in various locations to protect against
+                        theft, loss, or natural disaster.
                       </p>
                     </div>
                   </div>
@@ -569,54 +570,7 @@ export default function Home() {
           <p className="mb-8 text-lg leading-8 font-medium tracking-tight text-gray-100 sm:text-lg sm:leading-10">
             and start securing your bitcoin today
           </p>
-          <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
-            <a
-              href="https://github.com/KayBeSee/lily-wallet/releases/download/v1.1-rc-1/Lily.Wallet.Setup.1.0.2.exe"
-              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md sm:rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
-            >
-              <div>
-                <img
-                  className="max-h-12"
-                  src="./windows-logo.png"
-                  alt="Workcation"
-                />
-              </div>
-              <div className="flex flex-col mt-4 items-center justify-center">
-                <span>Windows</span>
-                <span className="text-gray-500 text-xs">
-                  Lily.Wallet.Setup.1.0.2.exe
-                </span>
-              </div>
-            </a>
-            <a
-              href="https://github.com/KayBeSee/lily-wallet/releases/download/v1.1-rc-1/Lily.Wallet-1.0.2.AppImage"
-              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md sm:rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
-            >
-              <div>
-                <img className="max-h-12" src="./linux-logo.png" alt="Mirage" />
-              </div>
-              <div className="flex flex-col mt-4 items-center justify-center">
-                <span>Linux</span>
-                <span className="text-gray-500 text-xs">
-                  Lily.Wallet-1.0.2.AppImage
-                </span>
-              </div>
-            </a>
-            <a
-              href="https://github.com/KayBeSee/lily-wallet/releases/download/v1.1-rc-1/Lily.Wallet-1.0.2.dmg"
-              className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 flex-col items-center mx-4 my-4 shadow-md sm:rounded-2xl hover:-translate-y-1 transform duration-500 ease-in-out"
-            >
-              <div>
-                <img className=" max-h-12" src="./apple-logo.png" alt="Tuple" />
-              </div>
-              <div className="flex flex-col mt-4 items-center justify-center">
-                <span>Mac</span>
-                <span className="text-gray-500 text-xs">
-                  Lily.Wallet-1.0.2.dmg
-                </span>
-              </div>
-            </a>
-          </div>
+          <DownloadButtons />
         </div>
       </div>
 

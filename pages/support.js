@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Head from "next/head";
 
@@ -7,6 +7,28 @@ import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
 
 const Support = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    console.log("name, email, message: ", name, email, message);
+    try {
+      // submit to zendesk
+      // TODO
+      setSuccess(true);
+    } catch (e) {
+      // set error
+      setError(e.message);
+    }
+    setIsLoading(false);
+  };
+
   return (
     <div class="relative pt-6 bg-gray-100">
       <Head>
@@ -285,13 +307,12 @@ const Support = () => {
                   Send us a message
                 </h3>
                 <form
-                  action="#"
-                  method="POST"
+                  onSubmit={submitForm}
                   class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
                 >
                   <div>
                     <label
-                      htmlFor="first_name"
+                      htmlFor="name"
                       class="block text-sm font-medium text-gray-900"
                     >
                       Name
@@ -299,10 +320,13 @@ const Support = () => {
                     <div class="mt-1">
                       <input
                         type="text"
-                        name="first_name"
-                        id="first_name"
+                        name="name"
+                        id="name"
                         autocomplete="given-name"
-                        class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                        disabled={isLoading || success}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md disabled:opacity-50"
                       />
                     </div>
                   </div>
@@ -319,7 +343,10 @@ const Support = () => {
                         name="email"
                         type="email"
                         autocomplete="email"
-                        class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                        disabled={isLoading || success}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md disabled:opacity-50"
                       />
                     </div>
                   </div>
@@ -331,16 +358,16 @@ const Support = () => {
                       >
                         Message
                       </label>
-                      <span id="message-max" class="text-sm text-gray-500">
-                        Max. 500 characters
-                      </span>
                     </div>
                     <div class="mt-1">
                       <textarea
                         id="message"
                         name="message"
                         rows="4"
-                        class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                        disabled={isLoading || success}
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md disabled:opacity-50"
                         aria-describedby="message-max"
                       ></textarea>
                     </div>
@@ -348,9 +375,16 @@ const Support = () => {
                   <div class="sm:col-span-2 sm:flex sm:justify-end">
                     <button
                       type="submit"
-                      class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:w-auto"
+                      disabled={isLoading || success}
+                      class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:w-auto disabled:opacity-50"
                     >
-                      Submit
+                      {isLoading
+                        ? "Sending..."
+                        : error
+                        ? "Oops, error. Try again."
+                        : success
+                        ? "Sent!"
+                        : "Send message"}
                     </button>
                   </div>
                 </form>

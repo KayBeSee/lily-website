@@ -303,11 +303,11 @@ const Navigation = () => {
               </div>
               <div>
                 <a
-                  href="#"
+                  href="/download"
                   className="rounded-md block w-full px-5 py-3 text-center font-medium text-white bg-green-700 hover:bg-gray-100 hover:text-yellow-700 focus:outline-none focus:bg-gray-100 focus:text-yellow-700 transition duration-150 ease-in-out"
                   role="menuitem"
                 >
-                  Email Link to Download on Desktop
+                  Download
                 </a>
               </div>
             </div>
