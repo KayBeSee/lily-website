@@ -4,6 +4,45 @@ import Link from "next/link";
 import EmailSubscribe from "./EmailSubscribe";
 
 const Footer = () => {
+  useEffect(() => {
+    zE("webWidget:on", "chat:status", function (status) {
+      zE("webWidget", "updateSettings", {
+        webWidget: {
+          chat: {
+            suppress: !!!(status === "online"),
+          },
+        },
+      });
+    });
+  }, []);
+
+  useEffect(() => {
+    window.zESettings = {
+      webWidget: {
+        launcher: {
+          chatLabel: {
+            "*": "Live support available now",
+          },
+        },
+        chat: {
+          suppress: true,
+        },
+        contactForm: {
+          suppress: true,
+        },
+        helpCenter: {
+          suppress: true,
+        },
+        talk: {
+          suppress: true,
+        },
+        answerBot: {
+          suppress: true,
+        },
+      },
+    };
+  }, []);
+
   return (
     <footer className="bg-green-700" aria-labelledby="footerHeading">
       <h2 id="footerHeading" className="sr-only">
