@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 import Head from "next/head";
 
@@ -7,6 +8,8 @@ import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
 
 const Support = () => {
+  console.log("envs: ", process.env);
+  console.log("envsxx: ", process.env.NEXT_PUBLIC_ZENDESK_REMOTE_URI);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -14,15 +17,39 @@ const Support = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
-  const submitForm = (e) => {
+  const submitForm = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     console.log("name, email, message: ", name, email, message);
+    console.log("process.env: ", process.env);
     try {
+      const resp = await axios.post(
+        `${process.env.NEXT_PUBLIC_ZENDESK_REMOTE_URI}/tickets`,
+        {
+          data: {
+            ticket: {
+              subject: "New ticket",
+              comment: {
+                body: message,
+              },
+            },
+            requester: {
+              name,
+              email,
+            },
+          },
+          header: {
+            user: `${process.env.NEXT_PUBLIC_ZENDESK_USERNAME}:${process.env.NEXT_PUBLIC_ZENDESK_TOKEN}`,
+          },
+        }
+      );
+      console.log("resp: ", resp);
+
       // submit to zendesk
       // TODO
       setSuccess(true);
     } catch (e) {
+      console.log("zendesk e: ", e);
       // set error
       setError(e.message);
     }
@@ -307,7 +334,7 @@ const Support = () => {
                   Send us a message
                 </h3>
                 <form
-                  onSubmit={submitForm}
+                  onSubmit={(e) => submitForm(e)}
                   class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
                 >
                   <div>
