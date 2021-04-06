@@ -8,8 +8,6 @@ import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
 
 const Support = () => {
-  console.log("envs: ", process.env);
-  console.log("envsxx: ", process.env.NEXT_PUBLIC_ZENDESK_REMOTE_URI);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -20,37 +18,22 @@ const Support = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    console.log("name, email, message: ", name, email, message);
-    console.log("process.env: ", process.env);
     try {
-      const resp = await axios.post(
-        `${process.env.NEXT_PUBLIC_ZENDESK_REMOTE_URI}/tickets`,
-        {
-          data: {
-            ticket: {
-              subject: "New ticket",
-              comment: {
-                body: message,
-              },
-            },
-            requester: {
-              name,
-              email,
-            },
+      const resp = await axios.post("/api/zendesk", {
+        ticket: {
+          subject: "New ticket",
+          comment: {
+            body: message,
           },
-          header: {
-            user: `${process.env.NEXT_PUBLIC_ZENDESK_USERNAME}:${process.env.NEXT_PUBLIC_ZENDESK_TOKEN}`,
-          },
-        }
-      );
-      console.log("resp: ", resp);
-
-      // submit to zendesk
-      // TODO
+        },
+        requester: {
+          name,
+          email,
+        },
+      });
       setSuccess(true);
     } catch (e) {
       console.log("zendesk e: ", e);
-      // set error
       setError(e.message);
     }
     setIsLoading(false);
@@ -420,7 +403,6 @@ const Support = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );

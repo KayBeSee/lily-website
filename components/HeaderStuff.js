@@ -31,6 +31,13 @@ const HeaderStuff = () => {
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
+
+      {/* <!-- Start of lilytechnologies Zendesk Widget script --> */}
+      <script
+        id="ze-snippet"
+        src="https://static.zdassets.com/ekr/snippet.js?key=9d9c46da-893e-4ae0-a17a-37c9f160ba54"
+      ></script>
+      {/* <!-- End of lilytechnologies Zendesk Widget script --> */}
     </>
   );
 };
