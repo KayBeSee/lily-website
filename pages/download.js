@@ -1,6 +1,7 @@
 import React from "react";
 
 import Head from "next/head";
+import Link from "next/link";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
@@ -171,13 +172,11 @@ const Download = () => {
 
                   <div className="mt-6">
                     <div className="rounded-md shadow">
-                      <a
-                        href="https://calendly.com/lilywallet/setup-walkthrough"
-                        target="_blank"
-                        className="flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
-                      >
-                        Schedule Appointment
-                      </a>
+                      <Link href="/schedule-demo">
+                        <a className="flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                          Schedule Appointment
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

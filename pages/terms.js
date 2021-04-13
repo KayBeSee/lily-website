@@ -8,15 +8,15 @@ import HeaderStuff from "../components/HeaderStuff";
 
 const Terms = () => {
   return (
-    <div class="relative pt-6">
+    <div class="flex flex-col relative pt-6 bg-gray-50 min-h-screen">
       <Head>
         <title>Terms - Lily Wallet</title>
         <HeaderStuff />
       </Head>
       <Navigation />
 
-      <div class="bg-white">
-        <div class="relative">
+      <div class="bg-white flex-grow">
+        <div class="relative flex-grow">
           <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
           <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 md:py-8">
             <div class="relative shadow-xl rounded-2xl sm:overflow-hidden">

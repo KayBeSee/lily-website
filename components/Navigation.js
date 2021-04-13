@@ -115,7 +115,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Fragment>
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 mb-8">
+      <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 mb-8">
         <nav className="relative flex items-center justify-between sm:h-10 md:justify-center">
           <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
             <div className="flex items-center justify-between w-full md:w-auto">
@@ -175,13 +175,12 @@ const Navigation = () => {
                 Features
               </a>
             </Link>
-            <Link href="https://calendly.com/lilywallet/setup-walkthrough">
+            <Link href="/schedule-demo">
               <a
-                target="_blank"
                 className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                 role="menuitem"
               >
-                Request a Demo
+                Schedule a Demo
               </a>
             </Link>
             <Link href="/pricing">

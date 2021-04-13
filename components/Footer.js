@@ -80,7 +80,7 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <Link href="https://docs.lily.kevinmulcrone.com">
+                    <Link href="https://docs.lily-wallet.com">
                       <a
                         target="_blank"
                         className="text-base text-white hover:text-green-200"
