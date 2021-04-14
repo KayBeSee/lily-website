@@ -176,7 +176,7 @@ const Footer = () => {
 
             <a
               target="_blank"
-              href="https://github.com/kaybesee/lily-wallet"
+              href="https://github.com/Lily-Technologies/lily-wallet"
               className="text-white hover:text-green-100"
             >
               <span className="sr-only">GitHub</span>

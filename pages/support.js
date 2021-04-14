@@ -87,8 +87,7 @@ const Support = () => {
                       Read the docs
                     </a>
                     <a
-                      href="https://calendly.com/lilywallet/setup-walkthrough"
-                      target="_blank"
+                      href="/schedule-demo"
                       class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                     >
                       Talk to a specialist
@@ -272,7 +271,7 @@ const Support = () => {
                     <a
                       class="text-green-200 hover:text-green-100"
                       target="_blank"
-                      href="https://github.com/kaybesee/lily-wallet"
+                      href="https://github.com/Lily-Technologies/lily-wallet"
                     >
                       <span class="sr-only">GitHub</span>
                       <svg
