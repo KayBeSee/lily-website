@@ -335,7 +335,7 @@ const BTCSecurityGuide = () => {
                 <figure>
                   <img
                     className="w-full rounded-lg"
-                    src="/btc-security-guide/single-sig.svg"
+                    src="/btc-security-guide/single-sig.png"
                   />
                   <figcaption className="flex">
                     <svg
@@ -400,7 +400,7 @@ const BTCSecurityGuide = () => {
                 <figure>
                   <img
                     className="w-full"
-                    src="/btc-security-guide/multisig.svg"
+                    src="/btc-security-guide/multisig.png"
                   />
                   <figcaption className="flex">
                     <svg
@@ -585,7 +585,7 @@ const BTCSecurityGuide = () => {
 
                 <p className="italic">
                   <span className="font-black text-gray-900 mr-1">
-                    Responsible disclosure:
+                    Disclaimer:
                   </span>{" "}
                   The information in this guide is for educational purposes only
                   and is not financial advice. Please read Lily Technologies{" "}
