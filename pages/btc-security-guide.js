@@ -332,6 +332,31 @@ const BTCSecurityGuide = () => {
                   Over the past few years, the industry has started shifting
                   towards using multisignature vaults to solve this problem.
                 </p>
+                <figure>
+                  <img
+                    className="w-full rounded-lg"
+                    src="/btc-security-guide/single-sig.svg"
+                  />
+                  <figcaption className="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    In a single signature setup, funds cannot be accessed if the
+                    private key is lost or stolen.
+                  </figcaption>
+                </figure>
+
                 <h2>What is multisig?</h2>
                 <p>
                   Multisig combines different private keys together to create
@@ -371,6 +396,31 @@ const BTCSecurityGuide = () => {
                   with the same resilliency as our vault before we lost one of
                   our keys.
                 </p>
+
+                <figure>
+                  <img
+                    className="w-full"
+                    src="/btc-security-guide/multisig.svg"
+                  />
+                  <figcaption className="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    A multisignature setup provides resilliency by allowing
+                    funds to be moved even if a private key is lost or stolen.
+                  </figcaption>
+                </figure>
 
                 <h2>Other single points of failure to consider</h2>
                 <p>
@@ -451,6 +501,12 @@ const BTCSecurityGuide = () => {
                   likely be a failed project.
                 </p>
 
+                <img
+                  className="relative"
+                  src="./screenshots/account.png"
+                  alt="Lily Wallet screenshot"
+                />
+
                 <h2>Next steps</h2>
                 <p>
                   We have outlined our thinking about bitcoin security above and
@@ -489,23 +545,19 @@ const BTCSecurityGuide = () => {
                 <h4>3) Setup a multisig vault with Lily Wallet</h4>
                 <p>
                   Once you have recieved your hardware wallets, setup a
-                  multisignature vault with Lily Wallet.
-                </p>
-
-                <p>
-                  We have detailed instructions with images on how to setup Lily
-                  Wallet in our{" "}
+                  multisignature vault with Lily Wallet. We have detailed
+                  instructions with images on how to setup Lily Wallet in our{" "}
                   <a
                     href="https://docs.lily-wallet.com/get-started/part-1"
                     target="_blank"
                   >
                     get started guide
                   </a>
-                  .
+                  .{" "}
                 </p>
 
                 <p>
-                  If you run into any problems or want an expeprt to assist you
+                  If you run into any problems or want an expert to assist you
                   while setting it up,{" "}
                   <Link href="/schedule-demo">
                     <a>schedule an an appointment</a>
@@ -535,9 +587,8 @@ const BTCSecurityGuide = () => {
                   <span className="font-black text-gray-900 mr-1">
                     Responsible disclosure:
                   </span>{" "}
-                  The information in this guide is for educational pursposes
-                  only and is not financial advice. Please read Lily
-                  Technologies{" "}
+                  The information in this guide is for educational purposes only
+                  and is not financial advice. Please read Lily Technologies{" "}
                   <Link href="/terms">
                     <a>terms and conditions</a>
                   </Link>
