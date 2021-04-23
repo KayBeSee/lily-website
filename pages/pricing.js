@@ -1801,10 +1801,9 @@ const Pricing = () => {
                   Can I purchase a license using a credit card?
                 </dt>
                 <dd class="text-base text-gray-500">
-                  We prefer receiving payment in Bitcoin because it's
-                  irreversable and gives our customers an opprotunity to send
-                  money using Lily. However, we will accept fiat if you email
-                  KayBeSee@gmail.com.
+                  No, we only accept Bitcoin as payment because it's
+                  irreversable and gives our customers an opprotunity to get
+                  comfortable sending money using Lily Wallet.
                 </dd>
               </div>
               <div class="space-y-2">
