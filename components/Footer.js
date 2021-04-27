@@ -68,7 +68,7 @@ const Footer = () => {
                   <li>
                     <Link href="/btc-security-guide">
                       <a className="text-base text-white hover:text-green-200">
-                        BTC Security Guide
+                        Security Guide
                       </a>
                     </Link>
                   </li>
