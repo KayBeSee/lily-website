@@ -37,6 +37,8 @@ const RequestDemo = () => {
             }}
             pageSettings={{
               hideEventTypeDetails: false,
+              hideLandingPageDetails: true,
+              primaryColor: "059669",
             }}
           />
         </div>
