@@ -76,7 +76,7 @@ const Features = () => (
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h5 className="text-lg leading-6 font-medium text-gray-900">
+                  <h5 className="text-lg leading-6 font-semibold text-gray-900">
                     Eliminate single points of failure
                   </h5>
                   <p className="mt-2 text-base leading-6 text-gray-500">
@@ -107,7 +107,7 @@ const Features = () => (
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h5 className="text-lg leading-6 font-medium text-gray-900">
+                  <h5 className="text-lg leading-6 font-semibold text-gray-900">
                     Distribute security
                   </h5>
                   <p className="mt-2 text-base leading-6 text-gray-500">
@@ -138,12 +138,12 @@ const Features = () => (
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h5 className="text-lg leading-6 font-medium text-gray-900">
+                  <h5 className="text-lg leading-6 font-semibold text-gray-900">
                     Simple recovery
                   </h5>
                   <p className="mt-2 text-base leading-6 text-gray-500">
-                    Lily uses industry-standard BIP-32 paths to make it straight
-                    forward to recover wallets in other software.
+                    Lily uses industry-standard derivation paths to make it easy
+                    to recover wallets in other software.
                   </p>
                 </div>
               </div>
@@ -259,7 +259,7 @@ const Features = () => (
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h5 className="text-lg leading-6 font-medium text-gray-900">
+                    <h5 className="text-lg leading-6 font-semibold text-gray-900">
                       Accountless
                     </h5>
                     <p className="mt-2 text-base leading-6 text-gray-500">
@@ -291,7 +291,7 @@ const Features = () => (
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h5 className="text-lg leading-6 font-medium text-gray-900">
+                    <h5 className="text-lg leading-6 font-semibold text-gray-900">
                       Stateless
                     </h5>
                     <p className="mt-2 text-base leading-6 text-gray-500">
@@ -323,7 +323,7 @@ const Features = () => (
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h5 className="text-lg leading-6 font-medium text-gray-900">
+                    <h5 className="text-lg leading-6 font-semibold text-gray-900">
                       Interoperable
                     </h5>
                     <p className="mt-2 text-base leading-6 text-gray-500">
@@ -354,7 +354,7 @@ const Features = () => (
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h5 className="text-lg leading-6 font-medium text-gray-900">
+                    <h5 className="text-lg leading-6 font-semibold text-gray-900">
                       Open Source
                     </h5>
                     <p className="mt-2 text-base leading-6 text-gray-500">

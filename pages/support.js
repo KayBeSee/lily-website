@@ -53,48 +53,16 @@ const Support = () => {
       <Navigation />
 
       <div class="bg-gray-100">
-        <div class="relative">
-          <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
-          <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 md:py-8">
-            <div class="relative shadow-xl rounded-2xl sm:overflow-hidden">
-              <div class="absolute inset-0">
-                <img
-                  class="h-full w-full object-cover"
-                  src="https://live.staticflickr.com/65535/50197334191_319fb3751f_h.jpg"
-                  alt="People working on laptops"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-green-800 to-green-700"
-                  style={{ mixBlendMode: "multiply" }}
-                ></div>
-              </div>
-              <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                  <span class="block text-white">We are here</span>
-                  <span class="block text-green-200"> to help you</span>
-                </h1>
-                <p class="mt-6 max-w-lg mx-auto text-center text-xl text-green-200 sm:max-w-3xl">
-                  Don't be scrambling to secure your digital wealth. Get started
-                  with Lily today and secure your bitcoins for generations.
-                </p>
-                <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-                  <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                    <a
-                      href="https://docs.lily-wallet.com/"
-                      target="_blank"
-                      class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-green-700 bg-white hover:bg-green-50 sm:px-8"
-                    >
-                      Read the docs
-                    </a>
-                    <a
-                      href="/schedule-demo"
-                      class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
-                    >
-                      Talk to a specialist
-                    </a>
-                  </div>
-                </div>
-              </div>
+        <div className="bg-warm-gray-50">
+          <div className="py-24 lg:py-32">
+            <div className="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
+              <h1 className="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">
+                Get in touch
+              </h1>
+              <p className="mt-6 text-xl text-warm-gray-500 max-w-3xl">
+                Don't be scrambling to secure your digital wealth. Get started
+                with Lily today and secure your bitcoins for generations.
+              </p>
             </div>
           </div>
         </div>
@@ -216,37 +184,20 @@ const Support = () => {
                     </defs>
                   </svg>
                 </div>
-                <h3 class="text-lg font-medium text-white">Get in touch</h3>
+                <h3 class="text-lg font-medium text-white">
+                  Contact information
+                </h3>
                 <p class="mt-6 text-base text-green-50 max-w-3xl">
-                  Bitcoin is hard. We get it. If you have any questions about
-                  getting set up with Lily, let us know and we'll be happy to
-                  walk you through it.
+                  We love talking with customers about bitcoin. If you have any
+                  questions, please feel free to reach out!
                 </p>
-                <dl class="mt-8 space-y-6">
-                  <dt>
-                    <span class="sr-only">Phone number</span>
-                  </dt>
-                  <dd class="flex text-base text-green-50">
-                    <svg
-                      class="flex-shrink-0 w-6 h-6 text-green-200"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      />
-                    </svg>
-                    <span class="ml-3">+1 808 374 5459</span>
-                  </dd>
+                <dl class="mt-8 space-y-2">
                   <dt>
                     <span class="sr-only">Email</span>
                   </dt>
+                  <span className="text-green-50 font-bold">
+                    Sales and Technical Support
+                  </span>
                   <dd class="flex text-base text-green-50">
                     <svg
                       class="flex-shrink-0 w-6 h-6 text-green-200"
@@ -263,7 +214,7 @@ const Support = () => {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <span class="ml-3">KayBeSee@gmail.com</span>
+                    <span class="ml-3">help@lily-wallet.com</span>
                   </dd>
                 </dl>
                 <ul class="mt-8 flex space-x-12" role="list">

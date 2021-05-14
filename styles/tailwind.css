@@ -20,3 +20,11 @@ body {
 .foobar div {
   margin: 0;
 }
+
+@layer utilities {
+  @variants responsive {
+    .w-xl {
+      width: 36rem;
+    }
+  }
+}

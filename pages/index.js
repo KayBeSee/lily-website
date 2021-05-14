@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
 import DownloadButtons from "../components/DownloadButtons";
 import Features from "../components/Features";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
   return (
@@ -157,6 +159,103 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <svg
+            className="absolute top-full right-full transform translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
+            width={404}
+            height={404}
+            fill="none"
+            viewBox="0 0 404 404"
+            role="img"
+            aria-labelledby="svg-workcation"
+          >
+            <title id="svg-workcation">Workcation</title>
+            <defs>
+              <pattern
+                id="ad119f34-7694-4c31-947f-5c9d249b21f3"
+                x={0}
+                y={0}
+                width={20}
+                height={20}
+                patternUnits="userSpaceOnUse"
+              >
+                <rect
+                  x={0}
+                  y={0}
+                  width={4}
+                  height={4}
+                  className="text-gray-200"
+                  fill="currentColor"
+                />
+              </pattern>
+            </defs>
+            <rect
+              width={404}
+              height={404}
+              fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)"
+            />
+          </svg>
+
+          <div className="relative z-10 text-center max-w-screen-lg xl:max-w-screen-xl mx-auto">
+            <div className="text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold text-gray-900 tracking-tight mb-8">
+              Self custody made easy
+            </div>
+            <blockquote className="mt-10">
+              <div className="max-w-3xl mx-auto text-center text-xl md:text-2xl leading-9 font-medium text-gray-900">
+                <p>
+                  &ldquo;We've written{" "}
+                  <Link href="./btc-security-guide">
+                    <a
+                      class="text-light-blue-600 font-semibold"
+                      style={{
+                        boxShadow:
+                          "inset 0 -0.1666666667em 0 0 #fff, inset 0 -0.3333333333em 0 0 #6ee7b7",
+                      }}
+                    >
+                      an entire guide
+                    </a>
+                  </Link>{" "}
+                  about how normal bitcoiners can easily keep their coins safe
+                  with enterprise level security thanks to hardware wallets and
+                  multisignature vaults. There are no excuses for{" "}
+                  <span className="italic">not</span> controlling your own keys
+                  today.&rdquo;
+                </p>
+              </div>
+              <footer className="mt-8">
+                <div className="md:flex md:items-center md:justify-center">
+                  <div className="md:flex-shrink-0">
+                    <img
+                      className="mx-auto h-10 w-10 rounded-full"
+                      src="./screenshots/kevin-small.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
+                    <div className="text-base font-medium text-gray-900">
+                      Kevin Mulcrone
+                    </div>
+
+                    <svg
+                      className="hidden md:block mx-1 h-5 w-5 text-green-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M11 0h3L9 20H6l5-20z" />
+                    </svg>
+
+                    <div className="text-base font-medium text-gray-500">
+                      CEO, Lily Technologies
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+      <Testimonials />
       <Features />
       <div className="bank-note-background" id="download">
         <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8">
@@ -434,12 +533,11 @@ export default function Home() {
                   Download Lily, connect your devices, and start securing your
                   bitcoin in under 10 minutes
                 </p>
-                <a
-                  href="/download"
-                  className="mt-8 bg-white border border-transparent rounded-md shadow px-6 py-3 inline-flex items-center text-base font-medium text-green-600 hover:bg-indigo-50"
-                >
-                  Download Lily
-                </a>
+                <Link href="/download">
+                  <a className="mt-8 bg-white border border-transparent rounded-md shadow px-6 py-3 inline-flex items-center text-base font-medium text-green-600 hover:bg-indigo-50">
+                    Download Lily
+                  </a>
+                </Link>
               </div>
             </div>
             <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">

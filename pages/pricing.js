@@ -69,7 +69,7 @@ const Pricing = () => {
                     class="py-5 px-4 text-sm font-normal text-gray-500 text-left"
                     scope="row"
                   >
-                    Single Signature Hardware Wallets
+                    Manage Hardware Wallets
                   </th>
                   <td class="py-5 pr-4">
                     <svg
@@ -94,7 +94,7 @@ const Pricing = () => {
                     class="py-5 px-4 text-sm font-normal text-gray-500 text-left"
                     scope="row"
                   >
-                    2-of-3 Multisig Vaults
+                    (1) 2-of-3 Multisig Vault
                   </th>
                   <td class="py-5 pr-4">
                     <svg
@@ -318,7 +318,7 @@ const Pricing = () => {
                     class="py-5 px-4 text-sm font-normal text-gray-500 text-left"
                     scope="row"
                   >
-                    Single Signature Hardware Wallets
+                    Manage Hardware Wallets
                   </th>
                   <td class="py-5 pr-4">
                     <svg
@@ -343,7 +343,7 @@ const Pricing = () => {
                     class="py-5 px-4 text-sm font-normal text-gray-500 text-left"
                     scope="row"
                   >
-                    2-of-3 Multisig Vaults
+                    (1) 2-of-3 Multisig Vault
                   </th>
                   <td class="py-5 pr-4">
                     <svg
@@ -569,7 +569,7 @@ const Pricing = () => {
                     class="py-5 px-4 text-sm font-normal text-gray-500 text-left"
                     scope="row"
                   >
-                    Single Signature Hardware Wallets
+                    Manage Hardware Wallets
                   </th>
                   <td class="py-5 pr-4">
                     <svg
@@ -594,7 +594,7 @@ const Pricing = () => {
                     class="py-5 px-4 text-sm font-normal text-gray-500 text-left"
                     scope="row"
                   >
-                    2-of-3 Multisig Vaults
+                    (1) 2-of-3 Multisig Vault
                   </th>
                   <td class="py-5 pr-4">
                     <svg
@@ -820,7 +820,7 @@ const Pricing = () => {
                     class="py-5 px-4 text-sm font-normal text-gray-500 text-left"
                     scope="row"
                   >
-                    Single Signature Hardware Wallets
+                    Manage Hardware Wallets
                   </th>
                   <td class="py-5 pr-4">
                     <svg
@@ -845,7 +845,7 @@ const Pricing = () => {
                     class="py-5 px-4 text-sm font-normal text-gray-500 text-left"
                     scope="row"
                   >
-                    2-of-3 Multisig Vaults
+                    (1) 2-of-3 Multisig Vault
                   </th>
                   <td class="py-5 pr-4">
                     <svg
@@ -1186,7 +1186,7 @@ const Pricing = () => {
                   class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
                   scope="row"
                 >
-                  Single Signature Hardware Wallets
+                  Manage Hardware Wallets
                 </th>
                 <td class="py-5 px-6">
                   <svg
@@ -1259,7 +1259,7 @@ const Pricing = () => {
                   class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
                   scope="row"
                 >
-                  2-of-3 Multisig Vaults
+                  (1) 2-of-3 Multisig Vault
                 </th>
                 <td class="py-5 px-6">
                   <svg
