@@ -8,7 +8,7 @@ import Features from "../components/Features";
 
 const FeaturesPage = () => {
   return (
-    <div className="relative pt-6 bg-white">
+    <div className="relative pt-6 bg-gray-50">
       <Head>
         <title>Features - Lily Wallet</title>
         <HeaderStuff />
@@ -16,7 +16,7 @@ const FeaturesPage = () => {
 
       <Navigation />
       <Features />
-      <div class="bg-gray-50">
+      <div class="bg-gray-100">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             <span class="block">Ready to dive in?</span>

@@ -111,6 +111,35 @@ const Transition = ({ show, appear, ...rest }) => {
   );
 };
 
+const menuItems = [
+  { href: "/features", text: "Features" },
+  { href: "/schedule-demo", text: "Schedule a Demo" },
+  { href: "/pricing", text: "Pricing" },
+  { href: "/support", text: "Support" },
+];
+
+const MenuItem = ({ text, href }) => (
+  <Link href={href}>
+    <a
+      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
+      role="menuitem"
+    >
+      {text}
+    </a>
+  </Link>
+);
+
+const MobileMenuItem = ({ text, href }) => (
+  <Link href={href}>
+    <a
+      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
+      role="menuitem"
+    >
+      {text}
+    </a>
+  </Link>
+);
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -123,7 +152,7 @@ const Navigation = () => {
                 <a
                   aria-label="Home"
                   style={{ display: "flex", alignItems: "center" }}
-                  className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green rounded-md"
+                  className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green"
                 >
                   <img
                     className="h-8 w-auto sm:h-10"
@@ -168,38 +197,9 @@ const Navigation = () => {
             </div>
           </div>
           <div className="hidden md:flex md:space-x-10">
-            <Link href="/features">
-              <a
-                className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
-                role="menuitem"
-              >
-                Features
-              </a>
-            </Link>
-            <Link href="/schedule-demo">
-              <a
-                className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
-                role="menuitem"
-              >
-                Schedule a Demo
-              </a>
-            </Link>
-            <Link href="/pricing">
-              <a
-                className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
-                role="menuitem"
-              >
-                Pricing
-              </a>
-            </Link>
-            <Link href="/support">
-              <a
-                className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
-                role="menuitem"
-              >
-                Support
-              </a>
-            </Link>
+            {menuItems.map((item) => (
+              <MenuItem text={item.text} href={item.href} />
+            ))}
           </div>
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
             <span className="inline-flex rounded-md shadow">
@@ -264,38 +264,9 @@ const Navigation = () => {
                 </div>
               </div>
               <div className="px-2 pt-2 pb-3">
-                <Link href="/features">
-                  <a
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
-                    role="menuitem"
-                  >
-                    Features
-                  </a>
-                </Link>
-                <Link href="/schedule-demo">
-                  <a
-                    className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
-                    role="menuitem"
-                  >
-                    Request a Demo
-                  </a>
-                </Link>
-                <Link href="/pricing">
-                  <a
-                    className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
-                    role="menuitem"
-                  >
-                    Pricing
-                  </a>
-                </Link>
-                <Link href="/support">
-                  <a
-                    className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
-                    role="menuitem"
-                  >
-                    Support
-                  </a>
-                </Link>
+                {menuItems.map((item) => (
+                  <MobileMenuItem text={item.text} href={item.href} />
+                ))}
               </div>
               <div>
                 <a
