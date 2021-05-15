@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import Head from "next/head";
+import Link from "next/link";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
@@ -55,14 +56,28 @@ const Support = () => {
       <div class="bg-gray-100">
         <div className="bg-warm-gray-50">
           <div className="py-24 lg:py-32">
-            <div className="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
-              <h1 className="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">
-                Get in touch
-              </h1>
-              <p className="mt-6 text-xl text-warm-gray-500 max-w-3xl">
-                Don't be scrambling to secure your digital wealth. Get started
-                with Lily today and secure your bitcoins for generations.
-              </p>
+            <div className="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8 grid lg:grid-cols-2 grid-cols-1">
+              <div>
+                <h1 className="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">
+                  Get in touch
+                </h1>
+                <p className="mt-6 text-xl text-warm-gray-500 max-w-3xl">
+                  Don't be scrambling to secure your digital wealth. Get started
+                  with Lily today and secure your bitcoins for generations.
+                </p>
+              </div>
+              <div className="flex justify-center items-center mt-12 flex-col md:flex-row">
+                <Link href="/schedule-demo">
+                  <button className="w-full bg-green-600 text-white rounded-md py-6 px-6 text-xl mr-4 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 active:bg-gray-50 active:text-green-700 transition duration-150 ease-in-out">
+                    Talk to an expert
+                  </button>
+                </Link>
+                <Link href="https://docs.lily-wallet.com" target="_blank">
+                  <button className="w-full mt-6 md:mt-0 bg-white text-green-600 border border-green-600 rounded-md py-6 px-6 text-xl mr-4 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 active:bg-gray-50 active:text-green-700 transition duration-150 ease-in-out">
+                    Read the docs
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
