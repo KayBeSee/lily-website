@@ -43,7 +43,6 @@ async function handler(req, res) {
     //     },
     //   },
     // });
-    console.log("resp: ", resp.data.request);
     res.json(resp.data.request);
   } catch (e) {
     console.log("e: ", e);

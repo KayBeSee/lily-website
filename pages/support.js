@@ -17,10 +17,6 @@ const Support = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-    console.log("xxxllll");
-  });
-
   const submitForm = async (e) => {
     e.preventDefault();
     setIsLoading(true);

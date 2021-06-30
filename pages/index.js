@@ -126,7 +126,7 @@ export default function Home() {
             <h3 className="text-center text-gray-100 text-sm font-semibold uppercase tracking-wide">
               Compatible with the most popular Bitcoin hardware devices
             </h3>
-            <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
               <div className="col-span-1 flex justify-center md:col-span-1 lg:col-span-1">
                 <img
                   className="h-12"
@@ -154,6 +154,14 @@ export default function Home() {
                   src="./vendor-logos/ledger.svg"
                   alt="Ledger"
                 />
+              </div>
+              <div className="col-span-1 flex justify-center text-white items-center md:col-span-1 lg:col-span-1">
+                <img
+                  className="h-12"
+                  src="./vendor-logos/bitbox.svg"
+                  alt="BitBox"
+                /> 
+                <span className="text-white text-3xl"><span className="font-black">BitBox</span>02</span>
               </div>
             </div>
           </div>

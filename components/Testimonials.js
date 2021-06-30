@@ -24,7 +24,7 @@ const testimonials = [
       name: "Domingo Guerra",
       role: "Entrepreneur",
       avatar:
-        "https://pbs.twimg.com/profile_images/1363012343752441859/m-diKH5l_400x400.jpg",
+      "./testimonials/sundaywar.jpeg",
     },
   },
   {
@@ -35,7 +35,7 @@ const testimonials = [
       name: "Bitcoin Rabbi",
       role: "Torah Maximalist",
       avatar:
-        "https://pbs.twimg.com/profile_images/1388887660094238721/NmMHJpBR_400x400.jpg",
+      "./testimonials/rabbi.jpeg",
     },
   },
   {
@@ -46,18 +46,18 @@ const testimonials = [
       name: "Colin Harper",
       role: "Tech journalist",
       avatar:
-        "https://pbs.twimg.com/profile_images/1362747091924094980/nv3SjCC1_400x400.jpg",
+      "./testimonials/collin.jpeg",
     },
   },
   {
     content:
       "Impressive stuff, making multisig easy is so important to get people familiar with it. No only the setup but more so using it on a regular basis.",
-    tweetUrl: "https://twitter.com/ryanflorence/status/1187951799442886656",
+    tweetUrl: "https://twitter.com/Polylunar_/status/1291737997830811648",
     author: {
       name: "Polylunar",
       role: "Bitcoin Enthusiast",
       avatar:
-        "https://pbs.twimg.com/profile_images/1286949104946311168/WDojm3wg_400x400.jpg",
+        "./testimonials/polylunar.jpeg",
     },
   },
   {
@@ -68,7 +68,7 @@ const testimonials = [
       name: "Andrew",
       role: "Bitcoin Magazine",
       avatar:
-        "https://pbs.twimg.com/profile_images/1375244110160744451/h8U5f9EB_400x400.jpg",
+      "./testimonials/fiftysat.jpeg",
     },
   },
 ];
@@ -87,8 +87,6 @@ function Testimonial({ testimonial, base, index, total }) {
   const [straight, setStraight] = useState(false);
 
   const color = colors[Object.keys(colors)[index % Object.keys(colors).length]];
-  console.log("xx: ", Object.keys(colors)[index % Object.keys(colors).length]);
-  console.log("color: ", color);
 
   return (
     <motion.li
