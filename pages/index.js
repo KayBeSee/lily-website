@@ -95,7 +95,7 @@ export default function Home() {
 
             <div className="mt-10 mx-auto max-w-screen-xl px-4 sm:px-6 md:mt-16 lg:mt-20">
               <div className="text-center">
-                <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+                <h2 className="text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
                   The best way to
                   <br />
                   <span className="text-yellow-300">secure your Bitcoin</span>
