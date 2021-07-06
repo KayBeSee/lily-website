@@ -326,7 +326,7 @@ const About = () => {
             </div>
             <div class="ml-3 inline-flex rounded-md shadow">
               <a
-                href="/schedule-demo"
+                href="/talk-to-an-expert"
                 class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50"
               >
                 Talk to an expert

@@ -49,7 +49,7 @@ const Terms = () => {
                       Review source code
                     </a>
                     <a
-                      href="/schedule-demo"
+                      href="/talk-to-an-expert"
                       class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                     >
                       Talk to a specialist

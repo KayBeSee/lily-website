@@ -63,7 +63,7 @@ const Support = () => {
                 </p>
               </div>
               <div className="flex justify-center items-center mt-12 flex-col md:flex-row">
-                <Link href="/schedule-demo">
+                <Link href="/talk-to-an-expert">
                   <button className="w-full bg-green-600 text-white rounded-md py-6 px-6 text-xl md:mr-4 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 active:bg-gray-50 active:text-green-700 transition duration-150 ease-in-out">
                     Talk to an expert
                   </button>

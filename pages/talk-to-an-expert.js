@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 
 import { InlineWidget } from "react-calendly";
@@ -8,11 +8,11 @@ import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
 import DotBackground from "../components/DotBackground";
 
-const RequestDemo = () => {
+const TalkToExpert = () => {
   return (
     <div className="flex flex-col relative pt-6 bg-gray-50 min-h-screen">
       <Head>
-        <title>Schedule a Demo - Lily Wallet</title>
+        <title>Talk to an Expert - Lily Wallet</title>
         <HeaderStuff />
       </Head>
 
@@ -22,15 +22,15 @@ const RequestDemo = () => {
         <DotBackground />
         <div className="relative lg:max-w-xl mx-auto px-4 my-4 sm:my-0 sm:px-6 lg:px-8 lg:max-w-screen-lg">
           <span className="mt-1 block text-2xl tracking-tight font-extrabold sm:text-3xl xl:text-4xl">
-            Schedule a demo
+            Talk to an expert
           </span>
           <span className="mt-4 max-w-3xl mx-auto text-center text-lg leading-7 text-green-600">
-            and start securing your bitcoin
+            and get your questions answered
           </span>
         </div>
         <div className="z-20 relative pb-10">
           <InlineWidget
-            url="https://calendly.com/lilywallet/setup-walkthrough"
+            url="https://calendly.com/lilywallet/talk-to-an-expert"
             styles={{
               height: "655px",
               margin: 0,
@@ -47,4 +47,4 @@ const RequestDemo = () => {
     </div>
   );
 };
-export default RequestDemo;
+export default TalkToExpert;
