@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Head from "next/head";
-
-import { InlineWidget } from "react-calendly";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
 import DotBackground from "../components/DotBackground";
+import CalendlyWidget from "../components/CalendlyWidget";
+
+const CALENDLY_URL = "https://calendly.com/lilywallet/setup-walkthrough";
 
 const SetupWalkthrough = () => {
   return (
@@ -29,18 +30,7 @@ const SetupWalkthrough = () => {
           </span>
         </div>
         <div className="z-20 relative pb-10">
-          <InlineWidget
-            url="https://calendly.com/lilywallet/setup-walkthrough"
-            styles={{
-              height: "655px",
-              margin: 0,
-            }}
-            pageSettings={{
-              hideEventTypeDetails: true,
-              hideLandingPageDetails: true,
-              primaryColor: "059669",
-            }}
-          />
+          <CalendlyWidget url={CALENDLY_URL} />
         </div>
       </div>
       <Footer />
