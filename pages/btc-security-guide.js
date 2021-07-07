@@ -695,7 +695,7 @@ const BTCSecurityGuide = () => {
                 <p>
                   If you run into any problems or want an expert to assist you
                   while setting it up,{" "}
-                  <Link href="/schedule-demo">
+                  <Link href="/talk-to-an-expert">
                     <a>schedule an appointment</a>
                   </Link>{" "}
                   with a specialist.

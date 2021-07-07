@@ -7,13 +7,13 @@ import HeaderStuff from "../components/HeaderStuff";
 import DotBackground from "../components/DotBackground";
 import CalendlyWidget from "../components/CalendlyWidget";
 
-const CALENDLY_URL = "https://calendly.com/lilywallet/demo";
+const CALENDLY_URL = "https://calendly.com/lilywallet/setup-walkthrough";
 
-const RequestDemo = () => {
+const SetupWalkthrough = () => {
   return (
     <div className="flex flex-col relative pt-6 bg-gray-50 min-h-screen">
       <Head>
-        <title>Schedule a Demo - Lily Wallet</title>
+        <title>Setup Walkthrough - Lily Wallet</title>
         <HeaderStuff />
       </Head>
 
@@ -23,10 +23,10 @@ const RequestDemo = () => {
         <DotBackground />
         <div className="relative lg:max-w-xl mx-auto px-4 my-4 sm:my-0 sm:px-6 lg:px-8 lg:max-w-screen-lg">
           <span className="mt-1 block text-2xl tracking-tight font-extrabold sm:text-3xl xl:text-4xl">
-            Schedule a demo
+            Setup Walkthrough
           </span>
           <span className="mt-4 max-w-3xl mx-auto text-center text-lg leading-7 text-green-600">
-            and start securing your bitcoin today
+            Get guided support setting up Lily Wallet
           </span>
         </div>
         <div className="z-20 relative pb-10">
@@ -37,4 +37,4 @@ const RequestDemo = () => {
     </div>
   );
 };
-export default RequestDemo;
+export default SetupWalkthrough;
