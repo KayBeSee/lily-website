@@ -42,7 +42,7 @@ const Support = () => {
   };
 
   return (
-    <div class="relative pt-6 bg-gray-100">
+    <div class="relative pt-6 bg-gray-50">
       <Head>
         <title>Support - Lily Wallet</title>
         <HeaderStuff />
@@ -50,14 +50,14 @@ const Support = () => {
       <Navigation />
 
       <div class="bg-gray-100">
-        <div className="bg-warm-gray-50">
+        <div className="bg-gray-50">
           <div className="py-24 lg:py-32">
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 grid-cols-1">
               <div>
-                <h1 className="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">
+                <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
                   Get in touch
                 </h1>
-                <p className="mt-6 text-xl text-warm-gray-500 max-w-3xl">
+                <p className="mt-6 text-xl text-gray-500 max-w-3xl">
                   Don't be scrambling to secure your digital wealth. Get started
                   with Lily today and secure your bitcoins for generations.
                 </p>
