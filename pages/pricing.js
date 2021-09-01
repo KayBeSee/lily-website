@@ -1046,7 +1046,7 @@ const Pricing = () => {
                 </dt>
                 <dd class="text-base text-gray-500">
                   No, we only accept Bitcoin as payment because it's
-                  irreversable and gives our customers an opprotunity to get
+                  irreversable and gives our customers an opportunity to get
                   comfortable sending money using Lily Wallet.
                 </dd>
               </div>
