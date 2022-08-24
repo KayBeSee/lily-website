@@ -40,7 +40,7 @@ const deepLinkRedirect = () => {
         </Head>
 
         <Navigation />
-        <div className="w-full max-w-7xl flex items-center justify-center mx-auto mt-20 pb-48 px-2 sm:px-8">
+        <div className="w-full max-w-7xl flex items-center justify-center mx-auto py-10 px-2 sm:px-8 bg-gray-100 dark:bg-slate-800 mt-20 mb-48 rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5 dark:highlight-white/10">
           <div className="w-full justify-center text-gray-900 dark:text-gray-200 overflow-x-hidden px-2 pb-2">
             <div className="flex flex-col mb-6">
               <h3 className="text-gray-600 dark:text-gray-400 text-xl">
@@ -51,7 +51,7 @@ const deepLinkRedirect = () => {
               </h1>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 border-t-8 border-green-600 shadow-sm rounded-t-lg">
+            <div className="bg-white dark:bg-slate-700 border-t-8 border-green-600 shadow-sm rounded-t-lg">
               <div className="flex items-center p-4 border-b border-gray-200 dark:border-gray-600 sm:p-6 sm:grid sm:grid-cols-4 sm:gap-x-6">
                 <dl className="flex-1 grid grid-cols-2 gap-x-6 text-sm sm:col-span-2 sm:grid-cols-2 lg:col-span-2">
                   <div>

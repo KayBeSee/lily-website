@@ -121,7 +121,7 @@ const menuItems = [
 const MenuItem = ({ text, href }) => (
   <Link href={href}>
     <a
-      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
+      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-500 dark:text-gray-200 dark:hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
       role="menuitem"
     >
       {text}
@@ -152,7 +152,7 @@ const Navigation = () => {
                 <a
                   aria-label="Home"
                   style={{ display: "flex", alignItems: "center" }}
-                  className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green"
+                  className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green rounded-md transition duration-150 ease-in-out"
                 >
                   <img
                     className="h-8 w-auto sm:h-10"
@@ -161,7 +161,7 @@ const Navigation = () => {
                     alt="Logo"
                   />
                   <span
-                    className="font-medium"
+                    className="font-medium dark:text-white"
                     style={{ paddingLeft: ".5em", fontSize: "1.25em" }}
                   >
                     Lily Wallet
