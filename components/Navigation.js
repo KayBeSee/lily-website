@@ -157,8 +157,8 @@ const Navigation = () => {
                   <img
                     className="h-8 w-auto sm:h-10"
                     style={{ margin: "0 0 .5em" }}
-                    src="logo.svg"
-                    alt="Logo"
+                    src="/logo.svg"
+                    alt="Lily Wallet Logo"
                   />
                   <span
                     className="font-medium dark:text-white"

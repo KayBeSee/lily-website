@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { EnvelopeIcon, UserIcon } from "@heroicons/react/24/outline";
+import {
+  EnvelopeIcon,
+  UserIcon,
+  InformationCircleIcon,
+  ArrowTopRightOnSquareIcon,
+} from "@heroicons/react/24/outline";
 import Navigation from "../../components/Navigation";
 import HeaderStuff from "../../components/HeaderStuff";
 import DeviceImage from "../../components/DeviceImage";
@@ -32,6 +37,15 @@ const deepLinkRedirect = () => {
 
   if (router.query.config) {
     const config = JSON.parse(router.query.config);
+    const status = router.query.status;
+    const returnAddress = router.query.returnTo;
+
+    const infoText =
+      status === "incomplete"
+        ? `${returnAddress} has invited you to add 2 devices to this
+    vault`
+        : "This vault's setup is complete";
+
     return (
       <div className="relative pt-6 bg-white dark:bg-slate-900 min-h-screen">
         <Head>
@@ -44,11 +58,34 @@ const deepLinkRedirect = () => {
           <div className="w-full justify-center text-gray-900 dark:text-gray-200 overflow-x-hidden px-2 pb-2">
             <div className="flex flex-col mb-6">
               <h3 className="text-gray-600 dark:text-gray-400 text-xl">
-                New Account
+                New vault
               </h3>
               <h1 className="text-gray-900 dark:text-gray-200 font-medium text-3xl">
-                Confirm vault details
+                {status === "complete"
+                  ? "Add to your Lily Wallet"
+                  : "Add your key(s)"}
               </h1>
+              <div className="rounded-md bg-blue-50 p-4 mt-4">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <InformationCircleIcon
+                      className="h-5 w-5 text-blue-400"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div className="ml-3 flex-1 md:flex md:justify-between">
+                    <p className="text-sm text-blue-700">{infoText}</p>
+                    <p className="mt-3 text-sm md:mt-0 md:ml-6">
+                      <a
+                        href="#"
+                        className="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600"
+                      >
+                        What is this? <span aria-hidden="true">&rarr;</span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="bg-white dark:bg-slate-700 border-t-8 border-green-600 shadow-sm rounded-t-lg">
@@ -145,10 +182,11 @@ const deepLinkRedirect = () => {
               </div>
             </div>
             <button
-              className="w-full flex text-lg font-semibold items-center justify-center bg-green-600 py-4 px-6 rounded-b-lg shadow-sm text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50"
+              className="w-full flex text-lg font-medium items-center justify-center bg-green-600 py-4 px-6 rounded-b-lg shadow-sm text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50"
               onClick={() => openDeepLink()}
             >
-              Add to Lily Wallet
+              {status === "complete" ? "Add to Lily Wallet" : "Join this vault"}
+              <ArrowTopRightOnSquareIcon className="h-4 w-4 ml-2 mb-1" />
             </button>
           </div>
         </div>
