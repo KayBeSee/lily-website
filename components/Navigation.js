@@ -6,6 +6,7 @@ import React, {
   useState,
 } from "react";
 import Link from "next/link";
+import clsx from "clsx";
 
 import { CSSTransition } from "react-transition-group";
 
@@ -118,10 +119,15 @@ const menuItems = [
   { href: "/support", text: "Support" },
 ];
 
-const MenuItem = ({ text, href }) => (
+const MenuItem = ({ text, href, darkBg }) => (
   <Link href={href}>
     <a
-      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-500 dark:text-gray-200 dark:hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out"
+      className={clsx(
+        "mt-1 block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out",
+        darkBg
+          ? "text-gray-700 hover:text-green-500 dark:text-gray-200 dark:hover:text-green-400"
+          : "text-gray-700 hover:text-green-500"
+      )}
       role="menuitem"
     >
       {text}
@@ -140,7 +146,7 @@ const MobileMenuItem = ({ text, href }) => (
   </Link>
 );
 
-const Navigation = () => {
+const Navigation = ({ darkBg }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Fragment>
@@ -198,7 +204,7 @@ const Navigation = () => {
           </div>
           <div className="hidden md:flex md:space-x-10">
             {menuItems.map((item) => (
-              <MenuItem text={item.text} href={item.href} />
+              <MenuItem text={item.text} href={item.href} darkBg={darkBg} />
             ))}
           </div>
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
