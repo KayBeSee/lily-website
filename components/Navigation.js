@@ -167,7 +167,12 @@ const Navigation = ({ darkBg }) => {
                     alt="Lily Wallet Logo"
                   />
                   <span
-                    className="font-medium dark:text-white"
+                    className={clsx(
+                      "font-medium",
+                      darkBg
+                        ? "text-gray-700 hover:text-green-500 dark:text-gray-200 dark:hover:text-green-400"
+                        : "text-gray-700 hover:text-green-500"
+                    )}
                     style={{ paddingLeft: ".5em", fontSize: "1.25em" }}
                   >
                     Lily Wallet
