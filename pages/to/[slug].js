@@ -289,6 +289,10 @@ const Welcome = () => {
 
   return (
     <div className="h-screen w-screen flex items-center justify-center">
+      <Head>
+        <title>Welcome - Lily Wallet</title>
+        <HeaderStuff />
+      </Head>
       <LoadingSpinner />
     </div>
   );
