@@ -4,6 +4,8 @@ import Link from "next/link";
 import EmailSubscribe from "./EmailSubscribe";
 
 const Footer = () => {
+  const YEAR = new Date().getFullYear();
+
   useEffect(() => {
     zE("webWidget:on", "chat:status", function (status) {
       zE("webWidget", "updateSettings", {
@@ -195,7 +197,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="mt-8 text-base text-white md:mt-0 md:order-1">
-            &copy; 2021 Lily Technologies, Inc. All rights reserved.
+            &copy; {YEAR} Lily Technologies, Inc. All rights reserved.
           </p>
         </div>
       </div>

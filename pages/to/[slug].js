@@ -13,6 +13,7 @@ import Navigation from "../../components/Navigation";
 import HeaderStuff from "../../components/HeaderStuff";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import DeviceImage from "../../components/DeviceImage";
+import Footer from "../../components/Footer";
 
 const QUERY = `?config={"name":"My Sweet Vault","type":"onchain","created_at":1661139721833,"network":"mainnet","addressType":"P2WSH","quorum":{"requiredSigners":1,"totalSigners":0},"extendedPublicKeys":[]}&status=incomplete&returnTo=Kevin%20Mulcrone%20%3CKayBeSee%40gmail.com%3E`;
 
@@ -79,7 +80,7 @@ const WelcomePanel = ({ returnAddress, style, setPosition, className }) => {
               <a
                 href=""
                 target="_blank"
-                className="w-max text-sm font-medium text-yellow-600 group-hover:text-yellow-700 dark:text-yellow-500 dark:group-hover:text-yellow-400 flex items-center rounded-md focus:ring-1 focus:ring-yellow-600 dark:focus:ring-yellow-500 outline-none"
+                className="w-max text-sm text-yellow-600 group-hover:text-yellow-700 dark:text-yellow-500 dark:group-hover:text-yellow-400 flex items-center rounded-md focus:ring-1 focus:ring-yellow-600 dark:focus:ring-yellow-500 outline-none"
               >
                 Learn more about multisignature vaults
                 <ArrowLongRightIcon className="h-5 w-5 fill-current ml-6" />
@@ -132,14 +133,14 @@ const Welcome = () => {
     const returnAddress = router.query.returnTo;
 
     return (
-      <div className="relative pt-6 bg-white dark:bg-slate-900 min-h-screen pb-48">
+      <div className="relative pt-6 bg-white dark:bg-slate-900 min-h-screen">
         <Head>
           <title>Welcome - Lily Wallet</title>
           <HeaderStuff />
         </Head>
 
         <Navigation darkBg={true} />
-        <div className="w-full max-w-7xl mx-auto bg-slate-50 dark:bg-slate-800 mt-20 rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5 dark:highlight-white/10">
+        <div className="w-full max-w-7xl mx-auto bg-slate-50 dark:bg-slate-800 mt-20 mb-24 rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5 dark:highlight-white/10">
           <div className="block">
             <div className="relative mt-20 overflow-hidden px-7 py-8 xl:px-12">
               <div className="-mx-5 flex">
@@ -281,6 +282,7 @@ const Welcome = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
