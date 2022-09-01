@@ -1,5 +1,10 @@
 module.exports = {
-  purge: [],
+  purge: [
+    "./public/**/*.html",
+    "./pages/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+  ],
+  mode: "jit",
   darkMode: "media",
   theme: {
     fontSize: {
@@ -31,6 +36,10 @@ module.exports = {
           800: "#1e293b",
           900: "#0f172a",
         },
+      },
+      transitionProperty: {
+        visibility: "visibility",
+        width: "width",
       },
     },
   },
