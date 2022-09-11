@@ -136,7 +136,7 @@ const BTCSecurityGuide = () => {
                 increase as more people decide to preserve their wealth with the
                 digital asset.
               </p>
-              <div class="mt-6 prose prose-green prose-lg text-gray-500 mx-auto">
+              <div class="mt-6 prose prose-green text-gray-500 mx-auto">
                 <p>
                   But knowing how to secure your bitcoins so that they are not
                   lost or stolen requires expertise in this new area of
