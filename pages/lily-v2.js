@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import clsx from "clsx";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
@@ -8,6 +10,13 @@ import HeaderStuff from "../components/HeaderStuff";
 
 import VaultSetupPrompt from "../components/VaultSetupPrompt";
 
+import image1 from "@/images/v1.9/v1.9-screenshot.png";
+import image2 from "@/images/v1.9/v1.9-screenshot.png";
+import image3 from "@/images/v1.9/v1.9-screenshot.png";
+import image4 from "@/images/v1.9/v1.9-screenshot.png";
+import image5 from "@/images/v1.9/v1.9-screenshot.png";
+
+const RETURN_ADDRESS = "Lily Technologies, Inc. <help@lily-wallet.com>";
 const CONFIG = {
   name: "My New Vault",
   type: "onchain",
@@ -39,20 +48,73 @@ const CONFIG = {
   ],
 };
 
-const BTCSecurityGuide = () => {
+function Photos() {
+  let rotations = [
+    "rotate-2",
+    "-rotate-2",
+    "rotate-2",
+    "rotate-2",
+    "-rotate-2",
+  ];
+
   return (
-    <div className="relative pt-6 bg-white">
+    <div className="mt-16 sm:mt-20">
+      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+          <div
+            key={image.src}
+            className={clsx(
+              "relative aspect-video w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl",
+              rotations[imageIndex % rotations.length]
+            )}
+          >
+            <Image
+              src={image}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const LilyVOneNine = () => {
+  // manually tracking dark mode for now since nav / site isn't optimized for it yet
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setDarkMode(true);
+    }
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        const colorScheme = event.matches ? "dark" : "light";
+        console.log(colorScheme); // "dark" or "light"
+        setDarkMode(colorScheme);
+      });
+  }, []);
+
+  return (
+    <div className="relative pt-6 bg-gray-50 dark:bg-slate-900">
       <Head>
         <title>Introducing Lily v1.0.9 - Lily Wallet</title>
         <HeaderStuff />
       </Head>
 
-      <Navigation />
+      <Navigation darkBg={darkMode} />
       <div>
-        <div class="relative py-16 bg-white overflow-hidden">
+        <div class="relative py-16 overflow-hidden">
           <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
             <div
-              class="relative h-full text-lg max-w-prose mx-auto"
+              class="relative h-full text-lg max-w-prose mx-auto bg-white dark:bg-slate-800 rounded-2xl"
               aria-hidden="true"
             >
               <svg
@@ -76,7 +138,7 @@ const BTCSecurityGuide = () => {
                       y="0"
                       width="4"
                       height="4"
-                      class="text-gray-200"
+                      class="text-gray-200 dark:text-slate-800"
                       fill="currentColor"
                     />
                   </pattern>
@@ -108,7 +170,7 @@ const BTCSecurityGuide = () => {
                       y="0"
                       width="4"
                       height="4"
-                      class="text-gray-200"
+                      class="text-gray-200 dark:text-slate-800"
                       fill="currentColor"
                     />
                   </pattern>
@@ -140,7 +202,7 @@ const BTCSecurityGuide = () => {
                       y="0"
                       width="4"
                       height="4"
-                      class="text-gray-200"
+                      class="text-gray-200 dark:text-slate-800"
                       fill="currentColor"
                     />
                   </pattern>
@@ -156,14 +218,14 @@ const BTCSecurityGuide = () => {
           <div class="relative px-4 sm:px-6 lg:px-8">
             <div class="text-lg max-w-prose mx-auto">
               <h1>
-                <span class="block text-base text-center text-green-600 font-semibold tracking-wide uppercase">
+                <span class="block text-base text-center text-green-600 dark:text-green-500 font-semibold tracking-wide uppercase">
                   Introducing
                 </span>
-                <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-slate-900 dark:!text-slate-200 sm:text-4xl">
                   Lily Wallet v1.0.9
                 </span>
               </h1>
-              <div class="mt-6 prose prose-slate-600 mx-auto">
+              <div class="mt-6 prose text-slate-600 dark:text-slate-400 mx-auto">
                 <p> Hey everyone,</p>
 
                 <p>
@@ -183,14 +245,23 @@ const BTCSecurityGuide = () => {
                   power users including Lightning Network account management,
                   retriving data from an Electrum server, and dark mode.
                 </p>
+              </div>
+            </div>
+          </div>
 
-                <div className="relative">
+          <Photos />
+          <div class="relative px-4 sm:px-6 lg:px-8">
+            <div class="text-lg max-w-prose mx-auto">
+              <div class="mt-6 prose text-slate-600 dark:text-slate-400 mx-auto">
+                {/* <div className="relative">
                   <img src="/blog/v1.9/v1.9-screenshot.png" layout="fill" />
-                </div>
+                </div> */}
 
-                <hr />
+                <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
 
-                <h3 className="tracking-tight">Setup vaults via URLs</h3>
+                <h3 className="tracking-tight text-slate-900 dark:!text-slate-200">
+                  Setup vaults via URLs
+                </h3>
 
                 <p>
                   After talking with users, many shared that their biggest
@@ -242,18 +313,25 @@ const BTCSecurityGuide = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="max-w-7xl  mx-auto border-2 border-dashed rounded-2xl my-16 py-6 px-4 border-slate-400">
-                <div className="absolute translate-x-1 -translate-y-14 lg:translate-x-6 bg-white text-slate-700 font-semibold p-4 border border-slate-400 rounded-2xl">
-                  <h2>Example setup dialogue</h2>
-                  <p className="text-xs text-slate-500">
+              <div className="max-w-7xl  mx-auto border-2 border-dashed rounded-2xl my-16 py-6 px-4 border-slate-400 bg-gray-50 dark:bg-slate-900">
+                <div className="absolute translate-x-1 -translate-y-14 lg:translate-x-6 bg-white dark:bg-slate-900 text-slate-700 font-semibold p-4 border-2 border-dashed border-slate-400 rounded-2xl">
+                  <h2 className="text-slate-900 dark:!text-slate-200">
+                    Example setup dialogue
+                  </h2>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">
                     View full page example{" "}
-                    <a
-                      href=""
-                      target="_blank"
-                      className="text-green-500 underline"
+                    <Link
+                      href={`/to/setup?config=${JSON.stringify(
+                        CONFIG
+                      )}&returnTo=${RETURN_ADDRESS}`}
                     >
-                      here
-                    </a>
+                      <a
+                        target="_blank"
+                        className="text-green-500 hover:text-green-600 dark:hover:text-green-400 underline"
+                      >
+                        here
+                      </a>
+                    </Link>
                   </p>
                 </div>
                 <VaultSetupPrompt
@@ -264,7 +342,7 @@ const BTCSecurityGuide = () => {
               </div>
             </div>
             <div class="text-lg max-w-prose mx-auto">
-              <div class="mt-6 prose-green prose text-slate-600 mx-auto">
+              <div class="mt-6 prose text-slate-600 dark:text-slate-400 mx-auto">
                 <p>
                   After they have added their key(s) to the vault, an email is
                   generated with a URL that includes the completed vault
@@ -273,9 +351,11 @@ const BTCSecurityGuide = () => {
                   their computer.
                 </p>
 
-                <hr />
+                <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
 
-                <h3 className="tracking-tight">Add device owner information</h3>
+                <h3 className="tracking-tight text-slate-900 dark:!text-slate-200">
+                  Add device owner information
+                </h3>
                 <p>
                   Users can optionally attach device owner names and email
                   addresses to devices included in a vault's setup. This gives
@@ -290,9 +370,11 @@ const BTCSecurityGuide = () => {
                   client vaults.
                 </p>
 
-                <hr />
+                <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
 
-                <h3 className="tracking-tight">Unlocking new use cases</h3>
+                <h3 className="tracking-tight text-slate-900 dark:!text-slate-200">
+                  Unlocking new use cases
+                </h3>
 
                 <p>
                   These features unlock a number of new use cases for
@@ -301,7 +383,9 @@ const BTCSecurityGuide = () => {
                 </p>
 
                 <div className="my-12">
-                  <h4 className="tracking-tight">Financial advisors</h4>
+                  <h4 className="tracking-tight text-slate-800 dark:!text-slate-300">
+                    Financial advisors
+                  </h4>
                   <p>
                     Give clients a URL to create 2-of-3 multisignature vaults
                     where you hold one of the keys. Because the client holds two
@@ -317,7 +401,9 @@ const BTCSecurityGuide = () => {
                 </div>
 
                 <div className="my-12">
-                  <h4 className="tracking-tight">Companies holding bitcoin</h4>
+                  <h4 className="tracking-tight text-slate-800 dark:!text-slate-300">
+                    Companies holding bitcoin
+                  </h4>
                   <p>
                     Companies can hold bitcoin on their balance sheet without
                     giving full control of funds to a single individual.
@@ -332,7 +418,9 @@ const BTCSecurityGuide = () => {
                 </div>
 
                 <div className="my-12">
-                  <h4 className="tracking-tight">Friends and family</h4>
+                  <h4 className="tracking-tight text-slate-800 dark:!text-slate-300">
+                    Friends and family
+                  </h4>
                   <p>
                     In the same way a financial advisor can help secure clients
                     funds, Bitcoin power users can help friends and family
@@ -345,14 +433,18 @@ const BTCSecurityGuide = () => {
                   </p>
                 </div>
 
-                <hr />
+                <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
 
-                <h2 className="tracking-tight">Other new features</h2>
+                <h2 className="tracking-tight text-slate-900 dark:!text-slate-200">
+                  Other new features
+                </h2>
                 <p>
                   There are a number of other features included with this
                   release targetting bitcoin power users:
                 </p>
-                <h3 className="tracking-tight">Lightning Network accounts</h3>
+                <h3 className="tracking-tight text-slate-900 dark:!text-slate-200">
+                  Lightning Network accounts
+                </h3>
                 <p>
                   This version of Lily Wallet also allows users to manage their
                   Lightning Network nodes from the same interface as their
@@ -380,9 +472,11 @@ const BTCSecurityGuide = () => {
                   vaults!
                 </p>
 
-                <hr />
+                <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
 
-                <h3 className="tracking-tight">Retrieve data from Electrum</h3>
+                <h3 className="tracking-tight text-slate-900 dark:!text-slate-200">
+                  Retrieve data from Electrum
+                </h3>
                 <p>
                   Another requested feature was to allow wallet users to
                   retrieve transaction data from a specific Electrum server
@@ -394,18 +488,19 @@ const BTCSecurityGuide = () => {
                   stop maintaining the wallet software.
                 </p>
 
-                <hr />
+                <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
 
-                <h3 className="tracking-tight">Dark mode</h3>
+                <h3 className="tracking-tight text-slate-900 dark:!text-slate-200">
+                  Dark mode
+                </h3>
                 <p>
                   The latest version of Lily Wallet includes a dark mode color
                   scheme. Lily Wallet will automatically detect your system's
                   color preference and apply styling accordingly.
                 </p>
 
-                <hr />
+                <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
 
-                <h2 className="tracking-tight">Conclusion</h2>
                 <p>
                   This latest v1.9 release of Lily Wallet makes creating and
                   managing multisignature vaults easier for users who want
@@ -415,7 +510,9 @@ const BTCSecurityGuide = () => {
                 <p>
                   To try it out, head over to the{" "}
                   <Link href="/download">
-                    <a className="underline">download page</a>
+                    <a className="underline !text-green-500 hover:!text-green-600 dark:hover:!text-green-400">
+                      download page
+                    </a>
                   </Link>{" "}
                   on the Lily Wallet website.
                 </p>
@@ -425,32 +522,38 @@ const BTCSecurityGuide = () => {
                   <a
                     href="https://github.com/Lily-Technologies/lily-wallet"
                     target="_blank"
-                    className="underline"
+                    className="underline !text-green-500 hover:!text-green-600 dark:hover:!text-green-400"
                   >
                     Github
                   </a>{" "}
                   repository.
                 </p>
+                <div className="flex align-center justify-center m-6">
+                  <img className="h-16" src="/logo.svg" />
+                </div>
 
-                <hr />
+                <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
 
-                <h4 className="tracking-tight">Lily Wallet in Atlanta</h4>
+                <h4 className="tracking-tight text-slate-800 dark:!text-slate-300">
+                  Lily Wallet at TABConf
+                </h4>
                 <p>
                   Lily Wallet will be at the{" "}
-                  <a href="" target="_blank">
-                    Atlanta Bitcoin Conference{" "}
+                  <a
+                    href="https://2022.tabconf.com/"
+                    target="_blank"
+                    className="underline !text-green-500 hover:!text-green-600 dark:hover:!text-green-400"
+                  >
+                    Atlanta Bitcoin Conference
                   </a>{" "}
                   this year.
                 </p>
                 <p>
                   If you are business looking to hold bitcoin on your balance
                   sheet, a developer who wants to get involved with a bitcoin
-                  project or a user with questions about Lily Wallet, stop by
-                  and say hello!
+                  project, or a bitcoiner with questions about Lily Wallet, stop
+                  by and say hello!
                 </p>
-              </div>
-              <div className="flex align-center justify-center m-6">
-                <img className="h-16" src="/logo.svg" />
               </div>
             </div>
           </div>
@@ -461,4 +564,4 @@ const BTCSecurityGuide = () => {
   );
 };
 
-export default BTCSecurityGuide;
+export default LilyVOneNine;
