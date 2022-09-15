@@ -3,7 +3,7 @@ const HeaderStuff = () => {
     <>
       <link rel="icon" href="/favicon.ico" />
       <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:wght@100;200;500;800&family=Raleway:wght@100;200;500;800&display=swap"
+        href="https://fonts.googleapis.com/css?family=Montserrat:wght@100;200;500;700;800&family=Raleway:wght@100;200;500;800&display=swap"
         rel="stylesheet"
       />
       <link

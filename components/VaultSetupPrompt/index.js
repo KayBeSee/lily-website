@@ -20,7 +20,7 @@ export const ImportSetupPrompt = ({
     <div
       className={clsx(
         className,
-        "w-full max-w-7xl mx-auto bg-slate-50 dark:bg-slate-800 md:rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5 dark:highlight-white/10"
+        "w-full max-w-7xl mx-auto bg-slate-50 dark:bg-slate-800 shadow-lg ring-1 ring-black ring-opacity-5 dark:highlight-white/10"
       )}
     >
       <div className="block">
