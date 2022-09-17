@@ -16,12 +16,14 @@ import image3dark from "@/images/v1.9/opening/send-dark.png";
 import image4dark from "@/images/v1.9/opening/unlock-dark.png";
 import requestDark from "@/images/v1.9/request-dark.png";
 import lightningOpenDark from "@/images/v1.9/lightning-open-dark.png";
+import headerDark from "@/images/v1.9/header.png";
 
 import image1light from "@/images/v1.9/opening/lightning-overview-light.png";
 import image2light from "@/images/v1.9/opening/receive-light.png";
 import image3light from "@/images/v1.9/opening/send-light.png";
 import image4light from "@/images/v1.9/opening/unlock-light.png";
 import requestLight from "@/images/v1.9/request-light.png";
+import headerLight from "@/images/v1.9/header.png";
 import lightningOpenLight from "@/images/v1.9/lightning-open-light.png";
 
 const RETURN_ADDRESS = "Lily Technologies, Inc. <help@lily-wallet.com>";
@@ -98,6 +100,7 @@ const LilyVOneNine = () => {
   // manually tracking dark mode for now since nav / site isn't optimized for it yet
   const [darkMode, setDarkMode] = useState(false);
 
+  const headerImage = darkMode ? headerDark : headerLight;
   const requestImage = darkMode ? requestDark : requestLight;
   const lightningOpenImage = darkMode ? lightningOpenDark : lightningOpenLight;
 
@@ -325,15 +328,16 @@ const LilyVOneNine = () => {
                 </div>
               </div>
             </div>
-
-            <Photos darkMode={darkMode} />
+            <div className="relative max-w-prose w-full mx-auto my-12">
+              <Image
+                src={headerImage}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover rounded-2xl"
+              />
+            </div>
             <div class="relative px-4 sm:px-6 lg:px-8">
               <div class="text-lg max-w-prose mx-auto">
                 <div class="mt-6 prose text-slate-600 dark:text-slate-400 mx-auto">
-                  {/* <div className="relative">
-                  <img src="/blog/v1.9/v1.9-screenshot.png" layout="fill" />
-                </div> */}
-
                   <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
 
                   <h3 className="tracking-tight text-slate-900 dark:!text-slate-200">
@@ -376,7 +380,7 @@ const LilyVOneNine = () => {
                     copied and sent to the desired vault participants.
                   </p>
 
-                  <div className="relative ">
+                  <div className="relative">
                     <Image
                       src={requestImage}
                       alt=""
