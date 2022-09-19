@@ -4,11 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
-import HeaderStuff from "../components/HeaderStuff";
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
+import HeaderStuff from "../../components/HeaderStuff";
 
-import VaultSetupPrompt from "../components/VaultSetupPrompt";
+import VaultSetupPrompt from "../../components/VaultSetupPrompt";
 
 import image1dark from "@/images/v1.9/opening/lightning-overview-dark.png";
 import image2dark from "@/images/v1.9/opening/receive-dark.png";
@@ -304,26 +304,16 @@ const LilyVOneNine = () => {
                 </div>
                 <div class="mt-10 prose text-slate-600 dark:text-slate-400 mx-auto">
                   <p>
-                    After spending this past year talking with users and adding
-                    features to Lily but kept putting off an official release
-                    (admitidly, something I need to be better about). So I am
-                    really excited to finally be releasing the latest version of
-                    Lily Wallet today.
+                    It's been a busy past couple of months adding new features
+                    to Lily Wallet and I am really excited to be pushing out an
+                    official release.
                   </p>
 
                   <p>
-                    The first few versions of Lily Wallet were focused on
-                    providing unified version of a person's bitcoin wallets
-                    through a pleasent user interface while allowing for sending
-                    and receiving bitcoin.
-                  </p>
-
-                  <p>
-                    This newest version focuses on the initial vault setup flow,
-                    device management, and adds a number of features targetting
-                    bitcoin power users including Lightning Network account
-                    management, retriving data from an Electrum server, and dark
-                    mode.
+                    This latest update focuses on the initial vault creation
+                    flow, device management, and adds a number of features
+                    bitcoin users will appreciate including Lightning Network
+                    accounts, Electrum support, and dark mode.
                   </p>
                 </div>
               </div>
@@ -332,7 +322,7 @@ const LilyVOneNine = () => {
               <Image
                 src={headerImage}
                 alt=""
-                className="absolute inset-0 h-full w-full object-cover rounded-2xl"
+                className="absolute inset-0 h-full w-full object-cover md:rounded-2xl"
               />
             </div>
             <div class="relative px-4 sm:px-6 lg:px-8">
@@ -346,30 +336,31 @@ const LilyVOneNine = () => {
 
                   <p>
                     After talking with users, many shared that their biggest
-                    frustration with multisignature vaults was a lack of support
-                    for extracting their extended public key(s) to share during
-                    initial setup.
+                    frustration with multisignature vaults was the tooling
+                    around vault creation.
                   </p>
 
                   <p>
-                    With current tooling, users have to export files or use the
-                    command line to get their xpub from their devices, send them
-                    to other vault keyholders, combine them correctly, and then
-                    share that data back to properly generate addresses and
-                    start securing their bitcoins. It's a process that requires
-                    a number of manual steps that are only open to technical
-                    users and vulnerable to mistakes.
+                    With current tools, users have to export files or use the
+                    command line to get their extended public key (xpub) from
+                    their devices, send them to other vault keyholders, combine
+                    them correctly, and then share that data back to properly
+                    generate addresses and start securing their bitcoins. It's a
+                    process that requires a number of manual steps that are only
+                    open to technical users and vulnerable to mistakes.
                   </p>
 
                   <p>
-                    Lily Wallet solves this by taking advantage of the operating
-                    system's deep linking functionality. Now users can request
-                    key information from friends by sending them a URL that
-                    passes information directly to the Lily Wallet desktop
-                    application. No more file extraction, copying and pasting
-                    data, and manually configuring forms. Simply send a link to
-                    the other parties, have them plug in their devices, and
-                    they'll send you a link back with the completed setup.
+                    Lily Wallet solves this by allowing key data to easily be
+                    passed into the application from the browser.
+                  </p>
+                  <p>
+                    Now users can share key information with friends by sending
+                    them a URL that continues the vault creation flow on their
+                    machine. No more file extraction, copying and pasting data,
+                    and manually configuring forms. Simply send a link to the
+                    other participants, have them add devices, and you're all
+                    set.
                   </p>
 
                   <p>
@@ -390,10 +381,10 @@ const LilyVOneNine = () => {
 
                   <p>
                     When the collaborator opens the link, they are shown the
-                    vault information and prompted to add their own hardware
-                    device to the vault. This link will automatically open their
-                    instance of Lily Wallet and prompt them to add their own
-                    keys to the vault setup.
+                    vault information and prompted to add their own key(s) to
+                    the vault. This link automatically opens their instance of
+                    Lily Wallet and prompt them to add their own keys to the
+                    vault setup.
                   </p>
                 </div>
               </div>
@@ -444,15 +435,14 @@ const LilyVOneNine = () => {
                   <p>
                     Users can optionally attach device owner names and email
                     addresses to devices included in a vault's setup. This gives
-                    more clarity to vault managers and gives a convienient way
-                    to message participants.
+                    more clarity to vault members and gives a convenient way to
+                    message participants.
                   </p>
 
                   <p>
-                    This feature is especially useful for users managing a
-                    number of different vaults with different participants like
-                    an Uncle Jim or personal financial advisor managing a large
-                    amount of client vaults.
+                    This is especially useful for users managing a number of
+                    different vaults with different participants like a personal
+                    financial advisor managing clients' vaults.
                   </p>
 
                   <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
@@ -498,7 +488,7 @@ const LilyVOneNine = () => {
 
                     <p>
                       It is also easy to provide read-only access to vaults with
-                      other staff who don't hold keys.
+                      other employees who don't control keys.
                     </p>
                   </div>
 
@@ -514,7 +504,8 @@ const LilyVOneNine = () => {
 
                     <p>
                       After orange-pilling people, help them on the next step in
-                      their bitcoin journey to self-custodying their coins.
+                      their bitcoin journey by having them self-custody their
+                      coins.
                     </p>
                   </div>
 
@@ -525,19 +516,19 @@ const LilyVOneNine = () => {
                   </h2>
                   <p>
                     There are a number of other features included with this
-                    release targetting bitcoin power users:
+                    release targeting bitcoin power users:
                   </p>
                   <h3 className="tracking-tight text-slate-900 dark:!text-slate-200">
                     Lightning Network accounts
                   </h3>
                   <p>
                     This version of Lily Wallet also allows users to manage
-                    their Lightning Network nodes from the same interface as
+                    their Lightning Network node from the same interface as
                     their hardware wallets and multisignature vaults.
                   </p>
 
                   <p>
-                    Simply input your node's LND Connect URI whem prompted and
+                    Simply input your node's LND Connect URI when prompted and
                     users can send and receive lightning payments from Lily
                     Wallet.
                   </p>
@@ -551,10 +542,10 @@ const LilyVOneNine = () => {
                   </div>
 
                   <p>
-                    Because Lily Wallet manages on-chain accounts alongside
-                    lightning wallets, users can also open and close their
-                    channels from their hardware wallets or even multisignature
-                    vaults!
+                    Because Lily Wallet manages lightning network nodes
+                    alongside other bitcoin accounts, users can open and close
+                    lightning network channels using funds controlled by their
+                    hardware wallets and even multisignature vaults!
                   </p>
 
                   <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
@@ -568,9 +559,9 @@ const LilyVOneNine = () => {
                     rather than a public API.
                   </p>
                   <p>
-                    This feature ensures that Lily Wallet users will be able to
-                    continue to use their software even if Lily Technologies,
-                    Inc. stop maintaining the wallet software.
+                    This feature gives users more privacy and ensures that users
+                    will be able to continue use their local Lily Wallet even if
+                    Lily Technologies, Inc. ceases operation.
                   </p>
 
                   <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
