@@ -272,7 +272,7 @@ const LilyVOneNine = () => {
                       <dt class="sr-only">Date</dt>
                       <dd class="absolute top-0 inset-x-0 text-slate-400 dark:text-slate-400">
                         <time datetime="2022-09-09T16:24:00.000Z">
-                          Friday, September 9, 2022
+                          Tuesday, September 20, 2022
                         </time>
                       </dd>
                     </dl>
@@ -283,7 +283,7 @@ const LilyVOneNine = () => {
                       <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                         <img
                           class="object-cover shadow-lg rounded-lg w-9 h-9"
-                          src="./screenshots/kevin-small.jpeg"
+                          src="/screenshots/kevin-small.jpeg"
                           alt=""
                         />
                       </div>
