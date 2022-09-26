@@ -272,7 +272,7 @@ const LilyVOneNine = () => {
                       <dt class="sr-only">Date</dt>
                       <dd class="absolute top-0 inset-x-0 text-slate-400 dark:text-slate-400">
                         <time datetime="2022-09-09T16:24:00.000Z">
-                          Tuesday, September 20, 2022
+                          Tuesday, September 27, 2022
                         </time>
                       </dd>
                     </dl>
