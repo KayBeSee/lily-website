@@ -3,10 +3,10 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
-import HeaderStuff from "../components/HeaderStuff";
-import DownloadButtons from "../components/DownloadButtons";
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
+import HeaderStuff from "../../components/HeaderStuff";
+import DownloadButtons from "../../components/DownloadButtons";
 
 const Download = () => {
   return (
