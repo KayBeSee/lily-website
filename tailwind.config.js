@@ -37,6 +37,9 @@ module.exports = {
           900: "#0f172a",
         },
       },
+      maxWidth: {
+        "8xl": "90rem",
+      },
       transitionProperty: {
         visibility: "visibility",
         width: "width",

@@ -9,7 +9,6 @@ import axios from "axios";
 
 async function handler(req, res) {
   const { ticket, requester } = req.body;
-  console.log("ticket, requester: ", ticket, requester);
 
   const base64 = new Buffer(
     `${process.env.ZENDESK_USERNAME}:${process.env.ZENDESK_TOKEN}`

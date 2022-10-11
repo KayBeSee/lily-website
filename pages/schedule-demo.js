@@ -19,9 +19,9 @@ const RequestDemo = () => {
 
       <Navigation />
 
-      <div className="relative flex-grow h-full h-24 overflow-hidden">
+      <div className="relative flex-grow h-full overflow-hidden">
         <DotBackground />
-        <div className="relative lg:max-w-xl mx-auto px-4 my-4 sm:my-0 sm:px-6 lg:px-8 lg:max-w-screen-lg">
+        <div className="relative mx-auto px-4 my-4 sm:my-0 sm:px-6 lg:px-8 lg:max-w-screen-lg">
           <span className="mt-1 block text-2xl tracking-tight font-extrabold sm:text-3xl xl:text-4xl">
             Schedule a demo
           </span>

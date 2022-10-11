@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { InlineWidget } from "react-calendly";
 
+import styles from "./CalendlyWidget.module.css";
+
 const CalendlyWidget = ({ url: BASE_URL }) => {
   const [width, setWidth] = useState(0);
   function handleWindowSizeChange() {
@@ -32,18 +34,20 @@ const CalendlyWidget = ({ url: BASE_URL }) => {
   }
 
   return (
-    <InlineWidget
-      url={url}
-      styles={{
-        height: "655px",
-        margin: 0,
-      }}
-      pageSettings={{
-        hideEventTypeDetails: true,
-        hideLandingPageDetails: true,
-        primaryColor: "059669",
-      }}
-    />
+    <div className={styles.iframeContainer}>
+      <InlineWidget
+        url={url}
+        styles={{
+          height: "100%",
+          margin: 0,
+        }}
+        pageSettings={{
+          hideEventTypeDetails: true,
+          hideLandingPageDetails: true,
+          primaryColor: "059669",
+        }}
+      />
+    </div>
   );
 };
 
