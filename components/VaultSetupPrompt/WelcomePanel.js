@@ -17,7 +17,7 @@ const ListItem = ({ text }) => (
 
 const listItems = [
   "Eliminate single points of failure",
-  "Retain full control of your bitcoin",
+  "Retain complete control of your bitcoin",
   "Preserve privacy and autonomy",
   "Pleasant user experience",
   "Easy to setup",
@@ -55,8 +55,8 @@ const WelcomePanel = ({ returnAddress, setPosition, className }) => {
           </ul>
 
           <p className="mt-4 text-sm leading-6 text-slate-700 dark:text-slate-300">
-            In order to participate, you will need to add one or more of your
-            bitcoin hardware wallet(s) or key(s) using Lily Wallet.
+            To participate, you will need to add one or more of your bitcoin
+            hardware wallet(s) or key(s) using Lily Wallet.
           </p>
 
           <div className="mt-5 group">
