@@ -272,7 +272,7 @@ const LilyVOneNine = () => {
                       <dt class="sr-only">Date</dt>
                       <dd class="absolute top-0 inset-x-0 text-slate-400 dark:text-slate-400">
                         <time datetime="2022-09-09T16:24:00.000Z">
-                          Tuesday, September 27, 2022
+                          Wednesday, October 12, 2022
                         </time>
                       </dd>
                     </dl>
@@ -305,15 +305,22 @@ const LilyVOneNine = () => {
                 <div class="mt-10 prose text-slate-600 dark:text-slate-400 mx-auto">
                   <p>
                     It's been a busy past couple of months adding new features
-                    to Lily Wallet and I am really excited to be pushing out an
-                    official release.
+                    to Lily Wallet and I am excited to be pushing out an{" "}
+                    <a
+                      className="!text-green-500 hover:!text-green-600 dark:hover:!text-green-400"
+                      href=""
+                      target="_blank"
+                    >
+                      official v1.1.0 release
+                    </a>
+                    .
                   </p>
 
                   <p>
                     This latest update focuses on the initial vault creation
-                    flow, device management, and adds a number of features
-                    bitcoin users will appreciate including Lightning Network
-                    accounts, Electrum support, and dark mode.
+                    flow, device management, and adds several features bitcoin
+                    users will appreciate including Lightning Network accounts,
+                    Electrum support, and dark mode.
                   </p>
                 </div>
               </div>
@@ -346,21 +353,20 @@ const LilyVOneNine = () => {
                     their devices, send them to other vault keyholders, combine
                     them correctly, and then share that data back to properly
                     generate addresses and start securing their bitcoins. It's a
-                    process that requires a number of manual steps that are only
+                    process that requires several manual steps that are only
                     open to technical users and vulnerable to mistakes.
                   </p>
 
                   <p>
-                    Lily Wallet solves this by allowing key data to easily be
-                    passed into the application from the browser.
+                    Lily Wallet solves this by allowing key data to be passed
+                    into the application from the browser.
                   </p>
                   <p>
                     Now users can share key information with friends by sending
                     them a URL that continues the vault creation flow on their
                     machine. No more file extraction, copying and pasting data,
-                    and manually configuring forms. Simply send a link to the
-                    other participants, have them add devices, and you're all
-                    set.
+                    and manually configuring forms. Send a link to the other
+                    participants, have them add keys, and you're all set.
                   </p>
 
                   <p>
@@ -381,10 +387,10 @@ const LilyVOneNine = () => {
 
                   <p>
                     When the collaborator opens the link, they are shown the
-                    vault information and prompted to add their own key(s) to
-                    the vault. This link automatically opens their instance of
-                    Lily Wallet and prompt them to add their own keys to the
-                    vault setup.
+                    vault information and prompted to add their key(s) to the
+                    vault. This link automatically opens their instance of Lily
+                    Wallet and prompts them to add their keys to the vault
+                    setup.
                   </p>
                 </div>
               </div>
@@ -414,6 +420,7 @@ const LilyVOneNine = () => {
                     config={CONFIG}
                     returnAddress="Lily Technologies, Inc. <help@lily-wallet.com>"
                     className="-translate-y-6 rounded-2xl"
+                    deepLink={`lily://setup?config=${JSON.stringify(CONFIG)}`}
                   />
                 </div>
               </div>
@@ -435,14 +442,14 @@ const LilyVOneNine = () => {
                   <p>
                     Users can optionally attach device owner names and email
                     addresses to devices included in a vault's setup. This gives
-                    more clarity to vault members and gives a convenient way to
+                    more clarity to vault members and offers a convenient way to
                     message participants.
                   </p>
 
                   <p>
-                    This is especially useful for users managing a number of
-                    different vaults with different participants like a personal
-                    financial advisor managing clients' vaults.
+                    This is especially useful for users managing many different
+                    vaults with different participants like a personal financial
+                    advisor managing clients' vaults.
                   </p>
 
                   <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
@@ -452,9 +459,9 @@ const LilyVOneNine = () => {
                   </h3>
 
                   <p>
-                    These features unlock a number of new use cases for
-                    individuals and businesses providing security services to
-                    clients, friends, and family members.
+                    These features unlock some new use cases for individuals and
+                    businesses providing security services to clients, friends,
+                    and family members.
                   </p>
 
                   <div className="my-12">
@@ -481,9 +488,9 @@ const LilyVOneNine = () => {
                     </h4>
                     <p>
                       Companies can hold bitcoin on their balance sheet without
-                      giving full control of funds to a single individual.
+                      giving complete control of funds to a single individual.
                       Creating a vault with the CEO, CFO, and other executives
-                      allows custody to be shared in a secure fashion.
+                      allows custody to be shared securely.
                     </p>
 
                     <p>
@@ -498,7 +505,7 @@ const LilyVOneNine = () => {
                     </h4>
                     <p>
                       In the same way a financial advisor can help secure
-                      clients funds, Bitcoin power users can help friends and
+                      clients' funds, Bitcoin power users can help friends and
                       family secure their bitcoin using multisignature vaults.
                     </p>
 
@@ -515,8 +522,8 @@ const LilyVOneNine = () => {
                     Other new features
                   </h2>
                   <p>
-                    There are a number of other features included with this
-                    release targeting bitcoin power users:
+                    There are several other features included with this release
+                    targeting bitcoin power users:
                   </p>
                   <h3 className="tracking-tight text-slate-900 dark:!text-slate-200">
                     Lightning Network accounts
@@ -528,9 +535,8 @@ const LilyVOneNine = () => {
                   </p>
 
                   <p>
-                    Simply input your node's LND Connect URI when prompted and
-                    users can send and receive lightning payments from Lily
-                    Wallet.
+                    Input your node's LND Connect URI when prompted and users
+                    can send and receive lightning payments from Lily Wallet.
                   </p>
 
                   <div className="relative">
@@ -560,8 +566,8 @@ const LilyVOneNine = () => {
                   </p>
                   <p>
                     This feature gives users more privacy and ensures that users
-                    will be able to continue use their local Lily Wallet even if
-                    Lily Technologies, Inc. ceases operation.
+                    will be able to continue using their local Lily Wallet even
+                    if Lily Technologies, Inc. ceases operation.
                   </p>
 
                   <hr className="dark:!border-slate-200 dark:!border-opacity-5" />
@@ -579,8 +585,8 @@ const LilyVOneNine = () => {
 
                   <p>
                     As you can see, this latest release of Lily Wallet contains
-                    a ton of new features that furthers the mission to make
-                    using bitcoin safe and easy.
+                    a ton of new features that further the mission to make using
+                    bitcoin safe and easy.
                   </p>
 
                   <p>
@@ -633,10 +639,10 @@ const LilyVOneNine = () => {
                     this year.
                   </p>
                   <p>
-                    If you are business holding bitcoin on your balance sheet, a
-                    developer who wants to contribute, or a bitcoiner with
-                    questions about Lily Wallet please stop by and say hello at
-                    the conference.
+                    If you are a a developer who wants to contribute, business
+                    holding bitcoin on your balance sheet, or a bitcoiner with
+                    questions about Lily Wallet please stop at our table during
+                    Builder Day.
                   </p>
 
                   <h4 className="tracking-tight text-slate-800 dark:!text-slate-300">
