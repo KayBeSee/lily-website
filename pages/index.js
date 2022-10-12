@@ -100,9 +100,9 @@ export default function Home() {
                   <br />
                   <span className="text-yellow-300">secure your Bitcoin</span>
                 </h2>
-                <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                  Lily makes it easy to keep your Bitcoin safe using
-                  multisignature vaults.
+                <p className="mt-3 max-w-lg mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-2xl">
+                  Secure bitcoin wallet designed for everyone on their journey
+                  towards financial freedom.
                 </p>
               </div>
             </div>
