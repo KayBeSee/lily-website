@@ -15,6 +15,14 @@ const Download = () => {
         <Head>
           <title>Download - Lily Wallet</title>
           <HeaderStuff />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@LilyWallet" />
+          <meta name="twitter:title" content="Lily Wallet - Download v1.1" />
+          <meta
+            name="twitter:description"
+            content="Bitcoin wallet designed for everyone on their journey towards financial freedom."
+          />
+          <meta name="twitter:image" content={"/download-twitter-card.png"} />
         </Head>
         <Navigation />
       </div>
