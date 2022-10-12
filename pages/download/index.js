@@ -30,7 +30,7 @@ const Download = () => {
       <div className="bg-white">
         <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8">
           <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 mb-8 sm:text-5xl sm:leading-none md:text-6xl">
-            Download Lily
+            Download Lily Wallet
             <br />
             <span class="text-green-600">
               and start securing your bitcoin today
