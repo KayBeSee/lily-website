@@ -8,6 +8,8 @@ import Footer from "../../components/Footer";
 import HeaderStuff from "../../components/HeaderStuff";
 import DownloadButtons from "../../components/DownloadButtons";
 
+import TwitterImage from "@/images/v1.9/header.png";
+
 const Download = () => {
   return (
     <>
@@ -22,7 +24,10 @@ const Download = () => {
             name="twitter:description"
             content="Bitcoin wallet designed for everyone on their journey towards financial freedom."
           />
-          <meta name="twitter:image" content={"/download-twitter-card.png"} />
+          <meta
+            name="twitter:image"
+            content={`https://lily-wallet.com${TwitterImage.src}`}
+          />
         </Head>
         <Navigation />
       </div>
