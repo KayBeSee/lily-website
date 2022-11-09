@@ -215,7 +215,7 @@ const Navigation = ({ darkBg }) => {
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
             <span className="inline-flex rounded-md shadow">
               <Link href="/download">
-                <a className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green active:bg-gray-50 active:text-green-700 transition duration-150 ease-in-out">
+                <a className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green active:bg-gray-50 active:text-green-700 transition duration-150 ease-in-out">
                   Download
                 </a>
               </Link>
@@ -282,7 +282,7 @@ const Navigation = ({ darkBg }) => {
               <div>
                 <a
                   href="/download"
-                  className="rounded-md block w-full px-5 py-3 text-center font-medium text-white bg-green-700 hover:bg-gray-100 hover:text-yellow-700 focus:outline-none focus:bg-gray-100 focus:text-yellow-700 transition duration-150 ease-in-out"
+                  className="rounded-md block w-full px-5 py-3 text-center font-medium text-white bg-emerald-700 hover:bg-gray-100 hover:text-yellow-700 focus:outline-none focus:bg-gray-100 focus:text-yellow-700 transition duration-150 ease-in-out"
                   role="menuitem"
                 >
                   Download

@@ -3,14 +3,18 @@ import { motion, useTransform, animate, useMotionValue } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const colors = {
-  lightblue: ["from-green-500 to-green-600", "text-green-100", "bg-green-100"],
+  lightblue: [
+    "from-green-500 to-green-600",
+    "text-green-100",
+    "bg-emerald-100",
+  ],
   purple: ["from-yellow-300 to-yellow-400", "text-yellow-100", "bg-yellow-100"],
-  orange: ["from-green-400 to-green-600", "text-green-100", "bg-green-100"],
+  orange: ["from-green-400 to-green-600", "text-green-100", "bg-emerald-100"],
   violet: ["from-yellow-300 to-yellow-400", "text-yellow-100", "bg-yellow-100"],
-  teal: ["from-green-400 to-green-500", "text-green-100", "bg-green-100"],
+  teal: ["from-green-400 to-green-500", "text-green-100", "bg-emerald-100"],
   pink: ["from-yellow-200 to-yellow-300", "text-yellow-100", "bg-yellow-100"],
-  amber: ["from-green-200 to-green-300", "text-green-100", "bg-green-100"],
-  // blue: ["from-green-400 to-green-500", "text-green-100", "bg-green-100"],
+  amber: ["from-green-200 to-green-300", "text-green-100", "bg-emerald-100"],
+  // blue: ["from-green-400 to-green-500", "text-green-100", "bg-emerald-100"],
 };
 
 const rotation = [-2, 1, -1, 2, -1, 1];
@@ -23,8 +27,7 @@ const testimonials = [
     author: {
       name: "Domingo Guerra",
       role: "Entrepreneur",
-      avatar:
-      "./testimonials/sundaywar.jpeg",
+      avatar: "./testimonials/sundaywar.jpeg",
     },
   },
   {
@@ -34,8 +37,7 @@ const testimonials = [
     author: {
       name: "Bitcoin Rabbi",
       role: "Torah Maximalist",
-      avatar:
-      "./testimonials/rabbi.jpeg",
+      avatar: "./testimonials/rabbi.jpeg",
     },
   },
   {
@@ -45,8 +47,7 @@ const testimonials = [
     author: {
       name: "Colin Harper",
       role: "Tech journalist",
-      avatar:
-      "./testimonials/collin.jpeg",
+      avatar: "./testimonials/collin.jpeg",
     },
   },
   {
@@ -56,8 +57,7 @@ const testimonials = [
     author: {
       name: "Polylunar",
       role: "Bitcoin Enthusiast",
-      avatar:
-        "./testimonials/polylunar.jpeg",
+      avatar: "./testimonials/polylunar.jpeg",
     },
   },
   {
@@ -67,8 +67,7 @@ const testimonials = [
     author: {
       name: "Andrew",
       role: "Bitcoin Magazine",
-      avatar:
-      "./testimonials/fiftysat.jpeg",
+      avatar: "./testimonials/fiftysat.jpeg",
     },
   },
 ];

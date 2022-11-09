@@ -90,7 +90,7 @@ const Press = () => {
                 <div class="rounded-md shadow">
                   <a
                     href="/support"
-                    class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-500"
+                    class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-500"
                   >
                     Contact us
                   </a>
@@ -162,10 +162,10 @@ const Press = () => {
                     </p>
                   </div>
                 </div>
-                <cite class="relative flex items-center sm:items-start bg-green-600 rounded-b-lg not-italic py-5 px-6 sm:py-5 sm:pl-12 sm:pr-10 sm:mt-10">
+                <cite class="relative flex items-center sm:items-start bg-emerald-600 rounded-b-lg not-italic py-5 px-6 sm:py-5 sm:pl-12 sm:pr-10 sm:mt-10">
                   <div class="relative rounded-full border-2 border-white sm:absolute sm:top-0 sm:transform sm:-translate-y-1/2">
                     <img
-                      class="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-green-300"
+                      class="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-emerald-300"
                       src="./screenshots/kevin-small.jpeg"
                       alt=""
                     />

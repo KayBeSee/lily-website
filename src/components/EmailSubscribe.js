@@ -43,7 +43,7 @@ const EmailSubscribe = () => {
                 type="submit"
                 className={`w-full ${
                   status === "success"
-                    ? "bg-green-500 hover:bg-green-400"
+                    ? "bg-emerald-500 hover:bg-emerald-400"
                     : status === "error"
                     ? "bg-red-500 hover:bg-red-400"
                     : "bg-yellow-400 hover:bg-yellow-300"

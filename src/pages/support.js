@@ -64,7 +64,7 @@ const Support = () => {
               </div>
               <div className="flex justify-center items-center mt-12 flex-col md:flex-row">
                 <Link href="/talk-to-an-expert">
-                  <button className="w-full bg-green-600 text-white rounded-md py-6 px-6 text-xl md:mr-4 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 active:bg-gray-50 active:text-green-700 transition duration-150 ease-in-out">
+                  <button className="w-full bg-emerald-600 text-white rounded-md py-6 px-6 text-xl md:mr-4 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 active:bg-gray-50 active:text-green-700 transition duration-150 ease-in-out">
                     Talk to an expert
                   </button>
                 </Link>
@@ -83,7 +83,7 @@ const Support = () => {
             <h2 class="sr-only">Contact us</h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-3">
-              <div class="relative overflow-hidden py-10 px-6 bg-green-700 sm:px-10 xl:p-12">
+              <div class="relative overflow-hidden py-10 px-6 bg-emerald-700 sm:px-10 xl:p-12">
                 <div
                   class="absolute inset-0 pointer-events-none sm:hidden"
                   aria-hidden="true"
@@ -352,7 +352,7 @@ const Support = () => {
                     <button
                       type="submit"
                       disabled={isLoading || success}
-                      class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:w-auto disabled:opacity-50"
+                      class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:w-auto disabled:opacity-50"
                     >
                       {isLoading
                         ? "Sending..."

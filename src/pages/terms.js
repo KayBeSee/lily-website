@@ -44,13 +44,13 @@ const Terms = () => {
                     <a
                       href="https://github.com/Lily-Technologies/lily-wallet"
                       target="_blank"
-                      class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-green-700 bg-white hover:bg-green-50 sm:px-8"
+                      class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-green-700 bg-white hover:bg-emerald-50 sm:px-8"
                     >
                       Review source code
                     </a>
                     <a
                       href="/talk-to-an-expert"
-                      class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                      class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-emerald-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                     >
                       Talk to a specialist
                     </a>

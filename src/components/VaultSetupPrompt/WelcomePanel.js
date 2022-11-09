@@ -74,7 +74,7 @@ const WelcomePanel = ({ returnAddress, setPosition, className }) => {
           </div>
           <div className="mt-6 flex gap-4">
             <button
-              className="inline-flex justify-center rounded-lg text-sm font-medium py-3 px-4 bg-green-500 border border-green-600 text-slate-50 hover:bg-green-600 focus:ring-1 focus:ring-green-800 dark:focus:ring-green-600 outline-none"
+              className="inline-flex justify-center rounded-lg text-sm font-medium py-3 px-4 bg-emerald-500 border border-green-600 text-slate-50 hover:bg-emerald-600 focus:ring-1 focus:ring-green-800 dark:focus:ring-green-600 outline-none"
               onClick={() => setPosition(1)}
             >
               Get started

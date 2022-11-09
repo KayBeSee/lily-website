@@ -27,7 +27,7 @@ const FeaturesPage = () => {
           <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div class="inline-flex rounded-md shadow">
               <Link href="/download">
-                <a class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
+                <a class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700">
                   Download Lily
                 </a>
               </Link>
@@ -35,7 +35,7 @@ const FeaturesPage = () => {
             <div class="ml-3 inline-flex rounded-md shadow">
               <a
                 href="/talk-to-an-expert"
-                class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50"
+                class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-emerald-50"
               >
                 Talk to an expert
               </a>

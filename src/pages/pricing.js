@@ -106,7 +106,7 @@ const FreeMobileSection = () => (
         <span class="text-base font-medium text-gray-500">/year</span>
       </p>
       <Link href="/download">
-        <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+        <a class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
           Download Lily
         </a>
       </Link>
@@ -196,7 +196,7 @@ const FreeMobileSection = () => (
 
     <div class="border-t border-gray-200 px-4 pt-5">
       <Link href="/download">
-        <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+        <a class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
           Download Lily
         </a>
       </Link>
@@ -214,7 +214,7 @@ const TwoOfThreeMobileSection = () => (
         <span class="text-base font-medium text-gray-500">/year</span>
       </p>
       <Link href="/download">
-        <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+        <a class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
           Purchase In-App
         </a>
       </Link>
@@ -304,7 +304,7 @@ const TwoOfThreeMobileSection = () => (
 
     <div class="border-t border-gray-200 px-4 pt-5">
       <Link href="/download">
-        <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+        <a class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
           Purchase In-App
         </a>
       </Link>
@@ -322,7 +322,7 @@ const ThreeOfFiveMobileSection = () => (
         <span class="text-base font-medium text-gray-500">/year</span>
       </p>
       <Link href="/download">
-        <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+        <a class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
           Purchase In-App
         </a>
       </Link>
@@ -412,7 +412,7 @@ const ThreeOfFiveMobileSection = () => (
 
     <div class="border-t border-gray-200 px-4 pt-5">
       <Link href="/download">
-        <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+        <a class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
           Purchase In-App
         </a>
       </Link>
@@ -430,7 +430,7 @@ const PremiumMobileSection = () => (
         <span class="text-base font-medium text-gray-500">/year</span>
       </p>
       <Link href="/download">
-        <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+        <a class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
           Purchase In-App
         </a>
       </Link>
@@ -528,7 +528,7 @@ const PremiumMobileSection = () => (
 
     <div class="border-t border-gray-200 px-4 pt-5">
       <Link href="/download">
-        <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+        <a class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
           Purchase In-App
         </a>
       </Link>
@@ -612,7 +612,7 @@ const DesktopTable = () => (
               </div>
               <a
                 href="/download"
-                class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Download Lily
               </a>
@@ -631,7 +631,7 @@ const DesktopTable = () => (
               </div>
               <a
                 href="/download"
-                class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Purchase In-App
               </a>
@@ -650,7 +650,7 @@ const DesktopTable = () => (
               </div>
               <a
                 href="/download"
-                class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Purchase In-App
               </a>
@@ -669,7 +669,7 @@ const DesktopTable = () => (
               </div>
               <a
                 href="/download"
-                class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
               >
                 Purchase In-App
               </a>
@@ -933,7 +933,7 @@ const DesktopTable = () => (
           <td class="pt-5 px-6">
             <a
               href="/download"
-              class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+              class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
               Download Lily
             </a>
@@ -942,7 +942,7 @@ const DesktopTable = () => (
           <td class="pt-5 px-6">
             <a
               href="/download"
-              class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+              class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
               Purchase In-App
             </a>
@@ -951,7 +951,7 @@ const DesktopTable = () => (
           <td class="pt-5 px-6">
             <a
               href="/download"
-              class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+              class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
               Purchase In-App
             </a>
@@ -960,7 +960,7 @@ const DesktopTable = () => (
           <td class="pt-5 px-6">
             <a
               href="/download"
-              class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+              class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
               Purchase In-App
             </a>
@@ -980,7 +980,7 @@ const Pricing = () => {
           <HeaderStuff />
         </Head>
         <Navigation />
-        <div class="bg-green-600">
+        <div class="bg-emerald-600">
           <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl">
             <div class="px-0 sm:px-4 lg:px-0 lg:flex lg:justify-between lg:items-center">
               <div class="max-w-xl">
@@ -1077,7 +1077,7 @@ const Pricing = () => {
 
       <div class="bg-white">
         <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div class="bg-green-600 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+          <div class="bg-emerald-600 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
             <div class="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
               <div class="lg:self-center">
                 <h2 class="text-3xl font-extrabold text-white sm:text-4xl">

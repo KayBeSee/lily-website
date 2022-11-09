@@ -180,7 +180,7 @@ const ImportPanel = ({ position, returnAddress, config, openDeepLink }) => {
               </div>
               <div className="flex justify-end pt-6">
                 <button
-                  className="flex text-md font-medium items-center justify-center bg-green-600 py-2 px-3 rounded-2xl shadow-sm text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50"
+                  className="flex text-md font-medium items-center justify-center bg-emerald-600 py-2 px-3 rounded-2xl shadow-sm text-white hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50"
                   onClick={() => openDeepLink()}
                 >
                   Complete setup in Lily Wallet
@@ -303,7 +303,7 @@ const ImportPanel = ({ position, returnAddress, config, openDeepLink }) => {
               </div>
               <div className="flex justify-end pt-6">
                 <button
-                  className="flex text-md font-medium items-center justify-center bg-green-600 py-2 px-3 rounded-2xl shadow-sm text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50"
+                  className="flex text-md font-medium items-center justify-center bg-emerald-600 py-2 px-3 rounded-2xl shadow-sm text-white hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50"
                   onClick={() => openDeepLink()}
                 >
                   Complete setup in Lily Wallet
