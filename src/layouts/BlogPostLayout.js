@@ -219,14 +219,14 @@ export function BlogPostLayout({ children, meta }) {
           </div>
           <footer className="mt-16">
             <div className="relative">
-              <section className="relative py-16 border-t border-slate-200 dark:border-slate-200/5">
+              <section className="relative py-16 border-t border-slate-200 dark:border-slate-200/5 mx-auto max-w-3xl">
                 <h2 className="text-xl font-semibold text-slate-900 tracking-tight dark:text-white">
                   Get all of our updates directly to your&nbsp;inbox.
                   <br />
                   Sign up for our newsletter.
                 </h2>
                 <div className="mt-5 max-w-md">
-                  <EmailSubscribe />
+                  <EmailSubscribe className="bg-green-700 hover:bg-green-600" />
                 </div>
               </section>
             </div>

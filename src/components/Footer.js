@@ -164,7 +164,15 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <EmailSubscribe />
+          <div className="mt-8 xl:mt-0">
+            <h3 className="text-sm font-semibold text-yellow-300 tracking-wider uppercase">
+              Subscribe to our newsletter
+            </h3>
+            <p className="mt-4 text-base text-white">
+              The latest news, articles, and resources, sent to your inbox.
+            </p>
+            <EmailSubscribe className="bg-yellow-500 hover:bg-yellow-400" />
+          </div>
         </div>
         <div className="mt-8 border-t border-emerald-800 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
