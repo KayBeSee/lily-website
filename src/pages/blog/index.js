@@ -100,3 +100,7 @@ Blog.layoutProps = {
     title: "Blog",
   },
 };
+
+export async function getStaticProps() {
+  return { props: {} };
+}

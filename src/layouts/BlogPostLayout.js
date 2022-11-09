@@ -281,3 +281,7 @@ function Metadata({ meta }) {
     </Head>
   );
 }
+
+export async function getStaticProps() {
+  return { props: {} };
+}
