@@ -1,0 +1,130 @@
+import { useEffect, useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import clsx from "clsx";
+
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import HeaderStuff from "@/components/HeaderStuff";
+
+import {BlogVaultSetupPrompt} from './components/BlogVaultSetupPrompt'
+
+import requestDark from "./img/request-dark.png";
+import lightningOpenDark from "./img/lightning-open-dark.png";
+import headerDark from "./img/header.png";
+
+
+import requestLight from "./img/request-light.png";
+import headerLight from "./img/header.png";
+import lightningOpenLight from "./img/lightning-open-light.png";
+
+import headerImage from './img/request-light.png'
+import requestImage from './img/request-light.png'
+
+import { kevinmulcrone } from '@/authors'
+
+export const meta = {
+    title: 'New Lily Wallet v1.1 includes better UX for creating vaults, Lightning Network accounts, and more',
+    description: `It's been a busy past couple of months adding new features to Lily Wallet and I am excited to be pushing out an official v1.1.0 release.`,
+    date: '2022-10-12T18:05:31Z',
+    authors: [kevinmulcrone],
+    image: headerLight,
+}
+
+
+
+It's been a busy past couple of months adding new features to Lily Wallet and I am excited to be pushing out an official v1.1.0 release.
+
+This latest update focuses on the initial vault creation flow, device management, and adds several features bitcoin users will appreciate including Lightning Network accounts, Electrum support, and dark mode.
+
+<div className="my-8">
+    <img src={headerLight.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
+</div>
+
+## Setup vaults via URLs
+After talking with users, many shared that their biggest frustration with multisignature vaults was the tooling around vault creation.
+
+With current tools, users have to export files or use the command line to get their extended public key (xpub) from their devices, send them to other vault keyholders, combine them correctly, and then share that data back to properly generate addresses and start securing their bitcoins. It's a process that requires several manual steps that are only open to technical users and vulnerable to mistakes.
+
+Lily Wallet solves this by allowing key data to be passed into the application from the browser.
+
+Now users can share key information with friends by sending them a URL that continues the vault creation flow on their machine. No more file extraction, copying and pasting data, and manually configuring forms. Send a link to the other participants, have them add keys, and you're all set.
+
+When creating a new vault, users have the option to "Request via URL". This option prompts them to input their email address and how many devices the other user needs to add. With this information, a magic link is displayed that can be copied and sent to the desired vault participants.
+
+
+<div className="my-8">
+    <img src={requestImage.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
+</div>
+
+When the collaborator opens the link, they are shown the vault information and prompted to add their key(s) to the vault. This link automatically opens their instance of Lily Wallet and prompts them to add their keys to the vault setup.
+
+<BlogVaultSetupPrompt />
+
+After they have added their key(s) to the vault, an email is generated with a URL that includes the completed vault configuration. This URL can be shared with other people to let them import the vault into their instance of Lily Wallet on their computer.
+
+<hr class="dark:!border-slate-200 dark:!border-opacity-5" />
+
+## Add device owner information
+Users can optionally attach device owner names and email addresses to devices included in a vault's setup. This gives more clarity to vault members and offers a convenient way to message participants.
+
+This is especially useful for users managing many different vaults with different participants like a personal financial advisor managing clients' vaults.
+
+<hr class="dark:!border-slate-200 dark:!border-opacity-5" />
+
+## Unlocking new use cases
+These features unlock some new use cases for individuals and businesses providing security services to clients, friends, and family members.
+
+#### Financial advisors
+Give clients a URL to create 2-of-3 multisignature vaults where you hold one of the keys. Because the client holds two of their keys, they retain unilateral control of their funds.
+
+As a participant in the vault, you have access to receive addresses which allows you to deposit bitcoin into their account on their behalf.
+
+#### Companies holding bitcoin
+Companies can hold bitcoin on their balance sheet without giving complete control of funds to a single individual. Creating a vault with the CEO, CFO, and other executives allows custody to be shared securely.
+
+It is also easy to provide read-only access to vaults with other employees who don't control keys.
+
+#### Friends and family
+In the same way a financial advisor can help secure clients' funds, Bitcoin power users can help friends and family secure their bitcoin using multisignature vaults.
+
+After orange-pilling people, help them on the next step in their bitcoin journey by having them self-custody their coins.
+
+<hr class="dark:!border-slate-200 dark:!border-opacity-5" />
+
+## Other new features
+There are several other features included with this release targeting bitcoin power users:
+
+#### Lightning Network accounts
+This version of Lily Wallet also allows users to manage their Lightning Network node from the same interface as their hardware wallets and multisignature vaults.
+
+Input your node's LND Connect URI when prompted and users can send and receive lightning payments from Lily Wallet.
+
+<div className="my-8">
+    <img src={lightningOpenLight.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
+</div>
+
+Because Lily Wallet manages lightning network nodes alongside other bitcoin accounts, users can open and close lightning network channels using funds controlled by their hardware wallets and even multisignature vaults!
+
+<hr class="dark:!border-slate-200 dark:!border-opacity-5" />
+
+#### Retrieve data from Electrum
+Another requested feature was to allow wallet users to retrieve transaction data from a specific Electrum server rather than a public API.
+
+This feature gives users more privacy and ensures that users will be able to continue using their local Lily Wallet even if Lily Technologies, Inc. ceases operation.
+
+<hr class="dark:!border-slate-200 dark:!border-opacity-5" />
+
+#### Dark mode
+The latest version of Lily Wallet includes a dark mode color scheme. Lily Wallet will automatically detect your system's color preference and apply styling accordingly.
+
+<hr class="dark:!border-slate-200 dark:!border-opacity-5" />
+
+As you can see, this latest release of Lily Wallet contains a ton of new features that further the mission to make using bitcoin safe and easy.
+
+With new features for simplifying multisignature vaults, using the lightning network, and designing one simple, unified view of users' different wallets, this brings us even closer to that goal.
+
+To try it out, head over to the download page on the Lily Wallet website.
+
+As always, the code is open source and can be reviewed in the Github repository.
