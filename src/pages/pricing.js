@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { CheckIcon } from "@heroicons/react/24/outline";
 
 import Head from "next/head";
 
@@ -7,999 +8,153 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
 
-const CheckMark = ({ plan }) => (
-  <>
-    <svg
-      class="h-5 w-5 text-green-500"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        fillRule="evenodd"
-        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-        clipRule="evenodd"
-      />
-    </svg>
-    <span class="sr-only">Included in {plan}</span>
-  </>
-);
-
-const DashMark = ({ plan }) => (
-  <>
-    <svg
-      class="h-5 w-5 text-gray-400"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        fillRule="evenodd"
-        d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-        clipRule="evenodd"
-      />
-    </svg>
-    <span class="sr-only">Not included in Free</span>
-  </>
-);
-
-const MobileCheckMark = () => (
-  <>
-    <svg
-      class="ml-auto h-5 w-5 text-green-500"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        fillRule="evenodd"
-        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-        clipRule="evenodd"
-      />
-    </svg>
-    <span class="sr-only">Yes</span>
-  </>
-);
-
-const MobileDashMark = () => (
-  <>
-    <svg
-      class="ml-auto h-5 w-5 text-gray-400"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        fillRule="evenodd"
-        d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-        clipRule="evenodd"
-      />
-    </svg>
-    <span class="sr-only">No</span>
-  </>
-);
-
-const MobileRow = ({ title, check }) => (
-  <tr class="border-t border-gray-200">
-    <th
-      class="py-5 px-4 text-sm font-normal text-gray-500 text-left"
-      scope="row"
-    >
-      {title}
-    </th>
-    <td class="py-5 pr-4">
-      {check ? <MobileCheckMark /> : <MobileDashMark />}
-    </td>
-  </tr>
-);
-
-const FreeMobileSection = () => (
-  <div>
-    <div class="px-4">
-      <h2 class="text-lg leading-6 font-medium text-gray-900">Free</h2>
-      <p class="mt-4">
-        <span class="text-4xl font-extrabold text-gray-900">$0</span>
-        <span class="text-base font-medium text-gray-500">/year</span>
-      </p>
-      <Link href="/download">
-        <a class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
-          Download Lily
-        </a>
-      </Link>
-    </div>
-
-    <table class="mt-8 w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Security
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Manage Hardware Wallets" check={true} />
-        <MobileRow title="2-of-3 Multisig Vault" check={false} />
-        <MobileRow title="3-of-5 Multisig Vault" check={false} />
-        <MobileRow title="Custom vault specs" check={false} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Features
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Fee customization" check={true} />
-        <MobileRow title="Import/Export PSBTs" check={true} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Network
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Connect to Bitcoin Core" check={false} />
-        <MobileRow title="Connect over Tor" check={false} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Support
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Email Support" check={false} />
-        <MobileRow title="Phone / Zoom Support" check={false} />
-      </tbody>
-    </table>
-
-    <div class="border-t border-gray-200 px-4 pt-5">
-      <Link href="/download">
-        <a class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
-          Download Lily
-        </a>
-      </Link>
-    </div>
-  </div>
-);
-
-const TwoOfThreeMobileSection = () => (
-  <div>
-    <div class="px-4">
-      <h2 class="text-lg leading-6 font-medium text-gray-900">2-of-3 Vault</h2>
-      <h4 class="text-sm leading-6 font-medium text-gray-500">Basic</h4>
-      <p class="mt-4">
-        <span class="text-4xl font-extrabold text-gray-900">$100</span>
-        <span class="text-base font-medium text-gray-500">/year</span>
-      </p>
-      <Link href="/download">
-        <a class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
-          Purchase In-App
-        </a>
-      </Link>
-    </div>
-
-    <table class="mt-8 w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Security
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Manage Hardware Wallets" check={true} />
-        <MobileRow title="2-of-3 Multisig Vault" check={true} />
-        <MobileRow title="3-of-5 Multisig Vault" check={false} />
-        <MobileRow title="Custom vault specs" check={false} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Features
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Fee customization" check={true} />
-        <MobileRow title="Import/Export PSBTs" check={true} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Network
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Connect to Bitcoin Core" check={true} />
-        <MobileRow title="Connect over Tor" check={true} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Support
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Email Support" check={true} />
-        <MobileRow title="Phone / Zoom Support" check={false} />
-      </tbody>
-    </table>
-
-    <div class="border-t border-gray-200 px-4 pt-5">
-      <Link href="/download">
-        <a class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
-          Purchase In-App
-        </a>
-      </Link>
-    </div>
-  </div>
-);
-
-const ThreeOfFiveMobileSection = () => (
-  <div>
-    <div class="px-4">
-      <h2 class="text-lg leading-6 font-medium text-gray-900">3-of-5 Vault</h2>
-      <h4 class="text-sm leading-6 font-medium text-gray-500">Basic</h4>
-      <p class="mt-4">
-        <span class="text-4xl font-extrabold text-gray-900">$500</span>
-        <span class="text-base font-medium text-gray-500">/year</span>
-      </p>
-      <Link href="/download">
-        <a class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
-          Purchase In-App
-        </a>
-      </Link>
-    </div>
-
-    <table class="mt-8 w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Security
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Manage Hardware Wallets" check={true} />
-        <MobileRow title="2-of-3 Multisig Vault" check={false} />
-        <MobileRow title="3-of-5 Multisig Vault" check={true} />
-        <MobileRow title="Custom vault specs" check={false} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Features
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Fee customization" check={true} />
-        <MobileRow title="Import/Export PSBTs" check={true} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Network
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Connect to Bitcoin Core" check={true} />
-        <MobileRow title="Connect over Tor" check={true} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Support
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Email Support" check={true} />
-        <MobileRow title="Phone / Zoom Support" check={false} />
-      </tbody>
-    </table>
-
-    <div class="border-t border-gray-200 px-4 pt-5">
-      <Link href="/download">
-        <a class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
-          Purchase In-App
-        </a>
-      </Link>
-    </div>
-  </div>
-);
-
-const PremiumMobileSection = () => (
-  <div>
-    <div class="px-4">
-      <h2 class="text-lg leading-6 font-medium text-gray-900">Custom Vault</h2>
-      <h4 class="text-sm leading-6 font-medium text-gray-500">Premium</h4>
-      <p class="mt-4">
-        <span class="text-4xl font-extrabold text-gray-900">$1000</span>
-        <span class="text-base font-medium text-gray-500">/year</span>
-      </p>
-      <Link href="/download">
-        <a class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
-          Purchase In-App
-        </a>
-      </Link>
-    </div>
-
-    <table class="mt-8 w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Security
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Manage Hardware Wallets" check={true} />
-        <MobileRow title="2-of-3 Multisig Vault" check={true} />
-        <MobileRow title="3-of-5 Multisig Vault" check={true} />
-        <tr class="border-t border-gray-200">
-          <th
-            class="py-5 px-4 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            Custom vault specs
-          </th>
-          <td class="py-5 pr-4 text-right text-gray-500">Up to 15 keys</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Features
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Fee customization" check={true} />
-        <MobileRow title="Import/Export PSBTs" check={true} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Network
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Connect to Bitcoin Core" check={true} />
-        <MobileRow title="Connect over Tor" check={true} />
-      </tbody>
-    </table>
-
-    <table class="w-full">
-      <caption class="bg-gray-50 border-t border-gray-200 py-3 px-4 text-sm font-medium text-gray-900 text-left">
-        Support
-      </caption>
-      <thead>
-        <tr>
-          <th class="sr-only" scope="col">
-            Feature
-          </th>
-          <th class="sr-only" scope="col">
-            Included
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-200">
-        <MobileRow title="Email Support" check={true} />
-        <MobileRow title="Phone / Zoom Support" check={true} />
-      </tbody>
-    </table>
-
-    <div class="border-t border-gray-200 px-4 pt-5">
-      <Link href="/download">
-        <a class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
-          Purchase In-App
-        </a>
-      </Link>
-    </div>
-  </div>
-);
-
-const MobileTable = () => (
-  <div class="space-y-24 lg:hidden">
-    <FreeMobileSection />
-    <TwoOfThreeMobileSection />
-    <ThreeOfFiveMobileSection />
-    <PremiumMobileSection />
-  </div>
-);
-
-const DesktopTable = () => (
-  <div class="hidden lg:block">
-    <table class="w-full h-px table-fixed">
-      <caption class="sr-only">Pricing plan comparison</caption>
-      <thead>
-        <tr>
-          <th
-            class="pb-4 pl-6 pr-6 text-sm font-medium text-gray-900 text-left"
-            scope="col"
-          >
-            <span class="sr-only">Feature by</span>
-            <span>Plans</span>
-          </th>
-
-          <th
-            class="w-1/5 pb-4 px-6 text-lg leading-6 font-medium text-gray-900 text-left"
-            scope="col"
-          >
-            Free
-          </th>
-
-          <th
-            class="w-1/5 pb-4 px-6 text-lg leading-6 font-medium text-gray-900 text-left"
-            scope="col"
-          >
-            2-of-3 Vault
-            <div class="text-sm font-medium text-gray-500 text-left">Basic</div>
-          </th>
-
-          <th
-            class="w-1/5 pb-4 px-6 text-lg leading-6 font-medium text-gray-900 text-left"
-            scope="col"
-          >
-            3-of-5 Vault
-            <div class="text-sm font-medium text-gray-500 text-left">Basic</div>
-          </th>
-
-          <th
-            class="w-1/5 pb-4 px-6 text-lg leading-6 font-medium text-gray-900 text-left"
-            scope="col"
-          >
-            Custom Vault
-            <div class="text-sm font-medium text-gray-500 text-left">
-              Premium
-            </div>
-          </th>
-        </tr>
-      </thead>
-      <tbody class="border-t border-gray-200 divide-y divide-gray-200">
-        <tr>
-          <th
-            class="py-8 pl-6 pr-6 align-top text-sm font-medium text-gray-900 text-left"
-            scope="row"
-          >
-            Pricing
-          </th>
-
-          <td class="h-full py-8 px-6 align-top">
-            <div class="h-full flex flex-col justify-between">
-              <div>
-                <p>
-                  <span class="text-4xl font-extrabold text-gray-900">$0</span>
-                  <span class="text-base font-medium text-gray-500">/year</span>
-                </p>
-              </div>
-              <a
-                href="/download"
-                class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Download Lily
-              </a>
-            </div>
-          </td>
-
-          <td class="h-full py-8 px-6 align-top">
-            <div class="h-full flex flex-col justify-between">
-              <div>
-                <p>
-                  <span class="text-4xl font-extrabold text-gray-900">
-                    $100
-                  </span>
-                  <span class="text-base font-medium text-gray-500">/year</span>
-                </p>
-              </div>
-              <a
-                href="/download"
-                class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Purchase In-App
-              </a>
-            </div>
-          </td>
-
-          <td class="h-full py-8 px-6 align-top">
-            <div class="h-full flex flex-col justify-between">
-              <div>
-                <p>
-                  <span class="text-4xl font-extrabold text-gray-900">
-                    $500
-                  </span>
-                  <span class="text-base font-medium text-gray-500">/year</span>
-                </p>
-              </div>
-              <a
-                href="/download"
-                class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Purchase In-App
-              </a>
-            </div>
-          </td>
-
-          <td class="h-full py-8 px-6 align-top">
-            <div class="h-full flex flex-col justify-between">
-              <div>
-                <p>
-                  <span class="text-4xl font-extrabold text-gray-900">
-                    $1000
-                  </span>
-                  <span class="text-base font-medium text-gray-500">/year</span>
-                </p>
-              </div>
-              <a
-                href="/download"
-                class="mt-6 block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-              >
-                Purchase In-App
-              </a>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th
-            class="py-3 pl-6 bg-gray-50 text-sm font-medium text-gray-900 text-left"
-            colspan="5"
-            scope="colgroup"
-          >
-            Security
-          </th>
-        </tr>
-
-        <tr>
-          <th
-            class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            Manage Hardware Wallets
-          </th>
-          <td class="py-5 px-6">
-            <CheckMark plan="free" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="2-of-3 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="3-of-5 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="premium" />
-          </td>
-        </tr>
-
-        <tr>
-          <th
-            class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            2-of-3 Multisig Vault
-          </th>
-          <td class="py-5 px-6">
-            <DashMark plan="free" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="2-of-3 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <DashMark plan="3-of-5 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="premium" />
-          </td>
-        </tr>
-
-        <tr>
-          <th
-            class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            3-of-5 Multisig Vault
-          </th>
-          <td class="py-5 px-6">
-            <DashMark plan="free" />
-          </td>
-          <td class="py-5 px-6">
-            <DashMark plan="2-of-3 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="3-of-5 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="premium" />
-          </td>
-        </tr>
-        <tr>
-          <th
-            class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            Custom vault specs
-          </th>
-          <td class="py-5 px-6">
-            <DashMark plan="free" />
-          </td>
-          <td class="py-5 px-6">
-            <DashMark plan="2-of-3 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <DashMark plan="3-of-5 vault" />
-          </td>
-          <td class="py-5 px-6 text-gray-500">
-            Up to 15 keys
-            <span class="sr-only">Included in Premium</span>
-          </td>
-        </tr>
-        <tr>
-          <th
-            class="py-3 pl-6 bg-gray-50 text-sm font-medium text-gray-900 text-left"
-            colspan="5"
-            scope="colgroup"
-          >
-            Features
-          </th>
-        </tr>
-
-        <tr>
-          <th
-            class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            Fee customization
-          </th>
-          <td class="py-5 px-6">
-            <CheckMark plan="free" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="2-of-3 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="3-of-5 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="premium" />
-          </td>
-        </tr>
-
-        <tr>
-          <th
-            class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            Import/Export PSBTs
-          </th>
-          <td class="py-5 px-6">
-            <CheckMark plan="free" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="2-of-3 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="3-of-5 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="premium" />
-          </td>
-        </tr>
-        <tr>
-          <th
-            class="py-3 pl-6 bg-gray-50 text-sm font-medium text-gray-900 text-left"
-            colspan="5"
-            scope="colgroup"
-          >
-            Network
-          </th>
-        </tr>
-
-        <tr>
-          <th
-            class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            Connect to Bitcoin Core
-          </th>
-          <td class="py-5 px-6">
-            <DashMark plan="free" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="2-of-3 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="3-of-5 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="premium" />
-          </td>
-        </tr>
-
-        <tr>
-          <th
-            class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            Connect over Tor
-          </th>
-          <td class="py-5 px-6">
-            <DashMark plan="free" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="2-of-3 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="3-of-5 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="premium" />
-          </td>
-        </tr>
-
-        <tr>
-          <th
-            class="py-3 pl-6 bg-gray-50 text-sm font-medium text-gray-900 text-left"
-            colspan="5"
-            scope="colgroup"
-          >
-            Support
-          </th>
-        </tr>
-
-        <tr>
-          <th
-            class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            Email Support
-          </th>
-          <td class="py-5 px-6">
-            <DashMark plan="free" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="2-of-3 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="3-of-5 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="premium" />
-          </td>
-        </tr>
-
-        <tr>
-          <th
-            class="py-5 pl-6 pr-6 text-sm font-normal text-gray-500 text-left"
-            scope="row"
-          >
-            Phone / Zoom Support
-          </th>
-          <td class="py-5 px-6">
-            <DashMark plan="free" />
-          </td>
-          <td class="py-5 px-6">
-            <DashMark plan="2-of-3 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <DashMark plan="3-of-5 vault" />
-          </td>
-          <td class="py-5 px-6">
-            <CheckMark plan="premium" />
-          </td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr class="border-t border-gray-200">
-          <th class="sr-only" scope="row">
-            Choose your plan
-          </th>
-
-          <td class="pt-5 px-6">
-            <a
-              href="/download"
-              class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Download Lily
-            </a>
-          </td>
-
-          <td class="pt-5 px-6">
-            <a
-              href="/download"
-              class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Purchase In-App
-            </a>
-          </td>
-
-          <td class="pt-5 px-6">
-            <a
-              href="/download"
-              class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Purchase In-App
-            </a>
-          </td>
-
-          <td class="pt-5 px-6">
-            <a
-              href="/download"
-              class="block w-full bg-emerald-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Purchase In-App
-            </a>
-          </td>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-);
+const tiers = [
+  {
+    name: "Personal",
+    href: "/download",
+    priceAnnual: 0,
+    description:
+      "An entry level wallet to start controlling your personal bitcoin",
+    features: [
+      "Manage existing funds on hardware wallets",
+      "Lightning network account management",
+      "Full PSBT support",
+      "Fee customization",
+    ],
+    cta: "Download Lily Wallet",
+  },
+  {
+    name: "Multisig",
+    href: "/download",
+    priceAnnual: 100,
+    description:
+      "A premium solution for businesses, inheritance, or high net-worth individuals",
+    features: [
+      "Eliminate single points of failure",
+      "Collaborative custody with other stakeholders",
+      "Zero KYC or invasive surveillance",
+      "Premium support staff on call to assist",
+    ],
+    cta: "Purchase in-app",
+  },
+];
 
 const Pricing = () => {
   return (
     <>
-      <div class="relative pt-6 pb-12 lg:pb-20">
+      <div class="relative pt-6">
         <Head>
           <title>Pricing - Lily Wallet</title>
           <HeaderStuff />
         </Head>
         <Navigation />
-        <div class="bg-emerald-600">
-          <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl">
-            <div class="px-0 sm:px-4 lg:px-0 lg:flex lg:justify-between lg:items-center">
-              <div class="max-w-xl">
-                <h2 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
-                  Pricing Plans
+
+        <div className="">
+          <div className="pt-12 sm:pt-16 lg:pt-24 bg-emerald-600 bg-gradient-to-b from-emerald-500 to-emerald-700">
+            <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-3xl space-y-2 lg:max-w-none pb-8 sm:pb-12 lg:pb-16">
+                <h2 className="text-xl font-semibold leading-6 text-green-100">
+                  Pricing
                 </h2>
-                <p class="mt-5 text-xl text-green-300">
-                  Connect your existing hardware wallet for free, then create a
-                  vault for extra security. All purchases are made within the
-                  application.
+                <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                  Start small and upgrade when you need
+                </p>
+                <p className="text-xl text-green-200">
+                  Lily Wallet meets you where you are. Only pay for premium
+                  security on the accounts that need it.
                 </p>
               </div>
             </div>
           </div>
+          <div className="bg-gray-50 pb-12 sm:pb-16 lg:pb-24">
+            <div className="relative">
+              <div className="absolute inset-0 h-3/4 bg-emerald-700" />
+              <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-md space-y-4 lg:grid lg:max-w-5xl lg:grid-cols-2 lg:gap-5 lg:space-y-0">
+                  {tiers.map((tier) => (
+                    <div
+                      key={tier.name}
+                      className="flex flex-col overflow-hidden rounded-lg shadow-lg"
+                    >
+                      <div className="bg-white px-6 py-8 sm:p-10 sm:pb-6">
+                        <div>
+                          <h3
+                            className="inline-flex rounded-full bg-emerald-100 px-4 py-1 text-base font-semibold text-emerald-600"
+                            id="tier-standard"
+                          >
+                            {tier.name}
+                          </h3>
+                        </div>
+                        <div className="mt-4 flex items-baseline text-6xl font-bold tracking-tight">
+                          ${tier.priceAnnual}
+                          <span className="ml-1 text-2xl font-medium tracking-normal text-gray-500">
+                            /year
+                          </span>
+                        </div>
+                        <p className="mt-5 text-lg text-gray-500">
+                          {tier.description}
+                        </p>
+                      </div>
+                      <div className="flex flex-1 flex-col justify-between space-y-6 bg-gray-50 px-6 pt-6 pb-8 sm:p-10 sm:pt-6">
+                        <ul role="list" className="space-y-4">
+                          {tier.features.map((feature) => (
+                            <li key={feature} className="flex items-start">
+                              <div className="flex-shrink-0">
+                                <CheckIcon
+                                  className="h-6 w-6 text-green-500"
+                                  aria-hidden="true"
+                                />
+                              </div>
+                              <p className="ml-3 text-base text-gray-700">
+                                {feature}
+                              </p>
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="rounded-md shadow">
+                          <a
+                            href={tier.href}
+                            className="flex items-center justify-center rounded-md border border-transparent bg-gray-800 px-5 py-3 text-base font-medium text-white hover:bg-gray-900"
+                            aria-describedby="tier-standard"
+                          >
+                            {tier.cta}
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="relative mx-auto mt-4 max-w-7xl px-4 sm:px-6 lg:mt-5 lg:px-8">
+              <div className="mx-auto max-w-md lg:max-w-5xl">
+                <div className="rounded-lg bg-gray-100 px-6 py-8 sm:p-10 lg:flex lg:items-center">
+                  <div className="flex-1">
+                    <div>
+                      <h3 className="inline-flex rounded-full bg-white px-4 py-1 text-base font-semibold text-gray-800">
+                        Conceirge Service
+                      </h3>
+                    </div>
+                    <div className="mt-4 text-lg text-gray-600">
+                      Get one-on-one access to a Lily Wallet customer service
+                      representative to setup your wallet and answer questions
+                      about self-custody for{" "}
+                      <span className="font-semibold text-gray-900">$29</span>.
+                    </div>
+                  </div>
+                  <div className="mt-6 rounded-md shadow lg:mt-0 lg:ml-10 lg:flex-shrink-0">
+                    <a
+                      href="/talk-to-an-expert"
+                      className="flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-50"
+                    >
+                      Buy Conceirge Onboarding
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="max-w-2xl mx-auto bg-white mt-8 rounded-lg py-4 sm:py-8 sm:px-6 lg:max-w-7xl lg:px-8">
-        <MobileTable />
-        <DesktopTable />
       </div>
 
       <div class="bg-gray-50">
@@ -1089,7 +244,7 @@ const Pricing = () => {
                 </p>
                 <a
                   href="/download"
-                  class="mt-8 bg-white border border-transparent rounded-md shadow px-6 py-3 inline-flex items-center text-base font-medium text-green-600 hover:bg-indigo-50"
+                  class="mt-8 bg-white border border-transparent rounded-md shadow px-6 py-3 inline-flex items-center text-base font-medium text-green-600 hover:bg-emerald-50"
                 >
                   Download Lily
                 </a>
