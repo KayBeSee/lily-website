@@ -63,7 +63,7 @@ const Download = () => {
           content={`https://lily-wallet.com${TwitterImage.src}`}
         />
       </Head>
-      <div class="relative py-6 z-10">
+      <div class="relative py-6 z-10 bg-gradient-to-t from-transparent to-slate-900">
         <Navigation darkBg />
       </div>
 

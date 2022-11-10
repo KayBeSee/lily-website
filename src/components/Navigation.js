@@ -125,7 +125,7 @@ const MenuItem = ({ text, href, darkBg }) => (
       className={clsx(
         "mt-1 block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out",
         darkBg
-          ? "text-gray-700 hover:text-green-500 dark:text-gray-200 dark:hover:text-green-400"
+          ? "text-gray-200 hover:text-green-400"
           : "text-gray-700 hover:text-green-500"
       )}
       role="menuitem"
