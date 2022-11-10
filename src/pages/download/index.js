@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
+import scenicBg from "public/scenic.jpg";
+
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import HeaderStuff from "../../components/HeaderStuff";
@@ -41,10 +43,11 @@ const Download = () => {
     <div className="h-screen relative overflow-hidden overflow-y-auto">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black">
         <Image
-          src="/scenic.jpg"
+          src={scenicBg}
           layout="fill"
           objectFit="cover"
           priority
+          placeholder="blur"
           className="z-[-2]"
         />
       </div>
