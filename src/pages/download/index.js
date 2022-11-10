@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-
 import Head from "next/head";
 import Image from "next/image";
+import { getPlaiceholder } from "plaiceholder";
 
 import scenicBg from "public/scenic.jpg";
+import imageLogo from "public/logo.svg";
 
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
@@ -21,7 +22,20 @@ const downloadLink = {
     "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.1.0/Lily.Wallet-1.1.0.AppImage",
 };
 
-const Download = () => {
+export const getStaticProps = async () => {
+  const { base64, img } = await getPlaiceholder("/logo.svg");
+
+  return {
+    props: {
+      imageProps: {
+        ...img,
+        blurDataURL: base64,
+      },
+    },
+  };
+};
+
+const Download = ({ imageProps }) => {
   const [operatingSystem, setOperatingSystem] = useState("");
 
   useEffect(() => {
@@ -74,7 +88,7 @@ const Download = () => {
         <div className="max-w-3xl mx-auto py-12 px-6 w-full">
           <div className="bg-black p-6 rounded-2xl max-w-7xl w-fit mx-auto bg-gradient-to-br to-slate-100 from-slate-300 mb-12">
             <div className="w-24 h-24 mx-auto relative">
-              <Image layout="fill" src="/logo.svg" />
+              <Image {...imageProps} placeholder="blur" />
             </div>
           </div>
           <h1 className="text-4xl tracking-tight leading-10 font-semibold font-sans text-white my-4 sm:leading-none md:text-5xl">
