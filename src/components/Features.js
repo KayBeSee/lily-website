@@ -156,7 +156,7 @@ export default function Features() {
                 </div>
                 <div className="mt-6">
                   <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                    Easily upgrade as your wealth appreciates
+                    Upgrade as your wealth appreciates
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
                     You can start using Lily Wallet with your current security
