@@ -50,7 +50,7 @@ const FeaturesPage = () => {
           </div>
         </Transition>
       </div>
-      <div className="my-20">
+      <div className="my-20 mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
         <div className="sm:text-center">
           <Transition
             appear={true}
