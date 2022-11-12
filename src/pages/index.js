@@ -2,11 +2,15 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
+import { getAllPostPreviews } from "@/utils/getAllPosts";
+
 import Footer from "../components/Footer";
 import HeaderStuff from "../components/HeaderStuff";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
+
+let posts = getAllPostPreviews();
 
 export default function Home() {
   return (
@@ -17,7 +21,7 @@ export default function Home() {
       </Head>
 
       {/* <Navigation /> */}
-      <Hero />
+      <Hero mostRecentPost={posts[0]} />
       <div>
         <div className="bank-note-background">
           <div className="max-w-screen-xl mx-auto pt-16 pb-16 px-4 sm:px-6 lg:px-8">
@@ -203,4 +207,8 @@ export default function Home() {
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  return { props: {} };
 }

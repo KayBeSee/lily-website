@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  ChevronRightIcon,
+} from "@heroicons/react/24/outline";
 
 import scenicBg from "public/scenic.jpg";
 
@@ -12,7 +16,8 @@ const navigation = [
   { name: "Support", href: "/support" },
 ];
 
-export default function Example() {
+export default function Hero({ mostRecentPost }) {
+  console.log("mostRecentPost: ", mostRecentPost);
   return (
     <div className="relative overflow-hidden bg-white">
       <div className="mx-auto max-w-7xl">
@@ -121,6 +126,22 @@ export default function Example() {
           </Popover>
 
           <main className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+            <Link href={`/blog/${mostRecentPost.slug}`}>
+              <a className="group inline-flex space-x-4 mb-6 items-center">
+                <span className="rounded bg-yellow-50 px-2.5 py-1 text-sm font-semibold text-yellow-600 whitespace-nowrap">
+                  What's new
+                </span>
+                <span className="inline-flex items-center space-x-1 text-sm font-medium text-yellow-600">
+                  <span className="truncate max-w-xs">
+                    {mostRecentPost.module.meta.title}
+                  </span>
+                  <ChevronRightIcon
+                    className="h-5 w-5 group-hover:translate-x-2 duration-500"
+                    aria-hidden="true"
+                  />
+                </span>
+              </a>
+            </Link>
             <div className="sm:text-center lg:text-left">
               <Transition
                 appear={true}
@@ -168,7 +189,7 @@ export default function Example() {
                 >
                   <div className="rounded-md shadow">
                     <Link href="/download">
-                      <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-emerald-600 px-8 py-3 text-base font-medium text-white hover:bg-emerald-700 md:py-4 md:px-10 md:text-lg">
+                      <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-emerald-600 px-8 py-3 text-base font-medium text-white hover:bg-emerald-700 duration-200 md:py-4 md:px-10 md:text-lg">
                         Get started
                       </a>
                     </Link>
@@ -186,7 +207,7 @@ export default function Example() {
                     leaveTo="opacity-0"
                   >
                     <Link href="#">
-                      <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-emerald-100 px-8 py-3 text-base font-medium text-emerald-700 hover:bg-emerald-200 md:py-4 md:px-10 md:text-lg">
+                      <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-emerald-100 px-8 py-3 text-base font-medium text-emerald-700 hover:bg-emerald-200 duration-200 md:py-4 md:px-10 md:text-lg">
                         Live demo
                       </a>
                     </Link>

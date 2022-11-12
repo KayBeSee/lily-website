@@ -93,7 +93,7 @@ export default function Features() {
                   <p className="mt-4 text-lg text-gray-500">
                     Don't use a different application for every bitcoin account
                     you have. Lily Wallet provides a beautiful interface to
-                    manage all of your bitcoin in one place.
+                    manage all of your bitcoin holistically.
                   </p>
                   <div className="mt-6">
                     <a
@@ -159,7 +159,7 @@ export default function Features() {
                     Upgrade as your wealth appreciates
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
-                    You can start using Lily Wallet with your current security
+                    You can start using Lily Wallet with your current custody
                     setup, no matter what that is. Then easily upgrade to
                     multisig for more robust security as your bitcoin increases
                     in value.
