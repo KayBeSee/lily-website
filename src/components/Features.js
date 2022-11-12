@@ -1,416 +1,225 @@
-const Features = () => (
-  <div className="py-16 bg-gray-50 overflow-hidden lg:py-24" id="features">
-    <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
-      <svg
-        className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
-        width="404"
-        height="784"
-        fill="none"
-        viewBox="0 0 404 784"
-      >
-        <defs>
-          <pattern
-            id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7"
-            x="0"
-            y="0"
-            width="20"
-            height="20"
-            patternUnits="userSpaceOnUse"
-          >
-            <rect
-              x="0"
-              y="0"
-              width="4"
-              height="4"
-              className="text-gray-200"
-              fill="currentColor"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width="404"
-          height="784"
-          fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
-        />
-      </svg>
+import {
+  HomeIcon,
+  SparklesIcon,
+  LockClosedIcon,
+  CloudArrowDownIcon,
+  ChatBubbleLeftEllipsisIcon,
+  DocumentChartBarIcon,
+  HeartIcon,
+  PencilSquareIcon,
+  TrashIcon,
+  UsersIcon,
+  UserGroupIcon,
+  BoltIcon,
+  ServerIcon,
+  FingerPrintIcon,
+  LifebuoyIcon,
+  SquaresPlusIcon,
+  TicketIcon,
+  AdjustmentsVerticalIcon,
+} from "@heroicons/react/24/outline";
 
-      <div className="relative">
-        <h3 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-          The best way to secure your bitcoin
-        </h3>
-        <p className="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
-          You don't have to compromise privacy or usability to secure your
-          wealth.
-        </p>
-      </div>
+const features = [
+  {
+    name: "Unlimited accounts",
+    description:
+      "Manage all of your accounts from one beautiful, intuitive user interface.",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Lightning Network",
+    description:
+      "Support for lightning network accounts including channel opening/closing from cold storage.",
+    icon: BoltIcon,
+  },
+  {
+    name: "Transaction metadata",
+    description:
+      "Easily add labels to transactions and tags to addresses to stay organized.",
+    icon: PencilSquareIcon,
+  },
+  {
+    name: "Fee customization",
+    description:
+      "Choose what fee you want to pay based on the priority of your transaction.",
+    icon: AdjustmentsVerticalIcon,
+  },
+  {
+    name: "PSBT support",
+    description:
+      "Fully interoperable with wallets and software that support partially signed bitcoin transactions.",
+    icon: TicketIcon,
+  },
+  {
+    name: "Connect to your node",
+    description:
+      "Easily connect to your node at home to verify and broadcast transactions.",
+    icon: ServerIcon,
+  },
+  {
+    name: "Privacy by default",
+    description:
+      "No sign ups, emails, or KYC required. Simply download the software and start using bitcoin.",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Support available",
+    description:
+      "Bitcoin experts are on call to help answer questions or provide support.",
+    icon: LifebuoyIcon,
+  },
+];
 
-      <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+export default function Features() {
+  return (
+    <>
+      <div className="relative overflow-hidden bg-white pt-16 pb-32">
         <div className="relative">
-          <h4 className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
-            Multisig for everyone
-          </h4>
-          <p className="mt-3 text-lg leading-7 text-gray-500">
-            Lily uses multisignature to protect your coins, requiring multiple
-            devices to approve transactions.
-          </p>
-
-          <ul className="mt-10">
-            <li>
-              <div className="flex">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-300 text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+            <div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
+              <div>
+                <div>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-md bg-emerald-600">
+                    <HomeIcon
+                      className="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                    Manage all of your bitcoin in one place
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-500">
+                    Don't use a different application for every bitcoin account
+                    you have. Lily Wallet provides a beautiful interface to
+                    manage all of your bitcoin in one place.
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      href="#"
+                      className="inline-flex rounded-md border border-transparent bg-emerald-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-emerald-700"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
-                      />
-                    </svg>
+                      Get started
+                    </a>
                   </div>
                 </div>
-                <div className="ml-4">
-                  <h5 className="text-lg leading-6 font-semibold text-gray-900">
-                    Eliminate single points of failure
-                  </h5>
-                  <p className="mt-2 text-base leading-6 text-gray-500">
-                    Multisig combines multiple keys to eliminate single points
-                    of failure.
-                  </p>
-                </div>
               </div>
-            </li>
-            <li className="mt-10">
-              <div className="flex">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-300 text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
+              <div className="mt-8 border-t border-gray-200 pt-6">
+                <blockquote>
+                  <div>
+                    <p className="text-base text-gray-500">
+                      &ldquo;Cras velit quis eros eget rhoncus lacus ultrices
+                      sed diam. Sit orci risus aenean curabitur donec aliquet.
+                      Mi venenatis in euismod ut.&rdquo;
+                    </p>
                   </div>
-                </div>
-                <div className="ml-4">
-                  <h5 className="text-lg leading-6 font-semibold text-gray-900">
-                    Distribute security
-                  </h5>
-                  <p className="mt-2 text-base leading-6 text-gray-500">
-                    Store keys in various locations to protect against theft,
-                    loss, or natural disaster.
-                  </p>
-                </div>
+                  <footer className="mt-3">
+                    <div className="flex items-center space-x-3">
+                      <div className="flex-shrink-0">
+                        <img
+                          className="h-6 w-6 rounded-full"
+                          src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                          alt=""
+                        />
+                      </div>
+                      <div className="text-base font-medium text-gray-700">
+                        Marcia Hill, Digital Marketing Manager
+                      </div>
+                    </div>
+                  </footer>
+                </blockquote>
               </div>
-            </li>
-            <li className="mt-10">
-              <div className="flex">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-300 text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <h5 className="text-lg leading-6 font-semibold text-gray-900">
-                    Simple recovery
-                  </h5>
-                  <p className="mt-2 text-base leading-6 text-gray-500">
-                    Lily uses industry-standard derivation paths to make it easy
-                    to recover wallets in other software.
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div className="mt-10 -mx-4 relative lg:mt-0 transform">
-          <svg
-            className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-            width="784"
-            height="404"
-            fill="none"
-            viewBox="0 0 784 404"
-          >
-            <defs>
-              <pattern
-                id="ca9667ae-9f92-4be7-abcb-9e3d727f2941"
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  className="text-gray-200"
-                  fill="currentColor"
+            </div>
+            <div className="mt-12 sm:mt-16 lg:mt-0">
+              <div className="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                <img
+                  className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                  src="/screenshots/home-down.png"
+                  alt="Lily Wallet Home Page"
                 />
-              </pattern>
-            </defs>
-            <rect
-              width="784"
-              height="404"
-              fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
-            />
-          </svg>
-          <img
-            className="relative mx-auto"
-            width="1200"
-            src="screenshots/select-hardware-wallets.png"
-            alt=""
-          />
-        </div>
-      </div>
-
-      <svg
-        className="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12"
-        width="404"
-        height="784"
-        fill="none"
-        viewBox="0 0 404 784"
-      >
-        <defs>
-          <pattern
-            id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
-            x="0"
-            y="0"
-            width="20"
-            height="20"
-            patternUnits="userSpaceOnUse"
-          >
-            <rect
-              x="0"
-              y="0"
-              width="4"
-              height="4"
-              className="text-gray-200"
-              fill="currentColor"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width="404"
-          height="784"
-          fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
-        />
-      </svg>
-
-      <div className="relative mt-12 sm:mt-16 lg:mt-24" id="security">
-        <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
-          <div className="lg:col-start-2">
-            <h4 className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
-              Security and privacy first
-            </h4>
-            <p className="mt-3 text-lg leading-7 text-gray-500">
-              Lily is constructed from a password encrypted configuration file.
-              There is no database, no data tracking, no analytics.
-            </p>
-
-            <ul className="mt-10">
-              <li>
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-300 text-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h5 className="text-lg leading-6 font-semibold text-gray-900">
-                      Accountless
-                    </h5>
-                    <p className="mt-2 text-base leading-6 text-gray-500">
-                      Lily doesn't require an account of any kind. Just download
-                      the software, create or load your wallets, and start using
-                      bitcoin.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className="mt-10">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-300 text-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h5 className="text-lg leading-6 font-semibold text-gray-900">
-                      Stateless
-                    </h5>
-                    <p className="mt-2 text-base leading-6 text-gray-500">
-                      Lily doesn't use a database of any kind. All information
-                      is loaded from your encrypted configuration file and used
-                      during your local session. When you close the program, all
-                      data related to your session is deleted too.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className="mt-10">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-300 text-white">
-                      <svg
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h5 className="text-lg leading-6 font-semibold text-gray-900">
-                      Interoperable
-                    </h5>
-                    <p className="mt-2 text-base leading-6 text-gray-500">
-                      Easily export your accounts to be used in other software
-                      like Caravan, BlueWallet, and Bitcoin Core.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className="mt-10">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-300 text-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h5 className="text-lg leading-6 font-semibold text-gray-900">
-                      Open Source
-                    </h5>
-                    <p className="mt-2 text-base leading-6 text-gray-500">
-                      The code for Lily is completely open source and able to be
-                      reviewed by anyone. Don't trust, verify.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-
-          <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1 transform">
-            <svg
-              className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-              width="784"
-              height="404"
-              fill="none"
-              viewBox="0 0 784 404"
-            >
-              <defs>
-                <pattern
-                  id="e80155a9-dfde-425a-b5ea-1f6fadd20131"
-                  x="0"
-                  y="0"
-                  width="20"
-                  height="20"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <rect
-                    x="0"
-                    y="0"
-                    width="4"
-                    height="4"
-                    className="text-gray-200"
-                    fill="currentColor"
-                  />
-                </pattern>
-              </defs>
-              <rect
-                width="784"
-                height="404"
-                fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
-              />
-            </svg>
-            <img
-              className="relative mx-auto"
-              width="600"
-              src="screenshots/unlock.png"
-              alt=""
-            />
+        </div>
+        <div className="mt-24">
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+            <div className="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0">
+              <div>
+                <div>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-md bg-emerald-600">
+                    <LockClosedIcon
+                      className="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                    Easily upgrade as your wealth appreciates
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-500">
+                    You can start using Lily Wallet with your current security
+                    setup, no matter what that is. Then easily upgrade to
+                    multisig for more robust security as your bitcoin increases
+                    in value.
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      href="#"
+                      className="inline-flex rounded-md border border-transparent bg-emerald-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-emerald-700"
+                    >
+                      Learn about multisig
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
+              <div className="-ml-48 pr-4 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                <img
+                  className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                  src="/screenshots/lightning-open-dark.png"
+                  alt="Customer profile user interface"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-);
-
-export default Features;
+      <div className="bg-emerald-700">
+        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
+          <h2 className="text-3xl font-bold tracking-tight text-white">
+            Unlock the full power of bitcoin
+          </h2>
+          <p className="mt-4 max-w-xl text-lg text-emerald-200">
+            We are bitcoiners ourselves, so we have built Lily Wallet with all
+            of the features we would expect in a world-class bitcoin wallet.
+          </p>
+          <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
+            {features.map((feature) => (
+              <div key={feature.name}>
+                <div>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
+                    <feature.icon
+                      className="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+                <div className="mt-6">
+                  <h3 className="text-lg font-medium text-white">
+                    {feature.name}
+                  </h3>
+                  <p className="mt-2 text-base text-emerald-200">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

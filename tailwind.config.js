@@ -19,6 +19,10 @@ module.exports = {
       "7xl": "5rem",
     },
     extend: {
+      animation: {
+        xBounce: "xBounce 1s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
+      },
       colors: {
         slate: {
           50: "#f8fafc",
@@ -31,6 +35,16 @@ module.exports = {
           700: "#334155",
           800: "#1e293b",
           900: "#0f172a",
+        },
+      },
+      keyframes: {
+        xBounce: {
+          "0%, 100%": { transform: "translateX(0.1rem)" },
+          "50%": { transform: "translateX(0rem)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0.4rem)" },
+          "50%": { transform: "translateY(0rem)" },
         },
       },
       maxWidth: {

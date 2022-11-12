@@ -187,10 +187,6 @@ export default function Testimonials() {
       onMouseEnter={() => setDuration(250)}
       onMouseLeave={() => setDuration(150)}
     >
-      <div
-        className="absolute right-0 bottom-1/2 left-0 bg-gradient-to-t from-gray-100 pointer-events-none"
-        style={{ height: 607, maxHeight: "50vh" }}
-      />
       <div className="flex overflow-hidden -my-8">
         <ul className="flex items-center w-full py-8">
           {testimonials.map((testimonial, i) => (

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
+import { Transition } from "@headlessui/react";
 
 import scenicBg from "public/scenic.jpg";
-import imageLogo from "public/logo.svg";
 
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
@@ -62,7 +62,7 @@ const Download = ({ imageProps }) => {
           objectFit="cover"
           priority
           placeholder="blur"
-          className="z-[-2]"
+          className="z-[-2] animate-float"
         />
       </div>
       <Head>
@@ -86,24 +86,68 @@ const Download = ({ imageProps }) => {
 
       <div className="relative text-center bg-cover h-screen flex items-center justify-center pb-28 z-10">
         <div className="max-w-3xl mx-auto py-12 px-6 w-full">
-          <div className="bg-black p-6 rounded-2xl max-w-7xl w-fit mx-auto bg-gradient-to-br to-slate-100 from-slate-300 mb-12">
-            <div className="w-24 h-24 mx-auto relative">
-              <Image {...imageProps} placeholder="blur" />
-            </div>
-          </div>
-          <h1 className="text-4xl tracking-tight leading-10 font-semibold font-sans text-white my-4 sm:leading-none md:text-5xl">
-            Download Lily Wallet
-            <br />
-          </h1>
-          <h2 className="text-md md:text-lg text-slate-100 mb-8">
-            Take control of your bitcoin today.
-          </h2>
-          <a
-            href={downloadLink[operatingSystem]}
-            className="py-4 px-8 bg-emerald-600 rounded-xl text-white font-semibold font-sans hover:bg-emerald-500 transition-all duration-300"
+          <Transition
+            appear={true}
+            show={true}
+            enter="transition-all duration-500"
+            enterFrom="opacity-0 blur-xl scale-50"
+            enterTo="opacity-100 blur-0 scale-100"
+            leave="transition-opacity duration-150"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
           >
-            Download for {operatingSystem}
-          </a>
+            <div className="bg-black p-6 rounded-2xl max-w-7xl w-fit mx-auto bg-gradient-to-br to-slate-100 from-slate-300 mb-12">
+              <div className="w-24 h-24 mx-auto relative">
+                <Image {...imageProps} placeholder="blur" />
+              </div>
+            </div>
+          </Transition>
+          <Transition
+            appear={true}
+            show={true}
+            enter="transition-all duration-500 delay-200"
+            enterFrom="opacity-0 translate-y-6"
+            enterTo="opacity-100 translate-y-0"
+            leave="transition-opacity duration-150"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <h1 className="text-4xl tracking-tight leading-10 font-semibold font-sans text-white my-4 sm:leading-none md:text-5xl">
+              Download Lily Wallet
+              <br />
+            </h1>
+          </Transition>
+          <Transition
+            appear={true}
+            show={true}
+            enter="transition-all duration-500 delay-300"
+            enterFrom="opacity-0 translate-y-6"
+            enterTo="opacity-100 translate-y-0"
+            leave="transition-opacity duration-150"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <h2 className="text-md md:text-lg text-slate-100 mb-8">
+              Take control of your bitcoin today.
+            </h2>
+          </Transition>
+          <Transition
+            appear={true}
+            show={true}
+            enter="transition-all duration-500 delay-500"
+            enterFrom="opacity-0 translate-y-6"
+            enterTo="opacity-100 translate-y-0"
+            leave="transition-opacity duration-150"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <a
+              href={downloadLink[operatingSystem]}
+              className="py-4 px-8 bg-emerald-600 rounded-xl text-white font-semibold font-sans hover:bg-emerald-500 transition-all duration-300"
+            >
+              Download for {operatingSystem}
+            </a>
+          </Transition>
         </div>
       </div>
 
