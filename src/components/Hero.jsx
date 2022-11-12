@@ -127,12 +127,12 @@ export default function Hero({ mostRecentPost }) {
 
           <main className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <Link href={`/blog/${mostRecentPost.slug}`}>
-              <a className="group inline-flex space-x-4 mb-6 items-center">
-                <span className="rounded bg-yellow-50 px-2.5 py-1 text-sm font-semibold text-yellow-600 whitespace-nowrap">
+              <a className="group flex flex-col lg:items-start lg:inline-flex space-x-2 mb-6 items-center">
+                <span className="rounded bg-yellow-50 group-hover:text-yellow-500 px-2.5 py-1 text-sm font-semibold text-yellow-600 whitespace-nowrap">
                   What's new
                 </span>
-                <span className="inline-flex items-center space-x-1 text-sm font-medium text-yellow-600">
-                  <span className="truncate max-w-xs">
+                <span className="inline-flex items-center text-sm font-medium text-yellow-600 group-hover:text-yellow-500">
+                  <span className="truncate max-w-xs sm:max-w-md md:max-w-2xl">
                     {mostRecentPost.module.meta.title}
                   </span>
                   <ChevronRightIcon
