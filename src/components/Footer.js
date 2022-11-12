@@ -212,7 +212,7 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-          <p className="mt-8 text-base text-white md:mt-0 md:order-1">
+          <p className="mt-8 text-sm sm:text-base text-white md:mt-0 md:order-1">
             &copy; {YEAR} Lily Technologies, Inc. All rights reserved.
           </p>
         </div>

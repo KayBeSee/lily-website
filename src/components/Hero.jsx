@@ -164,7 +164,7 @@ export default function Hero({ mostRecentPost }) {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <h1 className="leading-tight text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                <h1 className="leading-tight text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
                   <span className="block xl:inline">The best way to</span>{" "}
                   <span className="block text-emerald-600 xl:inline">
                     secure your bitcoin

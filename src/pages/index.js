@@ -113,7 +113,7 @@ export default function Home() {
           </svg>
 
           <div className="relative z-10 text-center max-w-screen-lg xl:max-w-screen-xl mx-auto">
-            <div className="text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold text-gray-900 tracking-tight mb-8">
+            <div className="text-2xl sm:text-5xl lg:text-6xl leading-none font-extrabold text-gray-900 tracking-tight mb-8">
               Self-custody made easy
             </div>
             <blockquote className="mt-10">
