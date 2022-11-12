@@ -109,7 +109,7 @@ const Pricing = () => {
                         <div className="bg-white px-6 py-8 sm:p-10 sm:pb-6">
                           <div>
                             <h3
-                              className="inline-flex rounded-full py-1 text-lg font-medium font-sans text-yellow-500"
+                              className="inline-flex text-lg font-medium font-sans text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-yellow-500"
                               id="tier-standard"
                             >
                               {tier.name}
@@ -150,7 +150,7 @@ const Pricing = () => {
                           <div className="rounded-md shadow">
                             <a
                               href={tier.href}
-                              className="flex items-center justify-center rounded-md border border-transparent bg-yellow-500 px-5 py-3 text-base font-medium text-white hover:bg-yellow-400"
+                              className="flex items-center justify-center rounded-md border border-transparent bg-yellow-500 bg-gradient-to-b from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 px-5 py-3 text-base font-medium text-white hover:bg-yellow-400"
                               aria-describedby="tier-standard"
                             >
                               {tier.cta}
@@ -180,12 +180,11 @@ const Pricing = () => {
                     </div>
                   </div>
                   <div className="mt-6 rounded-md shadow lg:mt-0 lg:ml-10 lg:flex-shrink-0">
-                    <a
-                      href="/talk-to-an-expert"
-                      className="flex items-center justify-center rounded-md border border-transparent bg-yellow-500 px-5 py-3 text-base font-medium text-white hover:bg-yellow-400"
-                    >
-                      Schedule Conceirge Onboarding
-                    </a>
+                    <Link href="/talk-to-an-expert">
+                      <a className="flex items-center justify-center rounded-md border border-transparent bg-yellow-500 bg-gradient-to-b from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 px-5 py-3 text-base font-medium text-white hover:bg-yellow-400">
+                        Schedule Conceirge Onboarding
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>

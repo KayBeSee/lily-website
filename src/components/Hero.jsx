@@ -198,7 +198,7 @@ export default function Example() {
         </div>
       </div>
 
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 relative h-48 lg:h-full">
         <Image
           src={scenicBg}
           layout="fill"

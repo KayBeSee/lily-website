@@ -13,7 +13,6 @@ const {
   simplifyToken,
   normalizeTokens,
 } = require("./remark/utils");
-const { withPrevalInstructions } = require("./remark/withPrevalInstructions");
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
@@ -195,7 +194,6 @@ module.exports = withBundleAnalyzer({
             ? {}
             : {
                 remarkPlugins: [
-                  withPrevalInstructions,
                   withExamples,
                   withSyntaxHighlighting,
                   withNextLinks,
