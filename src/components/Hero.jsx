@@ -126,29 +126,40 @@ export default function Hero({ mostRecentPost }) {
           </Popover>
 
           <main className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-            <Link href={`/blog/${mostRecentPost.slug}`}>
-              <a className="group flex flex-col lg:items-start lg:inline-flex space-x-2 mb-6 items-center">
-                <span className="rounded bg-yellow-50 group-hover:text-yellow-500 px-2.5 py-1 text-sm font-semibold text-yellow-600 whitespace-nowrap">
-                  What's new
-                </span>
-                <span className="inline-flex items-center text-sm font-medium text-yellow-600 group-hover:text-yellow-500">
-                  <span className="truncate max-w-xs sm:max-w-md md:max-w-2xl">
-                    {mostRecentPost.module.meta.title}
+            <Transition
+              appear={true}
+              show={true}
+              enter="transition-all duration-500 sm:delay-[1500ms]"
+              enterFrom="sm:opacity-0"
+              enterTo="sm:opacity-100"
+              leave="transition-opacity duration-150"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Link href={`/blog/${mostRecentPost.slug}`}>
+                <a className="group flex flex-col lg:items-start lg:inline-flex space-x-2 mb-6 items-center">
+                  <span className="rounded bg-yellow-50 group-hover:text-yellow-500 px-2.5 py-1 text-sm font-semibold text-yellow-600 whitespace-nowrap">
+                    What's new
                   </span>
-                  <ChevronRightIcon
-                    className="h-5 w-5 group-hover:translate-x-2 duration-500"
-                    aria-hidden="true"
-                  />
-                </span>
-              </a>
-            </Link>
+                  <span className="inline-flex items-center text-sm font-medium text-yellow-600 group-hover:text-yellow-500">
+                    <span className="truncate max-w-xs sm:max-w-md md:max-w-2xl">
+                      {mostRecentPost.module.meta.title}
+                    </span>
+                    <ChevronRightIcon
+                      className="h-5 w-5 group-hover:translate-x-2 duration-500"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </a>
+              </Link>
+            </Transition>
             <div className="sm:text-center lg:text-left">
               <Transition
                 appear={true}
                 show={true}
                 enter="transition-all duration-500"
-                enterFrom="opacity-0 translate-y-6"
-                enterTo="opacity-100 translate-y-0"
+                enterFrom="sm:opacity-0 sm:translate-y-6"
+                enterTo="sm:opacity-100 sm:translate-y-0"
                 leave="transition-opacity duration-150"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
@@ -164,8 +175,8 @@ export default function Hero({ mostRecentPost }) {
                 appear={true}
                 show={true}
                 enter="transition-all duration-500 delay-300"
-                enterFrom="opacity-0"
-                enterTo="opacity-100 translate-y-0"
+                enterFrom="sm:opacity-0"
+                enterTo="sm:opacity-100 sm:translate-y-0"
                 leave="transition-opacity duration-150"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
@@ -181,8 +192,8 @@ export default function Hero({ mostRecentPost }) {
                   appear={true}
                   show={true}
                   enter="transition-all duration-500 delay-500 z-10"
-                  enterFrom="opacity-0"
-                  enterTo="opacity-100 translate-y-0"
+                  enterFrom="sm:opacity-0"
+                  enterTo="sm:opacity-100 sm:translate-y-0"
                   leave="transition-opacity duration-150"
                   leaveFrom="opacity-100"
                   leaveTo="opacity-0"
@@ -200,8 +211,8 @@ export default function Hero({ mostRecentPost }) {
                     appear={true}
                     show={true}
                     enter="transition-all duration-500 delay-700 z-0"
-                    enterFrom="opacity-0 lg:-translate-x-full"
-                    enterTo="opacity-100 lg:translate-x-0"
+                    enterFrom="sm:opacity-0 lg:-translate-x-full"
+                    enterTo="sm:opacity-100 lg:translate-x-0"
                     leave="transition-opacity duration-150"
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
