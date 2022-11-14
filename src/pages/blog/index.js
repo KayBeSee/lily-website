@@ -10,7 +10,7 @@ let posts = getAllPostPreviews();
 export default function Blog() {
   return (
     <div className="relative pt-6 bg-white dark:bg-slate-900">
-      <Navigation />
+      <Navigation darkMode />
       <main className="max-w-[52rem] mx-auto px-4 pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-6xl">
         <header className="py-16 sm:text-center">
           <h1 className="mb-4 text-3xl sm:text-4xl tracking-tight text-slate-900 font-bold dark:text-slate-200">

@@ -118,14 +118,15 @@ const menuItems = [
   { href: "/support", text: "Support" },
 ];
 
-const MenuItem = ({ text, href, darkBg }) => (
+const MenuItem = ({ text, href, darkBg, darkMode }) => (
   <Link href={href}>
     <a
       className={clsx(
         "mt-1 block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:shadow-outline-green transition duration-150 ease-in-out",
         darkBg
           ? "text-gray-200 hover:text-green-400"
-          : "text-gray-700 hover:text-green-500"
+          : "text-gray-700 hover:text-green-500",
+        darkMode ? "dark:text-gray-200 dark:hover:text-green-400" : ""
       )}
       role="menuitem"
     >
@@ -145,7 +146,7 @@ const MobileMenuItem = ({ text, href }) => (
   </Link>
 );
 
-const Navigation = ({ darkBg }) => {
+const Navigation = ({ darkBg, darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Fragment>
@@ -170,7 +171,10 @@ const Navigation = ({ darkBg }) => {
                       "font-medium font-logo",
                       darkBg
                         ? "text-gray-200 hover:text-green-400"
-                        : "text-gray-700 hover:text-green-500"
+                        : "text-gray-700 hover:text-green-500",
+                      darkMode
+                        ? "dark:text-gray-200 dark:hover:text-green-400"
+                        : ""
                     )}
                     style={{ paddingLeft: ".5em", fontSize: "1.25em" }}
                   >
@@ -208,7 +212,12 @@ const Navigation = ({ darkBg }) => {
           </div>
           <div className="hidden md:flex md:space-x-10">
             {menuItems.map((item) => (
-              <MenuItem text={item.text} href={item.href} darkBg={darkBg} />
+              <MenuItem
+                text={item.text}
+                href={item.href}
+                darkBg={darkBg}
+                darkMode={darkMode}
+              />
             ))}
           </div>
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">

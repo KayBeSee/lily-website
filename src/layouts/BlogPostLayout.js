@@ -10,7 +10,7 @@ import Navigation from "@/components/Navigation";
 export function BlogPostLayout({ children, meta }) {
   return (
     <div className="relative pt-6 bg-gray-50 dark:bg-slate-900">
-      <Navigation />
+      <Navigation darkMode />
       <div class="relative overflow-hidden">
         <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full pb-10">
           <div

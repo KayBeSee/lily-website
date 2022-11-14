@@ -77,7 +77,7 @@ const FeaturesPage = () => {
             leaveTo="opacity-0"
           >
             <p className="mt-2 text-3xl font-semibold tracking-tight font-sans tracking-none text-gray-900 sm:text-5xl">
-              The new standard for bitcoin security
+              The standard for bitcoin security
             </p>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
               With its intuitive design, breathtaking speed and flexibility,
