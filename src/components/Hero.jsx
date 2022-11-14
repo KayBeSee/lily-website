@@ -41,7 +41,7 @@ export default function Hero({ mostRecentPost }) {
                 <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                   <div className="flex w-full items-center justify-between md:w-auto">
                     <Link href="/">
-                      <>
+                      <span className="flex items-center">
                         <span className="sr-only">Lily Wallet</span>
                         <img
                           className="h-8 w-auto sm:h-10"
@@ -49,7 +49,10 @@ export default function Hero({ mostRecentPost }) {
                           src="/logo.svg"
                           alt="Lily Wallet Logo"
                         />
-                      </>
+                        <span className="md:hidden cursor-pointer font-logo font-medium text-lg text-emerald-700 hover:text-emerald-500 ml-2">
+                          Lily Wallet
+                        </span>
+                      </span>
                     </Link>
                     <div className="-mr-2 flex items-center md:hidden">
                       <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
@@ -142,7 +145,7 @@ export default function Hero({ mostRecentPost }) {
                     What's new
                   </span>
                   <span className="inline-flex items-center text-sm font-medium text-yellow-600 group-hover:text-yellow-500">
-                    <span className="truncate max-w-xs sm:max-w-md md:max-w-2xl">
+                    <span className="truncate max-w-xs sm:max-w-md md:max-w-2xl group-hover:underline">
                       {mostRecentPost.module.meta.title}
                     </span>
                     <ChevronRightIcon

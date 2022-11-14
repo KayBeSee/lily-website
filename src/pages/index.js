@@ -171,10 +171,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative mt-20">
-        <Testimonials />
-      </section>
-
       <div className="bg-white">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="bg-emerald-600 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">

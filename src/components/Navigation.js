@@ -167,7 +167,7 @@ const Navigation = ({ darkBg }) => {
                   />
                   <span
                     className={clsx(
-                      "font-medium",
+                      "font-medium font-logo",
                       darkBg
                         ? "text-gray-200 hover:text-green-400"
                         : "text-gray-700 hover:text-green-500"

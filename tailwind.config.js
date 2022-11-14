@@ -23,6 +23,9 @@ module.exports = {
         xBounce: "xBounce 1s ease-in-out infinite",
         float: "float 6s ease-in-out infinite",
       },
+      fontFamily: {
+        logo: ["Raleway", "sans-serif"],
+      },
       colors: {
         slate: {
           50: "#f8fafc",

@@ -1,15 +1,9 @@
+import Link from "next/link";
+
 import {
   HomeIcon,
-  SparklesIcon,
   LockClosedIcon,
-  CloudArrowDownIcon,
-  ChatBubbleLeftEllipsisIcon,
-  DocumentChartBarIcon,
-  HeartIcon,
   PencilSquareIcon,
-  TrashIcon,
-  UsersIcon,
-  UserGroupIcon,
   BoltIcon,
   ServerIcon,
   FingerPrintIcon,
@@ -165,12 +159,11 @@ export default function Features() {
                     in value.
                   </p>
                   <div className="mt-6">
-                    <a
-                      href="#"
-                      className="inline-flex rounded-md border border-transparent bg-emerald-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-emerald-700"
-                    >
-                      Learn about multisig
-                    </a>
+                    <Link href="/blog/btc-security-guide">
+                      <a className="inline-flex rounded-md border border-transparent bg-emerald-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-emerald-700">
+                        Learn about multisig
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
