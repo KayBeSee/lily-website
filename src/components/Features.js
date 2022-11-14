@@ -90,12 +90,11 @@ export default function Features() {
                     manage all of your bitcoin holistically.
                   </p>
                   <div className="mt-6">
-                    <a
-                      href="#"
-                      className="inline-flex rounded-md border border-transparent bg-emerald-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-emerald-700"
-                    >
-                      Get started
-                    </a>
+                    <Link href="/download">
+                      <a className="inline-flex rounded-md border border-transparent bg-emerald-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-emerald-700">
+                        Get started
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>

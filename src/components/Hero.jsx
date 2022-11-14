@@ -209,7 +209,7 @@ export default function Hero({ mostRecentPost }) {
                     </Link>
                   </div>
                 </Transition>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
+                {/* <div className="mt-3 sm:mt-0 sm:ml-3">
                   <Transition
                     appear={true}
                     show={true}
@@ -226,7 +226,7 @@ export default function Hero({ mostRecentPost }) {
                       </a>
                     </Link>
                   </Transition>
-                </div>
+                </div> */}
               </div>
             </div>
           </main>
