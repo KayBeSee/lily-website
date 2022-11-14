@@ -134,7 +134,7 @@ export function BlogPostLayout({ children, meta }) {
                     strokeLinejoin="round"
                   />
                 </svg>
-                Go back
+                Back to Blog
               </a>
             </Link>
           </div>

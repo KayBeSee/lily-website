@@ -1,53 +1,61 @@
-import { kevinmulcrone } from '@/authors'
+import { kevinmulcrone } from "@/authors";
 
-import headerImage from './img/header.png'
-import coinSelectionScreenshot from './img/coin-selection-screenshot.png'
-import searchScreenshot from './img/search.png'
-import transactionDescription from './img/tx-description.png'
-import addressTag from './img/address-tag.png'
+import headerImage from "./img/header.png";
+import coinSelectionScreenshot from "./img/coin-selection-screenshot.png";
+import searchScreenshot from "./img/search.png";
+import transactionDescription from "./img/tx-description.png";
+import addressTag from "./img/address-tag.png";
 
 export const meta = {
-    title: 'Lily Wallet v1.2 adds transaction descriptions, address tags, and coin selection',
-    description: `After a fantastic week in Atlanta for TABConf, I am excited to be back home and releasing a new version of Lily Wallet.`,
-    date: '2022-11-01T18:05:31Z',
-    authors: [kevinmulcrone],
-    image: headerImage
-}
+  title:
+    "Lily Wallet v1.2 adds transaction descriptions, address tags, and coin selection",
+  description: `After a fantastic week in Atlanta for TABConf, I am excited to be back home and releasing a new version of Lily Wallet.`,
+  date: "2022-11-15T18:05:31Z",
+  authors: [kevinmulcrone],
+  image: headerImage,
+};
 
 After a fantastic week in Atlanta for [TABConf](https://tabconf.com/), I am excited to be back home and releasing new code.
 
 This latest version of Lily Wallet that brings the bitcoin financial experience one step closer to traditional finance applications.
 
 <div className="my-8">
-    <img src={headerImage.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
+  <img
+    src={headerImage.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-2xl"
+  />
 </div>
 
-This release allows users to add descriptions to their bitcoin transactions and tag their addresses. 
+This release allows users to add descriptions to their bitcoin transactions and tag their addresses.
 
 Additionally, this new metadata can easily be searched across the recent activity, address, and UTXO views and ultimately incorporated into selecting coins to use when constructing transactions.
 
 In earlier versions of Lily Wallet, the software automatically selected which coins to include in a user's transaction. Now users can optimize their bitcoin transactions for either cost, speed, or privacy.
 
-These new features allow users to organize, manage, and use their bitcoin more effectively. 
+These new features allow users to organize, manage, and use their bitcoin more effectively.
 
 <hr class="dark:!border-slate-200 dark:!border-opacity-5" />
 
-
 ### Transaction Descriptions
-Adding a description to transactions is the most basic way to bring bitcoin transactions in line with typical consumer money transfer applications. 
+
+Adding a description to transactions is the most basic way to bring bitcoin transactions in line with typical consumer money transfer applications.
 
 Like Venmo, CashApp, and Bitcoin's Lightning Network payments, this feature allows Lily Wallet users to provide context to onchain transactions beyond the standard time, amount, address, and payment direction.
 
-Are you purchasing something online? Depositing money into an exchange? Opening a lightning network channel? 
+Are you purchasing something online? Depositing money into an exchange? Opening a lightning network channel?
 
 Add a description to the transaction to provide more context and better track your bitcoin activity.
 
 <div className="my-8">
-    <img src={transactionDescription.src} alt="Lily Wallet transaction description screenshot" className="rounded-md shadow dark:border dark:border-slate-900/40"/>
+  <img
+    src={transactionDescription.src}
+    alt="Lily Wallet transaction description screenshot"
+    className="rounded-md shadow dark:border dark:border-slate-900/40"
+  />
 </div>
 
 <hr class="dark:!border-slate-200 dark:!border-opacity-5" />
-
 
 ### Address Tags
 
@@ -58,13 +66,17 @@ With this latest update, users can assign tags to specific addresses or an entir
 The transaction and address tags provided by the user also get assigned to the UTXOs associated with those resources.
 
 <div className="my-8">
-    <img src={addressTag.src} alt="Lily Wallet address tags screenshot" className="rounded-md shadow dark:border dark:border-slate-900/40"/>
+  <img
+    src={addressTag.src}
+    alt="Lily Wallet address tags screenshot"
+    className="rounded-md shadow dark:border dark:border-slate-900/40"
+  />
 </div>
 
 <hr class="dark:!border-slate-200 dark:!border-opacity-5" />
 
-
 ### Coin Selection
+
 This release of Lily Wallet also allows users to select which UTXOs to use when constructing their transactions.
 
 The metadata attached to transactions and addresses is accessible from the UTXO view, allowing users to make more informed decisions about which inputs to use.
@@ -72,7 +84,11 @@ The metadata attached to transactions and addresses is accessible from the UTXO 
 Whether you're optimizing for privacy, fee costs, or UTXO consolidation, Lily now gives users complete control over what coins get used in their transactions.
 
 <div className="my-8">
-    <img src={coinSelectionScreenshot.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
+  <img
+    src={coinSelectionScreenshot.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-2xl"
+  />
 </div>
 
 <hr class="dark:!border-slate-200 dark:!border-opacity-5" />
@@ -84,7 +100,11 @@ With this new metadata, all activity is now searchable by txid, transaction desc
 This should make finding old transactions a breeze!
 
 <div className="my-8">
-    <img src={searchScreenshot.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
+  <img
+    src={searchScreenshot.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-2xl"
+  />
 </div>
 
 <hr class="dark:!border-slate-200 dark:!border-opacity-5" />

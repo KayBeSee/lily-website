@@ -1,22 +1,22 @@
-import { kevinmulcrone } from '@/authors'
+import { kevinmulcrone } from "@/authors";
 
-import ledgerImage from './img/ledger.jpeg'
-import multisigImage from './img/multisig.png'
-import paperWalletImage from './img/paper-wallet.jpeg'
-import singleSigImage from './img/single-sig.png'
-import vaultSetupImage from './img/request-light.png'
+import ledgerImage from "./img/ledger.jpeg";
+import multisigImage from "./img/multisig.png";
+import paperWalletImage from "./img/paper-wallet.jpeg";
+import singleSigImage from "./img/single-sig.png";
+import vaultSetupImage from "./img/request-light.png";
 
-import InfoButton from './components/index'
+import InfoButton from "./components/index";
 
-import headerImage from '../2022-11-01-lily-release-v1.2/img/header.png'
+import headerImage from "../2022-11-15-lily-release-v1.2/img/header.png";
 
 export const meta = {
-    title: 'BTC Security Guide',
-    description: `Our guide to keeping your bitcoin secure in 2022 including product recommendations, setup, and explanation.`,
-    date: '2022-11-01T18:05:31Z',
-    authors: [kevinmulcrone],
-    image: headerImage
-}
+  title: "BTC Security Guide",
+  description: `Our guide to keeping your bitcoin secure in 2022 including product recommendations, setup, and explanation.`,
+  date: "2020-11-04T18:05:31Z",
+  authors: [kevinmulcrone],
+  image: headerImage,
+};
 
 Over the past twelve years, bitcoin has grown from a niche internet currency to one of the largest monetary networks on Earth. The limited supply of bitcoins causes its value to increase as more people decide to preserve their wealth with the digital asset.
 
@@ -55,8 +55,14 @@ In the early days of bitcoin, users would generate a new private key each time t
 These private keys were either stored on a user's computer where they could potentially be found by malicious software or else they were printed out on a piece of paper and stored in an offline location like a locked file cabinet.
 
 <figure>
-    <img src={paperWalletImage.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
-<figcaption className="flex"><InfoButton />A paper wallet generated on bitaddress.org circa 2011</figcaption>
+  <img
+    src={paperWalletImage.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-2xl"
+  />
+  <figcaption className="flex">
+    <InfoButton />A paper wallet generated on bitaddress.org circa 2011
+  </figcaption>
 </figure>
 
 This system forced users to keep track of a lot of data in order to use their bitcoin and it wasn't very secure. In 2012 and 2013, software updates were added to make private key management easier.
@@ -72,8 +78,16 @@ This greatly improved bitcoin's user experience and security. Now users can writ
 With hardware wallets, private keys now take on a physical form like real keys that people use to lock their cars and houses.
 
 <figure>
-    <img src={ledgerImage.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
-<figcaption className="flex"><InfoButton />The introduction of hardware wallets was a major leap forward for bitcoin security and user experience.</figcaption>
+  <img
+    src={ledgerImage.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-2xl"
+  />
+  <figcaption className="flex">
+    <InfoButton />
+    The introduction of hardware wallets was a major leap forward for bitcoin security
+    and user experience.
+  </figcaption>
 </figure>
 
 ### Keys are single points of failure
@@ -100,8 +114,16 @@ But what if we can secure our bitcoin in such a way that removes single points o
 Over the past few years, the industry has started shifting towards using multisignature vaults to solve this problem.
 
 <figure>
-    <img src={singleSigImage.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
-<figcaption className="flex"><InfoButton />In a single signature setup, funds cannot be accessed if the private key is lost or stolen.</figcaption>
+  <img
+    src={singleSigImage.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-2xl"
+  />
+  <figcaption className="flex">
+    <InfoButton />
+    In a single signature setup, funds cannot be accessed if the private key is lost
+    or stolen.
+  </figcaption>
 </figure>
 
 ### What is multisig?
@@ -115,8 +137,15 @@ Most popular multisignature setups are 2-of-3 or 3-of-5. This means that in orde
 By having coins controlled by multiple keys in a multisig format, users create redundancy in their security setup and make their digital wealth more resilient than traditional single-key security.
 
 <figure>
-    <img src={multisigImage.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
-<figcaption className="flex"><InfoButton />A multisignature setup provides resilience by allowing funds to be moved even if a private key is lost or stolen.</figcaption>
+  <img
+    src={multisigImage.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-2xl"
+  />
+  <figcaption className="flex">
+    <InfoButton />A multisignature setup provides resilience by allowing funds
+    to be moved even if a private key is lost or stolen.
+  </figcaption>
 </figure>
 
 Let's walk through what happens if one of the keys that controls a multisignature vault is lost or stolen:
@@ -132,6 +161,7 @@ So even though we lost one of our keys, we are still in complete control of our 
 While multisig provides resilient security for bitcoin in theory, there are other single points of failure that should be considered when setting up a multisignautre vault.
 
 #### Use different hardware wallets from different manufacturers
+
 The easiest way to reintroduce single points of failure to your multisig setup is to use the same model hardware wallet from the same hardware wallet manufacturer when creating your multisignature vault.
 
 Hardware wallets from the same manufacturer will likely run the same or similar code to secure your private keys. If there is a critical bug in the code that affects the device's ability to approve a transaction, then users can rely on their other devices to move their funds.
@@ -139,6 +169,7 @@ Hardware wallets from the same manufacturer will likely run the same or similar 
 Therefore, Lily Technologies recommends using hardware wallets from different manufacturers when creating your multisignature vault.
 
 #### Use Coldcard and Cobo Vault in your multisig setup
+
 Both Coldcard and Cobo Vault hardware wallets were built with multisig vaults in mind and provide an extra layer of security from sophisticated attacks involving change addresses.
 
 While these attacks have never been exploited in the wild, we still recommend users incorporate them into their vault setup for peace of mind.
@@ -149,6 +180,7 @@ If a user decides not to incorporate Coldcard or Cobo Vault into their vault set
 Lily Wallet makes it easy to do this by allowing users to export their vault in formats accepted by other wallet software like Caravan and Bitcoin Core.
 
 #### Make backups of your software and configuration files
+
 It is important to keep a backup of your wallet configuration in case you lose one of your hardware wallets.
 
 Both Coldcard and Cobo Vault conveniently have MicroSD Card slots for airgapping data between your wallet and the device. We recommend putting a copy of your wallet software and wallet config on a MicroSD Card and leaving it plugged into your hardware wallet.
@@ -156,6 +188,7 @@ Both Coldcard and Cobo Vault conveniently have MicroSD Card slots for airgapping
 That way you always have a copy of the software and configuration in case something goes wrong.
 
 #### Pull blockchain data from your own node
+
 A lot of wallets including Lily Wallet pull blockchain data from a third-party API by default so that users don't have to run their own full node. This is convenient for users who want to use the bitcoin network without running their own infrastructure.
 
 But there is the possibility that those APIs may go offline and prevent you from sending funds.
@@ -173,31 +206,44 @@ In order to set up a multisig vault using Lily Wallet, simply download the softw
 After your vault is set up, you can immediately start sending and receiving bitcoin.
 
 <figure>
-    <img src={vaultSetupImage.src} alt="Lily Wallet v1.2 Header" className="rounded-2xl"/>
-    <figcaption className="flex"><InfoButton />Using Lily Wallet makes it easy to create multisignature vaults to protect your bitcoin.</figcaption>
+  <img
+    src={vaultSetupImage.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-2xl"
+  />
+  <figcaption className="flex">
+    <InfoButton />
+    Using Lily Wallet makes it easy to create multisignature vaults to protect your
+    bitcoin.
+  </figcaption>
 </figure>
 
 What's more, if you want to upgrade to a first-class bitcoin citizen, you can also connect Lily Wallet to your bitcoin full-node for enhanced privacy and security.
 
 ### Next steps
+
 We have outlined our thinking about bitcoin security above and have concluded that securing your bitcoin using multisig is the most resilient way to store your digital wealth.
 
 But what are actionable steps users can take today to start securing their wealth?
 
 #### 1) Download Lily Wallet
+
 You can download the [latest version](/download) of Lily Wallet from our website.
 
 #### 2) Order Coldcard, Cobo Vault, and Trezor hardware wallets
+
 As mentioned above, we recommend using different hardware wallets from different manufacturers.
 
 We personally secure our funds with a multisig vault and store the keys on Coldcard's MK3, Cobo's Cobo Vault, and Trezor's Model One.
 
 #### 3) Setup a multisig vault with Lily Wallet
+
 Once you have received your hardware wallets, set up a multisignature vault with Lily Wallet. We have detailed instructions with images on how to set up Lily Wallet in our [get started guide](https://docs.lily-wallet.com/get-started/part-1).
 
 If you run into any problems or want an expert to assist you while setting it up, [schedule an appointment](/talk-to-an-expert) with a specialist.
 
 #### 4) Store your hardware wallets in different locations
+
 After setting up your vault with Lily, store your hardware wallets in different geographic locations.
 
 We recommend leaving one in a secure location in your house or apartment, another in a safe deposit box at your bank, and another in another location you have access to or with a trusted family member or friend.
