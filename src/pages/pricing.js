@@ -109,7 +109,7 @@ const Pricing = () => {
                         <div className="bg-white px-6 py-8 sm:p-10 sm:pb-6">
                           <div>
                             <h3
-                              className="inline-flex text-lg font-medium font-sans text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-yellow-500"
+                              className="inline-flex text-lg font-medium font-sans text-transparent text-yellow-400 bg-clip-text bg-gradient-to-b from-yellow-400 to-yellow-500"
                               id="tier-standard"
                             >
                               {tier.name}
