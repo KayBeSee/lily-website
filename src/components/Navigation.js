@@ -114,7 +114,7 @@ const Transition = ({ show, appear, ...rest }) => {
 
 const menuItems = [
   { href: "/features", text: "Features" },
-  { href: "/pricing", text: "Pricing" },
+  { href: "/blog", text: "Blog" },
   { href: "/support", text: "Support" },
 ];
 
