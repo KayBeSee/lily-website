@@ -35,7 +35,7 @@ const tiers = [
       "Zero KYC or invasive surveillance",
       "Premium support staff on call to assist",
     ],
-    cta: "Purchase in-app",
+    cta: "Start 30 Day Trial",
   },
 ];
 
