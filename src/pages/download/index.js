@@ -14,12 +14,12 @@ import TwitterImage from "@/images/v1.9/header.png";
 
 const downloadLink = {
   Windows:
-    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.1.0/Lily.Wallet.Setup.1.1.0.exe",
+    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.2.0/Lily.Wallet.Setup.1.2.0.exe",
   MacOS:
-    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.1.0/Lily.Wallet-1.1.0-arm64.dmg",
-  UNIX: "https://github.com/Lily-Technologies/lily-wallet/releases/tag/v1.1.0",
+    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.2.0/Lily.Wallet-1.2.0-arm64.dmg",
+  UNIX: "https://github.com/Lily-Technologies/lily-wallet/releases/tag/v1.2.0",
   Linux:
-    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.1.0/Lily.Wallet-1.1.0.AppImage",
+    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.2.0/Lily.Wallet-1.2.0.AppImagee",
 };
 
 export const getStaticProps = async () => {
