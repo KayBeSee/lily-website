@@ -92,6 +92,16 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
+                    <Link href="/pricing">
+                      <a
+                        target="_blank"
+                        className="text-base text-white hover:text-emerald-200"
+                      >
+                        Pricing
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/support">
                       <a className="text-base text-white hover:text-emerald-200">
                         Contact

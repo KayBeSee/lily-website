@@ -3,7 +3,6 @@ import Link from "next/link";
 import clsx from "clsx";
 import { formatDate } from "@/utils/formatDate";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 let posts = getAllPostPreviews();
 
@@ -90,7 +89,6 @@ export default function Blog() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

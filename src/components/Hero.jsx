@@ -12,7 +12,7 @@ import scenicBg from "public/scenic.jpg";
 
 const navigation = [
   { name: "Features", href: "/features" },
-  { name: "Blog", href: "/blog" },
+  { name: "Pricing", href: "/pricing" },
   { name: "Support", href: "/support" },
 ];
 
