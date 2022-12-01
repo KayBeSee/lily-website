@@ -19,7 +19,7 @@ const downloadLink = {
     "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.2.0/Lily.Wallet-1.2.0-arm64.dmg",
   UNIX: "https://github.com/Lily-Technologies/lily-wallet/releases/tag/v1.2.0",
   Linux:
-    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.2.0/Lily.Wallet-1.2.0.AppImagee",
+    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.2.0/Lily.Wallet-1.2.0.AppImage",
 };
 
 export const getStaticProps = async () => {
