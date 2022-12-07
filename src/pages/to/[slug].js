@@ -19,7 +19,6 @@ const Welcome = () => {
 
   const slug = router.query.slug;
   const stripped = removeTo(router.asPath);
-  console.log("stripped: ", stripped);
 
   useEffect(() => {
     if (slug) {

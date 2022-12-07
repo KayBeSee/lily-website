@@ -1,5 +1,4 @@
 function importAll(r) {
-  console.log("r: ", r.keys());
   return r
     .keys()
     .filter((filename) => filename.startsWith("."))
@@ -10,7 +9,6 @@ function importAll(r) {
     }))
     .filter(({ slug }) => !slug.includes("/snippets/"))
     .filter((p) => {
-      console.log("p: ", p.module);
       return p.module.meta.private !== true;
     })
     .sort((a, b) => dateSortDesc(a.module.meta.date, b.module.meta.date));

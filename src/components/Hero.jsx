@@ -17,7 +17,6 @@ const navigation = [
 ];
 
 export default function Hero({ mostRecentPost }) {
-  console.log("mostRecentPost: ", mostRecentPost);
   return (
     <div className="relative overflow-hidden bg-white">
       <div className="mx-auto max-w-7xl">

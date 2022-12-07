@@ -14,12 +14,12 @@ import TwitterImage from "@/images/v1.9/header.png";
 
 const downloadLink = {
   Windows:
-    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.2.0/Lily.Wallet.Setup.1.2.0.exe",
+    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.3.0/Lily.Wallet.Setup.1.3.0.exe",
   MacOS:
-    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.2.0/Lily.Wallet-1.2.0-arm64.dmg",
-  UNIX: "https://github.com/Lily-Technologies/lily-wallet/releases/tag/v1.2.0",
+    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.3.0/Lily.Wallet-1.3.0-arm64.dmg",
+  UNIX: "https://github.com/Lily-Technologies/lily-wallet/releases/tag/v1.3.0",
   Linux:
-    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.2.0/Lily.Wallet-1.2.0.AppImage",
+    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.3.0/Lily.Wallet-1.3.0.AppImage",
 };
 
 export const getStaticProps = async () => {
@@ -84,7 +84,7 @@ const Download = ({ imageProps }) => {
         <Navigation darkBg />
       </div>
 
-      <div className="relative text-center bg-cover h-screen flex items-center justify-center pb-28 z-10">
+      <div className="relative text-center bg-cover h-screen flex items-center justify-center z-10">
         <div className="max-w-3xl mx-auto py-12 px-6 w-full">
           <Transition
             appear={true}

@@ -1,0 +1,62 @@
+import { kevinmulcrone } from "@/authors";
+
+import headerImage from "./img/header.png";
+import channelViewImage from "./img/channel-view.png";
+import sendViewImage from "./img/send-view.png";
+
+export const meta = {
+  title:
+    "Lily Wallet v1.3 adds support for Nano S+, outgoing channel selection for lightning",
+  description: `This release of Lily Wallet updates the HWI library to v2.1.1 to support Ledger’s Nano S+ hardware wallet and allows users to select which lightning channel to send outgoing payments through.`,
+  date: "2022-12-07T18:05:31Z",
+  authors: [kevinmulcrone],
+  image: headerImage,
+};
+
+This release of Lily Wallet updates the HWI library to v2.1.1 to support Ledger’s Nano S+ hardware wallet and allows users to select which lightning channel to send outgoing payments through.
+
+There are also several minor bug fixes that users pointed out to us.
+
+<div className="my-8">
+  <img
+    src={headerImage.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-2xl"
+  />
+</div>
+
+### Outgoing channel selection
+
+In previous versions of Lily Wallet, we allowed LND to select which channel to send lightning network payments through.
+
+This latest version allows users to select the channel to send money on the lightning network. This functionality gives users more control over payments and enables users to balance a particular channel by sending through it.
+
+<div className="my-8">
+  <img
+    src={sendViewImage.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-lg"
+  />
+</div>
+
+After providing an invoice to Lily Wallet, the confirm payment screen will display the invoice details.
+
+This new version includes a link to "Choose outgoing channel" underneath the user's node alias and balance.
+
+When clicked, a slideover displays the user's current channels and local and remote balances.
+
+The user can select which channel to send their payment through, save, and then send it on the confirm screen.
+
+<div className="my-8">
+  <img
+    src={channelViewImage.src}
+    alt="Lily Wallet v1.2 Header"
+    className="rounded-lg"
+  />
+</div>
+
+<hr class="dark:!border-slate-200 dark:!border-opacity-5" />
+
+To try it out, head over to the [download page](https://lily-wallet.com/download) on the Lily Wallet website.
+
+As always, the code is open source and can be reviewed on [Github](https://github.com/Lily-Technologies/lily-wallet).
