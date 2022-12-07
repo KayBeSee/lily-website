@@ -10,7 +10,7 @@ import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import HeaderStuff from "../../components/HeaderStuff";
 
-import TwitterImage from "@/images/v1.9/header.png";
+import TwitterImage from "@/pages/blog/2022-12-07-lily-release-v1.3/img/header.png";
 
 const downloadLink = {
   Windows:
@@ -70,7 +70,7 @@ const Download = ({ imageProps }) => {
         <HeaderStuff />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@LilyWallet" />
-        <meta name="twitter:title" content="Lily Wallet - Download v1.1" />
+        <meta name="twitter:title" content="Lily Wallet - Download v1.3" />
         <meta
           name="twitter:description"
           content="Bitcoin wallet designed for everyone on their journey towards financial freedom."
