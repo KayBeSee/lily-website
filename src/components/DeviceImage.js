@@ -10,6 +10,9 @@ const Cobo = "/devices/cobo.png";
 const Bitbox = "/devices/bitbox02.png";
 const Iphone = "/devices/iphone.png";
 const Unchained = "/devices/unchained.png";
+const Bitgo = "/devices/bitgo.png";
+const Onramp = "/devices/onramp.png";
+const KingdomTrust = "/devices/kingdom-trust.png";
 
 export const DeviceImage = ({ device, className }) => {
   if (device.type === "unknown") {
@@ -41,6 +44,12 @@ export const DeviceImage = ({ device, className }) => {
           ? Bitbox
           : device.type === "unchained"
           ? Unchained
+          : device.type === "onramp"
+          ? Onramp
+          : device.type === "kingdom-trust"
+          ? KingdomTrust
+          : device.type === "bitgo"
+          ? Bitgo
           : Iphone
       }
     />
