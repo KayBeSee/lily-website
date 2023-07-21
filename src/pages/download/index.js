@@ -14,7 +14,7 @@ import TwitterImage from "@/pages/blog/2022-12-07-lily-release-v1.3/img/header.p
 
 const downloadLink = {
   Windows:
-    "https://github.com/Lily-Technologies/lily-wallet/releases/download/v1.4.0/Lily.Wallet.Setup.1.4.0.exe",
+    "https://github.com/Lily-Technologies/lily-wallet/releases/download/lily-wallet-v1.4.0/Lily.Wallet.Setup.1.4.0.exe",
   MacOS:
     "https://github.com/Lily-Technologies/lily-wallet/releases/download/lily-wallet-v1.4.0/Lily.Wallet-1.4.0-arm64.dmg",
   UNIX: "https://github.com/Lily-Technologies/lily-wallet/releases/tag/v1.4.0",
